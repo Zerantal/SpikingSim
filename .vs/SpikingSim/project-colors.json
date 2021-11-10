@@ -1,0 +1,31 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "05c62339-ab75-4c22-846e-57c2fb20eac2": {
+      "ProjectGuid": "05c62339-ab75-4c22-846e-57c2fb20eac2",
+      "DisplayName": "SpikingLibrary",
+      "ColorIndex": 0
+    },
+    "1e22cac4-8e90-4dd7-a754-6d1ef0845230": {
+      "ProjectGuid": "1e22cac4-8e90-4dd7-a754-6d1ef0845230",
+      "DisplayName": "Util",
+      "ColorIndex": 1
+    },
+    "06119b37-8ab7-47ac-a943-672feeeec597": {
+      "ProjectGuid": "06119b37-8ab7-47ac-a943-672feeeec597",
+      "DisplayName": "MathLib",
+      "ColorIndex": 2
+    },
+    "e716cc59-cc9c-4492-918b-f230c8f0c6c6": {
+      "ProjectGuid": "e716cc59-cc9c-4492-918b-f230c8f0c6c6",
+      "DisplayName": "SpikingLibTest",
+      "ColorIndex": 3
+    },
+    "b7c78de3-9534-4bdc-a21d-9dfcedbae6a0": {
+      "ProjectGuid": "b7c78de3-9534-4bdc-a21d-9dfcedbae6a0",
+      "DisplayName": "Spinner",
+      "ColorIndex": 4
+    }
+  },
+  "NextColorIndex": 5
+}

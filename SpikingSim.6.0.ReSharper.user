@@ -1,0 +1,1863 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Graph/f:Graph.cs" caret="6378" fromTop="24" />
+      <File id="E716CC59-CC9C-4492-918B-F230C8F0C6C6/f:NeuronDescription.cs" caret="418" fromTop="17" />
+      <File id="05C62339-AB75-4C22-846E-57C2FB20EAC2/f:NeuronParameters.cs" caret="5781" fromTop="125" />
+      <File id="05C62339-AB75-4C22-846E-57C2FB20EAC2/f:StdpParameters.cs" caret="2701" fromTop="27" />
+      <File id="E716CC59-CC9C-4492-918B-F230C8F0C6C6/f:SynapseDescription.cs" caret="478" fromTop="16" />
+      <File id="05C62339-AB75-4C22-846E-57C2FB20EAC2/f:AfferentNeuron.cs" caret="296" fromTop="10" />
+      <File id="05C62339-AB75-4C22-846E-57C2FB20EAC2/f:InputSource.cs" caret="879" fromTop="19" />
+      <File id="05C62339-AB75-4C22-846E-57C2FB20EAC2/f:TemporalEncodedAfferent.cs" caret="977" fromTop="5" />
+      <File id="E716CC59-CC9C-4492-918B-F230C8F0C6C6/f:EvolvableNeuralNetwork.cs" caret="2070" fromTop="35" />
+      <File id="06119B37-8AB7-47AC-A943-672FEEEEC597/d:Evolution/f:GraphChromosome.cs" caret="222" fromTop="11" />
+      <File id="05C62339-AB75-4C22-846E-57C2FB20EAC2/f:TemporalEncodedAfferentArray.cs" caret="1730" fromTop="21" />
+      <File id="E716CC59-CC9C-4492-918B-F230C8F0C6C6/f:NeuralEvolutionForm.cs" caret="1508" fromTop="11" />
+      <File id="E716CC59-CC9C-4492-918B-F230C8F0C6C6/f:NeuronDisplayTest.cs" caret="581" fromTop="17" />
+      <File id="E716CC59-CC9C-4492-918B-F230C8F0C6C6/f:NeuronSimulator.cs" caret="2644" fromTop="17" />
+      <File id="E716CC59-CC9C-4492-918B-F230C8F0C6C6/f:PairProtocol.cs" caret="1272" fromTop="18" />
+      <File id="E716CC59-CC9C-4492-918B-F230C8F0C6C6/f:PostPrePostTripletProtocol.cs" caret="1461" fromTop="17" />
+      <File id="E716CC59-CC9C-4492-918B-F230C8F0C6C6/f:QuadrupletProtocol.cs" caret="1257" fromTop="17" />
+      <File id="E716CC59-CC9C-4492-918B-F230C8F0C6C6/f:StdpLearningWindow.cs" caret="2089" fromTop="17" />
+      <File id="E716CC59-CC9C-4492-918B-F230C8F0C6C6/f:STDPTestForm.cs" caret="771" fromTop="20" />
+      <File id="E716CC59-CC9C-4492-918B-F230C8F0C6C6/f:XorTest.cs" caret="3170" fromTop="15" />
+      <File id="E716CC59-CC9C-4492-918B-F230C8F0C6C6/f:PrePostPreTipletProtocol.cs" caret="1304" fromTop="5" />
+      <File id="05C62339-AB75-4C22-846E-57C2FB20EAC2/f:NonLearningNoisySynapseFactory.cs" caret="1093" fromTop="17" />
+      <File id="05C62339-AB75-4C22-846E-57C2FB20EAC2/f:NeuronCollection.cs" caret="1794" fromTop="57" />
+      <File id="05C62339-AB75-4C22-846E-57C2FB20EAC2/f:NonLearningNoisySynapse.cs" caret="495" fromTop="14" />
+      <File id="05C62339-AB75-4C22-846E-57C2FB20EAC2/f:Neuron.cs" caret="2649" fromTop="0" />
+      <File id="E716CC59-CC9C-4492-918B-F230C8F0C6C6/f:FirstNetwork.cs" caret="8057" fromTop="17" />
+      <File id="E716CC59-CC9C-4492-918B-F230C8F0C6C6/f:SpikingNetGraph.cs" caret="2792" fromTop="32" />
+      <File id="05C62339-AB75-4C22-846E-57C2FB20EAC2/f:PeriodicInputSource.cs" caret="4785" fromTop="32" />
+      <File id="05C62339-AB75-4C22-846E-57C2FB20EAC2/f:SpikingNetEngine.cs" caret="9383" fromTop="33" />
+      <File id="05C62339-AB75-4C22-846E-57C2FB20EAC2/f:Synapse.cs" caret="827" fromTop="21" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="05C62339-AB75-4C22-846E-57C2FB20EAC2/f:NeuronCollection.cs" caret="4412" fromTop="16" />
+      <File id="05C62339-AB75-4C22-846E-57C2FB20EAC2/f:SpikingNetEngine.cs" caret="4397" fromTop="9" />
+      <File id="05C62339-AB75-4C22-846E-57C2FB20EAC2/f:SpikingNetEngine.cs" caret="4549" fromTop="22" />
+      <File id="05C62339-AB75-4C22-846E-57C2FB20EAC2/f:NeuronCollection.cs" caret="2123" fromTop="24" />
+      <File id="05C62339-AB75-4C22-846E-57C2FB20EAC2/f:NeuronCollection.cs" caret="1794" fromTop="15" />
+      <File id="05C62339-AB75-4C22-846E-57C2FB20EAC2/f:NonLearningNoisySynapse.cs" caret="374" fromTop="11" />
+      <File id="05C62339-AB75-4C22-846E-57C2FB20EAC2/f:Neuron.cs" caret="2090" fromTop="0" />
+      <File id="05C62339-AB75-4C22-846E-57C2FB20EAC2/f:Neuron.cs" caret="1094" fromTop="0" />
+      <File id="05C62339-AB75-4C22-846E-57C2FB20EAC2/f:Neuron.cs" caret="399" fromTop="0" />
+      <File id="05C62339-AB75-4C22-846E-57C2FB20EAC2/f:Synapse.cs" caret="432" fromTop="0" />
+      <File id="05C62339-AB75-4C22-846E-57C2FB20EAC2/f:Neuron.cs" caret="1307" fromTop="22" />
+      <File id="05C62339-AB75-4C22-846E-57C2FB20EAC2/f:Neuron.cs" caret="3632" fromTop="16" />
+      <File id="05C62339-AB75-4C22-846E-57C2FB20EAC2/f:SpikingNetEngine.cs" caret="8137" fromTop="32" />
+      <File id="05C62339-AB75-4C22-846E-57C2FB20EAC2/f:SpikingNetEngine.cs" caret="7385" fromTop="17" />
+      <File id="05C62339-AB75-4C22-846E-57C2FB20EAC2/f:SpikingNetEngine.cs" caret="7385" fromTop="17" />
+      <File id="05C62339-AB75-4C22-846E-57C2FB20EAC2/f:Neuron.cs" caret="2649" fromTop="17" />
+      <File id="05C62339-AB75-4C22-846E-57C2FB20EAC2/f:SpikingNetEngine.cs" caret="7580" fromTop="20" />
+      <File id="05C62339-AB75-4C22-846E-57C2FB20EAC2/f:SpikingNetEngine.cs" caret="114" fromTop="4" />
+      <File id="05C62339-AB75-4C22-846E-57C2FB20EAC2/f:SpikingNetEngine.cs" caret="8137" fromTop="25" />
+      <File id="05C62339-AB75-4C22-846E-57C2FB20EAC2/f:SpikingNetEngine.cs" caret="1482" fromTop="16" />
+      <File id="05C62339-AB75-4C22-846E-57C2FB20EAC2/f:SpikingNetEngine.cs" caret="8028" fromTop="24" />
+      <File id="05C62339-AB75-4C22-846E-57C2FB20EAC2/f:SpikingNetEngine.cs" caret="9140" fromTop="19" />
+      <File id="05C62339-AB75-4C22-846E-57C2FB20EAC2/f:SpikingNetEngine.cs" caret="9010" fromTop="19" />
+      <File id="05C62339-AB75-4C22-846E-57C2FB20EAC2/f:PeriodicInputSource.cs" caret="5624" fromTop="19" />
+      <File id="05C62339-AB75-4C22-846E-57C2FB20EAC2/f:PeriodicInputSource.cs" caret="6766" fromTop="20" />
+      <File id="05C62339-AB75-4C22-846E-57C2FB20EAC2/f:PeriodicInputSource.cs" caret="3249" fromTop="27" />
+      <File id="05C62339-AB75-4C22-846E-57C2FB20EAC2/f:PeriodicInputSource.cs" caret="4785" fromTop="32" />
+      <File id="05C62339-AB75-4C22-846E-57C2FB20EAC2/f:SpikingNetEngine.cs" caret="9290" fromTop="25" />
+      <File id="05C62339-AB75-4C22-846E-57C2FB20EAC2/f:SpikingNetEngine.cs" caret="8390" fromTop="16" />
+      <File id="05C62339-AB75-4C22-846E-57C2FB20EAC2/f:SpikingNetEngine.cs" caret="8834" fromTop="23" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="double" priority="134" />
+      <Item value="Decimal`0" priority="3" />
+      <Item value="bParamUpDown" priority="0" />
+      <Item value="if" priority="133" />
+      <Item value="ctl" priority="1" />
+      <Item value="null" priority="177" />
+      <Item value="TabControlAction`0" priority="0" />
+      <Item value="return" priority="83" />
+      <Item value="Contract`0" priority="381" />
+      <Item value="postsynapticNeuron" priority="10" />
+      <Item value="NeuronCollection`0" priority="10" />
+      <Item value="neuronGroup" priority="13" />
+      <Item value="n" priority="57" />
+      <Item value="using" priority="121" />
+      <Item value="Util" priority="17" />
+      <Item value="ToDo" priority="2" />
+      <Item value="internal" priority="19" />
+      <Item value="public" priority="93" />
+      <Item value="struct" priority="6" />
+      <Item value="private" priority="232" />
+      <Item value="int" priority="337" />
+      <Item value="SchedulerSlot`0" priority="7" />
+      <Item value="_eventTimeIdx" priority="1" />
+      <Item value="eventIdx" priority="3" />
+      <Item value="_slotIdx" priority="1" />
+      <Item value="slotIdx" priority="1" />
+      <Item value="System" priority="74" />
+      <Item value="Diagnostics" priority="44" />
+      <Item value="Contracts" priority="38" />
+      <Item value="ContractInvariantMethod" priority="9" />
+      <Item value="void" priority="55" />
+      <Item value="Thread`0" priority="12" />
+      <Item value="_scheduleName" priority="0" />
+      <Item value="oldEvent" priority="7" />
+      <Item value="_numberOfEventBins" priority="1" />
+      <Item value="readonly" priority="26" />
+      <Item value="bool" priority="25" />
+      <Item value="_eventBin" priority="1" />
+      <Item value="_idxInBin" priority="1" />
+      <Item value="ScheduleEvent`0" priority="2" />
+      <Item value="_schedulingBins" priority="2" />
+      <Item value="newTimeInterval" priority="0" />
+      <Item value="AddEvent`0" priority="0" />
+      <Item value="new" priority="353" />
+      <Item value="SchedulerSlot" priority="6" />
+      <Item value="_isValid" priority="1" />
+      <Item value="true" priority="32" />
+      <Item value="false" priority="46" />
+      <Item value="isValid" priority="1" />
+      <Item value="idxInBin" priority="0" />
+      <Item value="while" priority="13" />
+      <Item value="delay" priority="8" />
+      <Item value="synapticDelayGenerator" priority="0" />
+      <Item value="count" priority="7" />
+      <Item value="throw" priority="14" />
+      <Item value="Exception" priority="1" />
+      <Item value="ArgumentNullException" priority="0" />
+      <Item value="eventBin" priority="1" />
+      <Item value="ev" priority="2" />
+      <Item value="neuronTypeCB" priority="3" />
+      <Item value="_presetParams" priority="0" />
+      <Item value="i" priority="84" />
+      <Item value="NeuronSimulator`0" priority="3" />
+      <Item value="SpikingLibrary" priority="13" />
+      <Item value="NeuronClass`0" priority="42" />
+      <Item value="NeuronClass" priority="8" />
+      <Item value="Neuron`0" priority="46" />
+      <Item value="Neuron" priority="10" />
+      <Item value="NeuralNetwork`0" priority="23" />
+      <Item value="NeuralNetwork" priority="2" />
+      <Item value="net" priority="11" />
+      <Item value="TimeoutException`0" priority="3" />
+      <Item value="_lastFiringTime" priority="2" />
+      <Item value="_currentFiringCount" priority="3" />
+      <Item value="_maxFiringCount" priority="1" />
+      <Item value="firingEventsUpDown" priority="0" />
+      <Item value="e" priority="23" />
+      <Item value="List" priority="40" />
+      <Item value="clockDrivenTB" priority="2" />
+      <Item value="_clockDriventFiringTimes" priority="3" />
+      <Item value="eventDrivenTB" priority="2" />
+      <Item value="foreach" priority="30" />
+      <Item value="in" priority="38" />
+      <Item value="_eventDrivenFiringTimes" priority="2" />
+      <Item value="List&lt;int&gt;" priority="10" />
+      <Item value="_clockDrivenExecution" priority="2" />
+      <Item value="else" priority="33" />
+      <Item value="timeInterval" priority="7" />
+      <Item value="_net" priority="4" />
+      <Item value="NetPipeStyleUriParser`0" priority="0" />
+      <Item value="this" priority="27" />
+      <Item value="Delegate`0" priority="0" />
+      <Item value="AppendFiringInterval`0" priority="0" />
+      <Item value="UpdateGuiDelegate`0" priority="0" />
+      <Item value="object" priority="24" />
+      <Item value="UpdateState`0" priority="0" />
+      <Item value="time" priority="6" />
+      <Item value="_lastUpdateTime" priority="0" />
+      <Item value="_clockDrivenTrial" priority="2" />
+      <Item value="v" priority="15" />
+      <Item value="Trajectory" priority="5" />
+      <Item value="uIdx" priority="4" />
+      <Item value="vIdx" priority="4" />
+      <Item value="t" priority="37" />
+      <Item value="FiringTable" priority="1" />
+      <Item value="lookupU" priority="2" />
+      <Item value="lookupV" priority="3" />
+      <Item value="UInc" priority="3" />
+      <Item value="UMin" priority="0" />
+      <Item value="u0" priority="2" />
+      <Item value="VInc" priority="5" />
+      <Item value="VMin" priority="0" />
+      <Item value="v0" priority="2" />
+      <Item value="t10" priority="1" />
+      <Item value="t00" priority="2" />
+      <Item value="XmlWriterTraceListener`0" priority="0" />
+      <Item value="u" priority="9" />
+      <Item value="t01" priority="1" />
+      <Item value="t11" priority="0" />
+      <Item value="numberOfTimeBins" priority="2" />
+      <Item value="uDim" priority="0" />
+      <Item value="vDim" priority="0" />
+      <Item value="neuron" priority="24" />
+      <Item value="Sched" priority="3" />
+      <Item value="Collection&lt;ScheduledEventItem&gt;" priority="0" />
+      <Item value="ScheduledEvent" priority="7" />
+      <Item value="_u" priority="5" />
+      <Item value="_neuronType" priority="0" />
+      <Item value="_v" priority="1" />
+      <Item value="ref" priority="7" />
+      <Item value="const" priority="15" />
+      <Item value="Du`0" priority="1" />
+      <Item value="uNew" priority="1" />
+      <Item value="vNew" priority="1" />
+      <Item value="Dv`0" priority="0" />
+      <Item value="EventArgs`0" priority="8" />
+      <Item value="NeuronProbeUpdateEventArgs`0" priority="8" />
+      <Item value="U" priority="1" />
+      <Item value="V" priority="0" />
+      <Item value="NeuronProbeUpdateEventHandler`0" priority="0" />
+      <Item value="_updateTime" priority="6" />
+      <Item value="updateInterval" priority="2" />
+      <Item value="AsyncOperation`0" priority="1" />
+      <Item value="_asyncOp" priority="6" />
+      <Item value="_taskID" priority="1" />
+      <Item value="NeuronProbeUpdateEventArgs" priority="0" />
+      <Item value="ReportNeuronState`0" priority="0" />
+      <Item value="_neuron" priority="0" />
+      <Item value="static" priority="42" />
+      <Item value="Threading" priority="9" />
+      <Item value="_slowDown" priority="1" />
+      <Item value="updateCounter" priority="0" />
+      <Item value="_efficacy" priority="0" />
+      <Item value="_target" priority="21" />
+      <Item value="EventHandlerList`0" priority="0" />
+      <Item value="EventHandler`0" priority="1" />
+      <Item value="SynapseProbeUpdateEventArgs`0" priority="0" />
+      <Item value="value" priority="26" />
+      <Item value="target" priority="1" />
+      <Item value="float" priority="2" />
+      <Item value="Double`0" priority="1" />
+      <Item value="Convert`0" priority="2" />
+      <Item value="Interlocked`0" priority="3" />
+      <Item value="_running" priority="7" />
+      <Item value="InvalidOperationException" priority="2" />
+      <Item value="_numEvents" priority="0" />
+      <Item value="perpetualExecution" priority="1" />
+      <Item value="_schedulingCancelled" priority="4" />
+      <Item value="_executingThreadId" priority="1" />
+      <Item value="lock" priority="36" />
+      <Item value="_pendingEventsLock" priority="0" />
+      <Item value="_pendingEventAdditions" priority="3" />
+      <Item value="_threadLock" priority="7" />
+      <Item value="IDisposable`0" priority="1" />
+      <Item value="_waitHandle" priority="0" />
+      <Item value="schedulerStopping" priority="1" />
+      <Item value="pauseBtn" priority="5" />
+      <Item value="Minimized" priority="0" />
+      <Item value="Form" priority="1" />
+      <Item value="NeuronDisplayTest`0" priority="0" />
+      <Item value="showNeuronDisplayForm" priority="0" />
+      <Item value="delayGenerators" priority="0" />
+      <Item value="efficacyGenerator" priority="0" />
+      <Item value="neuronDisplay" priority="2" />
+      <Item value="NeuronProbe`0" priority="2" />
+      <Item value="_probe" priority="26" />
+      <Item value="NeuronProbe" priority="9" />
+      <Item value="_sampleInterval" priority="10" />
+      <Item value="RecreateNeuronProbe`0" priority="0" />
+      <Item value="ZedGraph" priority="5" />
+      <Item value="Color`0" priority="7" />
+      <Item value="MathLib" priority="8" />
+      <Item value="Statistics" priority="1" />
+      <Item value="INumberGenerator`0" priority="5" />
+      <Item value="noiseSource" priority="1" />
+      <Item value="_noiseSource" priority="3" />
+      <Item value="InvalidOperationException`0" priority="1" />
+      <Item value="ConstantGenerator`0" priority="3" />
+      <Item value="_delayGenerator" priority="4" />
+      <Item value="Target" priority="0" />
+      <Item value="EventHandler&lt;NeuronProbeUpdateEventArgs&gt;" priority="0" />
+      <Item value="_neuronTrace" priority="0" />
+      <Item value="RollingPointPairList`0" priority="0" />
+      <Item value="SynapseProbe" priority="13" />
+      <Item value="Time" priority="1" />
+      <Item value="Form`0" priority="3" />
+      <Item value="showSTDPTestForm" priority="0" />
+      <Item value="PeriodicInputSignal`0" priority="5" />
+      <Item value="PeriodicInputSignal" priority="5" />
+      <Item value="input" priority="3" />
+      <Item value="voltageUD" priority="0" />
+      <Item value="Synapse`0" priority="35" />
+      <Item value="_postSynapticNeurons" priority="0" />
+      <Item value="_axon" priority="15" />
+      <Item value="synapse" priority="31" />
+      <Item value="Synapse" priority="12" />
+      <Item value="_injectionPeriod" priority="0" />
+      <Item value="periodicity" priority="3" />
+      <Item value="List&lt;Synapse&gt;" priority="8" />
+      <Item value="decimal" priority="2" />
+      <Item value="freqUD" priority="6" />
+      <Item value="_input" priority="22" />
+      <Item value="s" priority="14" />
+      <Item value="freq" priority="3" />
+      <Item value="stopBtn" priority="1" />
+      <Item value="startBtn" priority="1" />
+      <Item value="synapseDisplayControl1" priority="3" />
+      <Item value="schedTestForm" priority="0" />
+      <Item value="deltaT" priority="2" />
+      <Item value="t1" priority="8" />
+      <Item value="t2" priority="9" />
+      <Item value="s1" priority="8" />
+      <Item value="s2" priority="3" />
+      <Item value="_dendrite" priority="6" />
+      <Item value="A2pos" priority="0" />
+      <Item value="A3pos" priority="0" />
+      <Item value="A2neg" priority="2" />
+      <Item value="A3neg" priority="1" />
+      <Item value="tau_x" priority="1" />
+      <Item value="tau_y" priority="0" />
+      <Item value="tau_neg" priority="2" />
+      <Item value="tau_pos" priority="1" />
+      <Item value="r1" priority="2" />
+      <Item value="r2" priority="5" />
+      <Item value="Efficacy" priority="0" />
+      <Item value="lastPreSpikeTime" priority="0" />
+      <Item value="Math`0" priority="14" />
+      <Item value="o2" priority="1" />
+      <Item value="lastSTDPUpdateTime" priority="1" />
+      <Item value="o1" priority="1" />
+      <Item value="synapseFactory" priority="2" />
+      <Item value="syn" priority="13" />
+      <Item value="STDPParameters`0" priority="0" />
+      <Item value="_stdpParams" priority="12" />
+      <Item value="StdpParameters`0" priority="24" />
+      <Item value="stdpParameters" priority="4" />
+      <Item value="efficacy" priority="0" />
+      <Item value="SynapseFactory`0" priority="0" />
+      <Item value="StdpParameters" priority="7" />
+      <Item value="A2Neg" priority="6" />
+      <Item value="A3Pos" priority="4" />
+      <Item value="A3Neg" priority="3" />
+      <Item value="TauX" priority="6" />
+      <Item value="TauY" priority="6" />
+      <Item value="TauPos" priority="3" />
+      <Item value="TauNeg" priority="3" />
+      <Item value="NonLearningSynapse`0" priority="4" />
+      <Item value="NonLearningSynapse" priority="0" />
+      <Item value="override" priority="11" />
+      <Item value="Stopwatch`0" priority="4" />
+      <Item value="timer" priority="7" />
+      <Item value="Stopwatch" priority="1" />
+      <Item value="Slowdown" priority="0" />
+      <Item value="SpeedSlider" priority="0" />
+      <Item value="UpdateFrequency" priority="0" />
+      <Item value="ComponentModel" priority="7" />
+      <Item value="Browsable" priority="1" />
+      <Item value="FlowLayoutSettings`0" priority="0" />
+      <Item value="Minute" priority="0" />
+      <Item value="_weightPane" priority="21" />
+      <Item value="Date" priority="0" />
+      <Item value="XDate`0" priority="1" />
+      <Item value="_maxTime" priority="21" />
+      <Item value="_voltagePane" priority="2" />
+      <Item value="zgc" priority="15" />
+      <Item value="Description" priority="2" />
+      <Item value="Category" priority="1" />
+      <Item value="DefaultValue" priority="1" />
+      <Item value="_updateFreq" priority="1" />
+      <Item value="_numTracePoints" priority="2" />
+      <Item value="RollingPointListWithStaticX`0" priority="0" />
+      <Item value="RollingPointListWithStaticX" priority="0" />
+      <Item value="synapticEfficacy" priority="0" />
+      <Item value="SynapseProbe`0" priority="5" />
+      <Item value="CurveItem`0" priority="2" />
+      <Item value="weightTrace" priority="0" />
+      <Item value="_synapseTrace" priority="1" />
+      <Item value="val" priority="2" />
+      <Item value="hours" priority="1" />
+      <Item value="minutes" priority="0" />
+      <Item value="index" priority="3" />
+      <Item value="A2Pos" priority="1" />
+      <Item value="DrawItemEventArgs`0" priority="0" />
+      <Item value="EvaluateException`0" priority="1" />
+      <Item value="GraphPane`0" priority="0" />
+      <Item value="_learningWindowTrace" priority="2" />
+      <Item value="PointPairList" priority="6" />
+      <Item value="for" priority="35" />
+      <Item value="dt" priority="6" />
+      <Item value="_initWeight" priority="6" />
+      <Item value="probe" priority="5" />
+      <Item value="numPairs" priority="0" />
+      <Item value="Application`0" priority="2" />
+      <Item value="neuronSimBtn" priority="0" />
+      <Item value="showStdpLearningWindowForm" priority="0" />
+      <Item value="Thread" priority="1" />
+      <Item value="ParameterizedThreadStart" priority="0" />
+      <Item value="EvaluateLearningWindow`0" priority="2" />
+      <Item value="_lastStdpUpdateTime" priority="1" />
+      <Item value="sbyte" priority="0" />
+      <Item value="_postSynapticNeuron" priority="2" />
+      <Item value="volatile" priority="1" />
+      <Item value="ContractReferenceAssemblyAttribute`0" priority="0" />
+      <Item value="spikeCount" priority="1" />
+      <Item value="_spikeCount" priority="0" />
+      <Item value="threadLock" priority="0" />
+      <Item value="Scheduler`0" priority="8" />
+      <Item value="string" priority="3" />
+      <Item value="_slowdown" priority="4" />
+      <Item value="slowdown" priority="3" />
+      <Item value="Scheduler" priority="5" />
+      <Item value="ISynapseFactoryContract`0" priority="2" />
+      <Item value="NeuronCollection" priority="7" />
+      <Item value="Object`0" priority="0" />
+      <Item value="_pendingNeuronAdditions" priority="4" />
+      <Item value="_neuronRegister" priority="2" />
+      <Item value="_slowdownInEffect" priority="3" />
+      <Item value="_slowdownMethodRunning" priority="1" />
+      <Item value="_neuronAdditionScheduled" priority="3" />
+      <Item value="_networkStarted" priority="1" />
+      <Item value="NeuralNetworkEngine`0" priority="6" />
+      <Item value="TriggerNeuronSpike`0" priority="0" />
+      <Item value="NeuronFiredEventArgs`0" priority="4" />
+      <Item value="_onNeuronProbedDelegate" priority="0" />
+      <Item value="IFormatProvider`0" priority="3" />
+      <Item value="_started" priority="0" />
+      <Item value="_stopping" priority="0" />
+      <Item value="PendingUpdatesScheduled`0" priority="10" />
+      <Item value="updatesScheduledFlag" priority="8" />
+      <Item value="_pendingVChange" priority="0" />
+      <Item value="All" priority="0" />
+      <Item value="PostsynapticNeuron" priority="2" />
+      <Item value="_pendingVIncrement" priority="1" />
+      <Item value="_pendingUIncrement" priority="0" />
+      <Item value="SpikingNetEngine`0" priority="52" />
+      <Item value="allNeurons" priority="0" />
+      <Item value="NeuronFiredEventArgs" priority="0" />
+      <Item value="HashSet" priority="9" />
+      <Item value="NotImplementedException" priority="5" />
+      <Item value="_neuronSet" priority="11" />
+      <Item value="event" priority="0" />
+      <Item value="_privateNeuronFired" priority="4" />
+      <Item value="add" priority="0" />
+      <Item value="remove" priority="0" />
+      <Item value="IEnumerable" priority="10" />
+      <Item value="HashSet&lt;Neuron&gt;" priority="0" />
+      <Item value="sender" priority="4" />
+      <Item value="_syncObj" priority="0" />
+      <Item value="Tuple`0" priority="18" />
+      <Item value="ISynapseFactory`0" priority="3" />
+      <Item value="_pendingConnection" priority="8" />
+      <Item value="List&lt;Tuple&lt;NeuronCollection,ISynapseFactory&gt;&gt;" priority="2" />
+      <Item value="_connectionEventScheduled" priority="2" />
+      <Item value="Tuple&lt;NeuronCollection,ISynapseFactory&gt;" priority="0" />
+      <Item value="connInfo" priority="1" />
+      <Item value="T`0" priority="48" />
+      <Item value="IShallowCloneable" priority="1" />
+      <Item value="_label" priority="1" />
+      <Item value="retCollection" priority="3" />
+      <Item value="NeuronFired" priority="0" />
+      <Item value="SynapseFactory" priority="1" />
+      <Item value="NonLearningNoisySynapseFactory`0" priority="0" />
+      <Item value="_weightGenerator" priority="1" />
+      <Item value="IDeepCloneable" priority="17" />
+      <Item value="Num" priority="0" />
+      <Item value="NormalRandomGenerator`0" priority="0" />
+      <Item value="Max" priority="1" />
+      <Item value="max" priority="0" />
+      <Item value="UniformRandomGenerator`0" priority="0" />
+      <Item value="Min" priority="0" />
+      <Item value="IsStopping" priority="3" />
+      <Item value="_isStopping" priority="1" />
+      <Item value="_currentSpikeCount" priority="2" />
+      <Item value="_maxSpikeCount" priority="2" />
+      <Item value="PeriodicInputFinished" priority="1" />
+      <Item value="dt_min" priority="0" />
+      <Item value="p1" priority="24" />
+      <Item value="weight" priority="3" />
+      <Item value="dt_inc" priority="0" />
+      <Item value="CalcAxonalDelays`0" priority="1" />
+      <Item value="out" priority="5" />
+      <Item value="dt_max" priority="0" />
+      <Item value="_axonalDelay" priority="0" />
+      <Item value="_AxonalDelayUpdateScheduled" priority="1" />
+      <Item value="_pendingAxonalDelayUpdate" priority="1" />
+      <Item value="_pendingSynapseConnections" priority="0" />
+      <Item value="_pendingSynapseConnection" priority="3" />
+      <Item value="_latestWeight" priority="0" />
+      <Item value="_pendingWeightUpdate" priority="1" />
+      <Item value="_weightUpdateScheduled" priority="2" />
+      <Item value="p2" priority="14" />
+      <Item value="_weightsuccessfullyRetrieved" priority="3" />
+      <Item value="_weightValue" priority="1" />
+      <Item value="long" priority="5" />
+      <Item value="_r2" priority="3" />
+      <Item value="_o2" priority="3" />
+      <Item value="NumPairs" priority="1" />
+      <Item value="_r1" priority="2" />
+      <Item value="_o1" priority="3" />
+      <Item value="Debug`0" priority="2" />
+      <Item value="_dt" priority="0" />
+      <Item value="TextWriterTraceListener`0" priority="1" />
+      <Item value="TextWriterTraceListener" priority="0" />
+      <Item value="listener" priority="0" />
+      <Item value="ScrollStateVScrollVisible" priority="2" />
+      <Item value="stdpListener" priority="0" />
+      <Item value="_stdpListener" priority="1" />
+      <Item value="Weight" priority="1" />
+      <Item value="_pane" priority="1" />
+      <Item value="DtMax" priority="0" />
+      <Item value="DtMin" priority="0" />
+      <Item value="ThreadExceptionDialog`0" priority="0" />
+      <Item value="NewsStyleUriParser`0" priority="0" />
+      <Item value="SpikingNetTimeNotifier`0" priority="3" />
+      <Item value="Notification" priority="1" />
+      <Item value="notificationTime" priority="0" />
+      <Item value="SpikingNetTimeNotifier" priority="2" />
+      <Item value="timeDelayNotifier" priority="1" />
+      <Item value="showStdpTripletForm" priority="0" />
+      <Item value="pairPane" priority="6" />
+      <Item value="QuadrupletPane" priority="0" />
+      <Item value="TripletPane1" priority="0" />
+      <Item value="TripletPane2" priority="0" />
+      <Item value="DataTable`0" priority="1" />
+      <Item value="rhoMax" priority="4" />
+      <Item value="quadrupletPane" priority="6" />
+      <Item value="TMin" priority="7" />
+      <Item value="TMax" priority="2" />
+      <Item value="BarItem`0" priority="1" />
+      <Item value="_pairCurve" priority="0" />
+      <Item value="PointPairList`0" priority="5" />
+      <Item value="timeIntervals" priority="0" />
+      <Item value="Count`1" priority="3" />
+      <Item value="_pairList" priority="0" />
+      <Item value="_triplet2List" priority="0" />
+      <Item value="timeInterval1" priority="1" />
+      <Item value="_pairList1" priority="2" />
+      <Item value="timeinterval2" priority="1" />
+      <Item value="_pairList2" priority="1" />
+      <Item value="_quadrupletList" priority="7" />
+      <Item value="tripletPane1" priority="4" />
+      <Item value="_rho" priority="12" />
+      <Item value="rhoMin" priority="3" />
+      <Item value="_useTimeInterval1" priority="10" />
+      <Item value="notifier" priority="6" />
+      <Item value="rhoInc" priority="0" />
+      <Item value="_p1" priority="3" />
+      <Item value="PairProtocol`0" priority="6" />
+      <Item value="_p2" priority="1" />
+      <Item value="c1" priority="5" />
+      <Item value="c2" priority="1" />
+      <Item value="Dash" priority="0" />
+      <Item value="_s3" priority="2" />
+      <Item value="T" priority="8" />
+      <Item value="_injectionTimes" priority="9" />
+      <Item value="_injectionIdx" priority="2" />
+      <Item value="injectionTime" priority="2" />
+      <Item value="_injectionAdditionScheduled" priority="0" />
+      <Item value="_pendingInjectionTimeAdditions" priority="3" />
+      <Item value="_injectionTimeAdditionScheduled" priority="0" />
+      <Item value="_input2" priority="2" />
+      <Item value="t1pre" priority="23" />
+      <Item value="t1post" priority="16" />
+      <Item value="_quad_dt1" priority="1" />
+      <Item value="t2pre" priority="15" />
+      <Item value="_quad_dt2" priority="1" />
+      <Item value="t2post" priority="13" />
+      <Item value="Min`2" priority="3" />
+      <Item value="minTime" priority="3" />
+      <Item value="_input1" priority="2" />
+      <Item value="TInc" priority="1" />
+      <Item value="SetupQuadrupletProtocol`0" priority="0" />
+      <Item value="TimeSpan`0" priority="0" />
+      <Item value="times" priority="0" />
+      <Item value="Max`2" priority="1" />
+      <Item value="maxPostTime" priority="2" />
+      <Item value="minPostTime" priority="0" />
+      <Item value="LineItem`0" priority="0" />
+      <Item value="SymbolType`0" priority="0" />
+      <Item value="_quad_freq" priority="0" />
+      <Item value="PowerState`0" priority="0" />
+      <Item value="UpdateEvent" priority="0" />
+      <Item value="QuadrupletProtocol`0" priority="3" />
+      <Item value="_injectionTimings" priority="1" />
+      <Item value="timings" priority="4" />
+      <Item value="Length" priority="41" />
+      <Item value="Clone`0" priority="2" />
+      <Item value="_pendingSpikeTimingChange" priority="2" />
+      <Item value="_newSpikeTimings" priority="2" />
+      <Item value="_spikeTimings" priority="3" />
+      <Item value="_spikeIdx" priority="0" />
+      <Item value="_preInput" priority="4" />
+      <Item value="_postInput" priority="6" />
+      <Item value="IInputSource`0" priority="4" />
+      <Item value="List&lt;Tuple&lt;IInputSource,int&gt;&gt;" priority="0" />
+      <Item value="_pendingInputsToSynchronise" priority="2" />
+      <Item value="sources" priority="3" />
+      <Item value="_synchrinisationEventScheduled" priority="2" />
+      <Item value="InputSources`0" priority="2" />
+      <Item value="Tuple&lt;IInputSource,int&gt;" priority="7" />
+      <Item value="_preProbe" priority="0" />
+      <Item value="_timeInterval" priority="0" />
+      <Item value="_T" priority="8" />
+      <Item value="DateTime`0" priority="0" />
+      <Item value="dt1" priority="10" />
+      <Item value="dt2" priority="10" />
+      <Item value="preSpikeInterval" priority="8" />
+      <Item value="Frequency" priority="5" />
+      <Item value="postSpikeInterval" priority="4" />
+      <Item value="Linq" priority="0" />
+      <Item value="MinIndex`1" priority="0" />
+      <Item value="tmp" priority="1" />
+      <Item value="_preInputStartTime" priority="7" />
+      <Item value="_postStartTime" priority="1" />
+      <Item value="_postInputStartTime" priority="5" />
+      <Item value="minStartTime" priority="4" />
+      <Item value="QuadrupletProtocol" priority="1" />
+      <Item value="Start`0" priority="1" />
+      <Item value="startTime" priority="1" />
+      <Item value="preInterval" priority="8" />
+      <Item value="postInterval" priority="3" />
+      <Item value="_TMax" priority="0" />
+      <Item value="_TMin" priority="0" />
+      <Item value="_quadrupletList2" priority="0" />
+      <Item value="PrePostPreTipletProtocol" priority="0" />
+      <Item value="_prepostpreTripletList" priority="3" />
+      <Item value="_prepostpreTriplets" priority="10" />
+      <Item value="PostPrePostTripletProtocol" priority="0" />
+      <Item value="_postprepostTripletList" priority="2" />
+      <Item value="_postprepostTriplets" priority="3" />
+      <Item value="_dt1" priority="1" />
+      <Item value="prepostpreTriplets" priority="1" />
+      <Item value="GetLength`0" priority="12" />
+      <Item value="_dt2" priority="0" />
+      <Item value="_tripletIdx" priority="6" />
+      <Item value="tpost" priority="2" />
+      <Item value="PrePostPreTipletProtocol`0" priority="0" />
+      <Item value="PostPrePostTripletProtocol`0" priority="1" />
+      <Item value="UpdateGraphs`0" priority="0" />
+      <Item value="tripletPane2" priority="0" />
+      <Item value="String`0" priority="0" />
+      <Item value="str1" priority="1" />
+      <Item value="Text" priority="0" />
+      <Item value="postprepostTripletList" priority="0" />
+      <Item value="postprepostTriplets" priority="1" />
+      <Item value="neuronType" priority="3" />
+      <Item value="ContractClass" priority="2" />
+      <Item value="typeof" priority="5" />
+      <Item value="ContractClassFor" priority="1" />
+      <Item value="Count" priority="3" />
+      <Item value="PendingInputsToSynchronise" priority="0" />
+      <Item value="threadName" priority="0" />
+      <Item value="NeuronRegister" priority="1" />
+      <Item value="PendingNeuronRemovals" priority="0" />
+      <Item value="UnloadNeurons" priority="0" />
+      <Item value="_unloadNeurons" priority="0" />
+      <Item value="virtual" priority="1" />
+      <Item value="InputSignal`0" priority="8" />
+      <Item value="InputSourceContract`0" priority="0" />
+      <Item value="class" priority="1" />
+      <Item value="SensorArray`0" priority="0" />
+      <Item value="_x" priority="2" />
+      <Item value="X" priority="1" />
+      <Item value="_y" priority="1" />
+      <Item value="_outputSynapse" priority="0" />
+      <Item value="CrossAppDomainDelegate`0" priority="0" />
+      <Item value="_currentPopulation" priority="20" />
+      <Item value="initialPopulation" priority="0" />
+      <Item value="fitnessScores" priority="8" />
+      <Item value="_parentCount" priority="4" />
+      <Item value="k" priority="2" />
+      <Item value="_selectFromParents" priority="1" />
+      <Item value="nextGeneration" priority="5" />
+      <Item value="_childrenToBreed" priority="3" />
+      <Item value="fittestSolutions" priority="3" />
+      <Item value="parentIdx" priority="1" />
+      <Item value="List&lt;T&gt;" priority="4" />
+      <Item value="child" priority="5" />
+      <Item value="Random`0" priority="9" />
+      <Item value="Random" priority="9" />
+      <Item value="additionalParents" priority="13" />
+      <Item value="EvaluatePopulationFitness`0" priority="1" />
+      <Item value="_outputAxons" priority="0" />
+      <Item value="TonicSpiking" priority="0" />
+      <Item value="m1" priority="11" />
+      <Item value="m2" priority="9" />
+      <Item value="m3" priority="10" />
+      <Item value="o" priority="10" />
+      <Item value="I1m1" priority="1" />
+      <Item value="I1m2" priority="1" />
+      <Item value="I2m3" priority="1" />
+      <Item value="m1o" priority="3" />
+      <Item value="m2o" priority="3" />
+      <Item value="I2m2" priority="0" />
+      <Item value="m3o" priority="2" />
+      <Item value="m1NeuronDisplay" priority="0" />
+      <Item value="m2NeuronDisplay" priority="0" />
+      <Item value="m3NeuronDisplay" priority="0" />
+      <Item value="outputNeuronDisplay" priority="0" />
+      <Item value="XorTest`0" priority="0" />
+      <Item value="showXortTestForm" priority="0" />
+      <Item value="x" priority="2" />
+      <Item value="Xm1" priority="1" />
+      <Item value="ConnectTo`0" priority="1" />
+      <Item value="Xm2" priority="1" />
+      <Item value="y" priority="3" />
+      <Item value="Ym2" priority="1" />
+      <Item value="Ym3" priority="1" />
+      <Item value="default" priority="1" />
+      <Item value="postSynapticNeuron" priority="10" />
+      <Item value="Tuple&lt;Neuron,Synapse&gt;" priority="0" />
+      <Item value="List&lt;Tuple&lt;Neuron,Synapse&gt;&gt;" priority="0" />
+      <Item value="TemporalEncodedAfferent" priority="5" />
+      <Item value="_min" priority="2" />
+      <Item value="minValue" priority="2" />
+      <Item value="_max" priority="2" />
+      <Item value="maxValue" priority="2" />
+      <Item value="_timeSlice" priority="5" />
+      <Item value="timeSlice" priority="3" />
+      <Item value="aMiddleUD" priority="2" />
+      <Item value="middleClass" priority="3" />
+      <Item value="outputClass" priority="1" />
+      <Item value="_a" priority="1" />
+      <Item value="_i" priority="0" />
+      <Item value="Xm1Probe" priority="4" />
+      <Item value="Xm2Probe" priority="3" />
+      <Item value="Ym2Probe" priority="2" />
+      <Item value="Ym3Probe" priority="2" />
+      <Item value="m1oProbe" priority="2" />
+      <Item value="m2oProbe" priority="2" />
+      <Item value="m3oProbe" priority="2" />
+      <Item value="m1Probe" priority="1" />
+      <Item value="m2Probe" priority="1" />
+      <Item value="outputProbe" priority="1" />
+      <Item value="ReferenceEquals`0" priority="1" />
+      <Item value="synapseXm1TB" priority="2" />
+      <Item value="synapseXm2TB" priority="0" />
+      <Item value="a" priority="0" />
+      <Item value="b" priority="0" />
+      <Item value="c" priority="3" />
+      <Item value="d" priority="0" />
+      <Item value="I" priority="0" />
+      <Item value="newClass" priority="2" />
+      <Item value="m3Probe" priority="0" />
+      <Item value="try" priority="0" />
+      <Item value="FormatException`0" priority="0" />
+      <Item value="TemporalEncodedAfferent`0" priority="6" />
+      <Item value="trainingInput" priority="2" />
+      <Item value="trainingSynapse" priority="0" />
+      <Item value="r" priority="27" />
+      <Item value="trainingData" priority="3" />
+      <Item value="idx" priority="0" />
+      <Item value="_pendingSignal" priority="1" />
+      <Item value="signal" priority="1" />
+      <Item value="_signalEventScheduled" priority="1" />
+      <Item value="_range" priority="3" />
+      <Item value="_rangeOverTimeSlice" priority="0" />
+      <Item value="TimeDelayNotification`0" priority="0" />
+      <Item value="TimeDelayNotification" priority="0" />
+      <Item value="NeuralEvolutionForm`0" priority="0" />
+      <Item value="evolutionTestForm" priority="0" />
+      <Item value="Evolution" priority="2" />
+      <Item value="IEvolvableObject" priority="0" />
+      <Item value="EvolvableNeuralNetwork`0" priority="17" />
+      <Item value="abstract" priority="2" />
+      <Item value="AfferentNeuron`0" priority="1" />
+      <Item value="Axon" priority="1" />
+      <Item value="TemporalEncodedAfferentArray" priority="0" />
+      <Item value="NeuronDescription`0" priority="22" />
+      <Item value="SynapseDescription`0" priority="15" />
+      <Item value="neurons" priority="11" />
+      <Item value="List&lt;NeuronDescription&gt;" priority="2" />
+      <Item value="synapses" priority="0" />
+      <Item value="List&lt;SynapseDescription&gt;" priority="1" />
+      <Item value="TemporalEncodedAfferentArray`0" priority="0" />
+      <Item value="_afferentArray" priority="7" />
+      <Item value="size" priority="0" />
+      <Item value="num" priority="0" />
+      <Item value="NeuronDescription" priority="14" />
+      <Item value="neuronCount" priority="1" />
+      <Item value="switch" priority="0" />
+      <Item value="case" priority="1" />
+      <Item value="break" priority="0" />
+      <Item value="_neurons" priority="39" />
+      <Item value="_predefinedNeuronClasses" priority="5" />
+      <Item value="EvolvableNeuralNetwork" priority="6" />
+      <Item value="childNetwork" priority="3" />
+      <Item value="_synapses" priority="23" />
+      <Item value="clone" priority="12" />
+      <Item value="Dictionary" priority="11" />
+      <Item value="Take`1" priority="0" />
+      <Item value="Skip`1" priority="0" />
+      <Item value="outputNeuron" priority="0" />
+      <Item value="_neuronId" priority="3" />
+      <Item value="neuronId" priority="9" />
+      <Item value="ArgumentException" priority="0" />
+      <Item value="HashSet&lt;int&gt;" priority="4" />
+      <Item value="from" priority="4" />
+      <Item value="select" priority="2" />
+      <Item value="newParent" priority="1" />
+      <Item value="GetLowerBound`0" priority="0" />
+      <Item value="otherParentNeurons" priority="0" />
+      <Item value="newNeuronSet" priority="2" />
+      <Item value="childNet" priority="6" />
+      <Item value="commonNeurons" priority="0" />
+      <Item value="Dictionary&lt;int,NeuronClass&gt;" priority="0" />
+      <Item value="Dictionary&lt;int,SynapseDescription&gt;" priority="3" />
+      <Item value="outputNeurons" priority="4" />
+      <Item value="AddNeuron`0" priority="0" />
+      <Item value="neuronCounter" priority="0" />
+      <Item value="NeuronCount" priority="0" />
+      <Item value="enum" priority="0" />
+      <Item value="NeuronType`0" priority="9" />
+      <Item value="_type" priority="4" />
+      <Item value="type" priority="0" />
+      <Item value="id" priority="0" />
+      <Item value="_neuronParams" priority="11" />
+      <Item value="InputNeuron" priority="4" />
+      <Item value="NeuronParameters`0" priority="24" />
+      <Item value="neuronParameters" priority="3" />
+      <Item value="NeuronParameters" priority="10" />
+      <Item value="InterNeurons" priority="1" />
+      <Item value="_neuronCount" priority="1" />
+      <Item value="numNeuronClasses" priority="1" />
+      <Item value="Type" priority="1" />
+      <Item value="NeuronId" priority="0" />
+      <Item value="NeuronParams" priority="0" />
+      <Item value="extraParent" priority="12" />
+      <Item value="_synapseId" priority="0" />
+      <Item value="HashSet&lt;NeuronDescription&gt;" priority="1" />
+      <Item value="HashSet&lt;SynapseDescription&gt;" priority="0" />
+      <Item value="sharedNeurons" priority="5" />
+      <Item value="recombineNeuronList`0" priority="1" />
+      <Item value="Dictionary&lt;int,NeuronDescription&gt;" priority="2" />
+      <Item value="kvp" priority="27" />
+      <Item value="neuron1" priority="3" />
+      <Item value="neuron2" priority="1" />
+      <Item value="pRec" priority="2" />
+      <Item value="TKey`0" priority="3" />
+      <Item value="TValue`0" priority="6" />
+      <Item value="where" priority="7" />
+      <Item value="Dictionary&lt;TKey,TValue&gt;" priority="0" />
+      <Item value="original" priority="3" />
+      <Item value="KeyValuePair" priority="7" />
+      <Item value="ret" priority="1" />
+      <Item value="entry" priority="1" />
+      <Item value="SynapseDescription" priority="3" />
+      <Item value="_postsynapticNeuron" priority="1" />
+      <Item value="_presynapticNeuron" priority="1" />
+      <Item value="_learningParameters" priority="1" />
+      <Item value="uniqueNeurons" priority="0" />
+      <Item value="numInputs" priority="4" />
+      <Item value="numOutputs" priority="6" />
+      <Item value="MaxInputs" priority="7" />
+      <Item value="MaxOutputs" priority="8" />
+      <Item value="neuronClass" priority="0" />
+      <Item value="parameters" priority="5" />
+      <Item value="PresynapticNeuron" priority="0" />
+      <Item value="synapseId" priority="3" />
+      <Item value="synapse1" priority="4" />
+      <Item value="synapse2" priority="1" />
+      <Item value="Collections" priority="5" />
+      <Item value="ObjectModel" priority="2" />
+      <Item value="Collection&lt;Synapse&gt;" priority="0" />
+      <Item value="_pendingNeuronConnections" priority="1" />
+      <Item value="A2Negative" priority="3" />
+      <Item value="A2Positive" priority="2" />
+      <Item value="A3Negative" priority="2" />
+      <Item value="A3Positive" priority="2" />
+      <Item value="TauNegative" priority="2" />
+      <Item value="TauPositive" priority="2" />
+      <Item value="oldParams" priority="0" />
+      <Item value="_neuronParamVariances" priority="0" />
+      <Item value="newParams" priority="4" />
+      <Item value="_stdpVariances" priority="0" />
+      <Item value="LearningParameters" priority="4" />
+      <Item value="maxNeuronDeletions" priority="0" />
+      <Item value="maxSynapseDeletions" priority="1" />
+      <Item value="maxNeuronAdditions" priority="0" />
+      <Item value="maxSynapseAdditions" priority="0" />
+      <Item value="synapsesAdded" priority="2" />
+      <Item value="AxonalDelay" priority="5" />
+      <Item value="axonalDelay" priority="8" />
+      <Item value="axonalDelayMutationVariance" priority="2" />
+      <Item value="axonalDelayVariance" priority="1" />
+      <Item value="keys" priority="11" />
+      <Item value="presynapticNeuron" priority="2" />
+      <Item value="_synapseCount" priority="1" />
+      <Item value="maxInitDelayVariance" priority="0" />
+      <Item value="PredefinedSynapseTypes" priority="3" />
+      <Item value="numSynapsesSelectForDeletion" priority="0" />
+      <Item value="rta" priority="0" />
+      <Item value="synapsesToDelete" priority="3" />
+      <Item value="neuronsToDelete" priority="3" />
+      <Item value="neuronIds" priority="3" />
+      <Item value="synapseIDs" priority="0" />
+      <Item value="initPopulation" priority="4" />
+      <Item value="EvolutionEngine&lt;EvolvableNeuralNetwork&gt;" priority="0" />
+      <Item value="List&lt;EvolvableNeuralNetwork&gt;" priority="0" />
+      <Item value="evol" priority="2" />
+      <Item value="evaluatingFitness" priority="0" />
+      <Item value="Dictionary&lt;int,Neuron&gt;" priority="0" />
+      <Item value="SortedDictionary" priority="0" />
+      <Item value="SortedDictionary&lt;int,TemporalEncodedAfferent&gt;" priority="0" />
+      <Item value="inputs" priority="0" />
+      <Item value="TimeSlice" priority="0" />
+      <Item value="ThreadPriorityLevel`0" priority="1" />
+      <Item value="List&lt;Task&lt;double&gt;&gt;" priority="0" />
+      <Item value="taskList" priority="0" />
+      <Item value="Task`0" priority="1" />
+      <Item value="List&lt;Tuple&lt;T,Task&lt;double&gt;&gt;&gt;" priority="0" />
+      <Item value="Dictionary&lt;T,Task&lt;double&gt;&gt;" priority="0" />
+      <Item value="taskDictionary" priority="2" />
+      <Item value="solution" priority="3" />
+      <Item value="List&lt;Tuple&lt;double,T&gt;&gt;" priority="0" />
+      <Item value="Tuple&lt;double,T&gt;" priority="0" />
+      <Item value="GaObject" priority="2" />
+      <Item value="IChromosome`0" priority="4" />
+      <Item value="TGraph`0" priority="5" />
+      <Item value="Graph" priority="6" />
+      <Item value="GraphBase`0" priority="2" />
+      <Item value="Graph`0" priority="4" />
+      <Item value="GraphChromosome" priority="15" />
+      <Item value="_geneNetwork" priority="1" />
+      <Item value="_vertices" priority="10" />
+      <Item value="SortedList&lt;int,object&gt;" priority="0" />
+      <Item value="_edges" priority="5" />
+      <Item value="TypeLoadException`0" priority="0" />
+      <Item value="SortedList&lt;int,Tuple&lt;int,int&gt;&gt;" priority="1" />
+      <Item value="protected" priority="5" />
+      <Item value="genes" priority="0" />
+      <Item value="otherChromosome" priority="3" />
+      <Item value="as" priority="3" />
+      <Item value="IChromosome" priority="2" />
+      <Item value="IChromosomeMetaData`0" priority="0" />
+      <Item value="ElitismSelection" priority="5" />
+      <Item value="ValueChromosome" priority="3" />
+      <Item value="VertexNode`0" priority="2" />
+      <Item value="EdgeNode`0" priority="2" />
+      <Item value="TVertexData`0" priority="0" />
+      <Item value="TEdgeData`0" priority="1" />
+      <Item value="EdgeNode" priority="0" />
+      <Item value="IMutator`0" priority="4" />
+      <Item value="ValueChromosomeBase" priority="0" />
+      <Item value="_genes" priority="20" />
+      <Item value="initialValues" priority="7" />
+      <Item value="FixedLengthChromosome" priority="4" />
+      <Item value="extraChromosome" priority="14" />
+      <Item value="Pure" priority="0" />
+      <Item value="extraGenes" priority="3" />
+      <Item value="newGenes" priority="6" />
+      <Item value="CreateChromosome`0" priority="1" />
+      <Item value="RealChromosome`0" priority="3" />
+      <Item value="geneData" priority="3" />
+      <Item value="Genes" priority="5" />
+      <Item value="g" priority="0" />
+      <Item value="clonedGenes" priority="0" />
+      <Item value="_currentGeneration" priority="0" />
+      <Item value="ArgumentOutOfRangeException`0" priority="0" />
+      <Item value="DenseMatrixBase" priority="0" />
+      <Item value="TMatrixType`0" priority="0" />
+      <Item value="Collection&lt;int&gt;" priority="0" />
+      <Item value="ColIndices" priority="1" />
+      <Item value="TValueType`0" priority="7" />
+      <Item value="_colStart" priority="0" />
+      <Item value="ContractVerification" priority="18" />
+      <Item value="SortedList&lt;int,GraphVertex&gt;" priority="0" />
+      <Item value="SortedList&lt;int,GraphEdge&gt;" priority="0" />
+      <Item value="populationFitness" priority="15" />
+      <Item value="obj" priority="19" />
+      <Item value="_elitismSelection" priority="2" />
+      <Item value="OffspringPerGeneration" priority="2" />
+      <Item value="_offspringPerGeneration" priority="1" />
+      <Item value="DBNull`0" priority="0" />
+      <Item value="genome1" priority="1" />
+      <Item value="genome2" priority="1" />
+      <Item value="_genome" priority="0" />
+      <Item value="StaticRandom`0" priority="13" />
+      <Item value="parentsToSelect" priority="1" />
+      <Item value="minFitness" priority="3" />
+      <Item value="fitness" priority="1" />
+      <Item value="result" priority="0" />
+      <Item value="aggregateFitness" priority="0" />
+      <Item value="parents" priority="2" />
+      <Item value="IList" priority="1" />
+      <Item value="obj1" priority="0" />
+      <Item value="obj2" priority="0" />
+      <Item value="parentSelected" priority="5" />
+      <Item value="runningFitnessTotal" priority="0" />
+      <Item value="IChromosomeContract`0" priority="0" />
+      <Item value="sourceMatrix" priority="5" />
+      <Item value="columns" priority="4" />
+      <Item value="columnStart" priority="2" />
+      <Item value="length" priority="0" />
+      <Item value="lhs" priority="3" />
+      <Item value="rhs" priority="3" />
+      <Item value="RowStart" priority="0" />
+      <Item value="RowPtrs" priority="2" />
+      <Item value="RowEnd" priority="1" />
+      <Item value="rowStart" priority="0" />
+      <Item value="rows" priority="1" />
+      <Item value="ColumnStart" priority="0" />
+      <Item value="ColStart" priority="0" />
+      <Item value="base" priority="10" />
+      <Item value="SpikingNetChromosome`0" priority="0" />
+      <Item value="SpikingNetGraph`0" priority="11" />
+      <Item value="Generic" priority="1" />
+      <Item value="IFitnessSelectorContract" priority="1" />
+      <Item value="numInput" priority="0" />
+      <Item value="_inputVertices" priority="14" />
+      <Item value="AddVertex`0" priority="3" />
+      <Item value="_outputVertices" priority="11" />
+      <Item value="_neuronParameters" priority="10" />
+      <Item value="vertexId" priority="0" />
+      <Item value="GenerateNeuronParameters`0" priority="1" />
+      <Item value="ChromosomalGraph" priority="4" />
+      <Item value="IGraphInitialiser" priority="0" />
+      <Item value="TGraph" priority="1" />
+      <Item value="_random" priority="0" />
+      <Item value="NormalRandomGenerator" priority="0" />
+      <Item value="Chromosome" priority="5" />
+      <Item value="GraphChromosome&lt;SpikingNetGraph&gt;" priority="0" />
+      <Item value="SpikingNetGraph" priority="1" />
+      <Item value="initGraph" priority="5" />
+      <Item value="ReadOnlyCollection" priority="6" />
+      <Item value="inputVertices" priority="6" />
+      <Item value="outputVertices" priority="6" />
+      <Item value="ReadOnlyCollection&lt;int&gt;" priority="3" />
+      <Item value="is" priority="0" />
+      <Item value="_synapseParameters" priority="7" />
+      <Item value="PredefinedNeuronTypes" priority="1" />
+      <Item value="Dictionary&lt;int,NeuronParameters&gt;" priority="0" />
+      <Item value="Dictionary&lt;int,StdpParameters&gt;" priority="0" />
+      <Item value="chromosome" priority="1" />
+      <Item value="NeuronMutationVariances" priority="5" />
+      <Item value="nguid" priority="0" />
+      <Item value="neuronParams" priority="4" />
+      <Item value="STDPTestForm`0" priority="0" />
+      <Item value="learningParams" priority="4" />
+      <Item value="Specialized" priority="0" />
+      <Item value="OrderedDictionary`0" priority="0" />
+      <Item value="Parameters" priority="0" />
+      <Item value="Wolfram.NETLink" priority="0" />
+      <Item value="_evolutionThread" priority="1" />
+      <Item value="_evolEngine" priority="1" />
+      <Item value="numGenerations" priority="3" />
+      <Item value="vertices" priority="0" />
+      <Item value="ImmortalVertices" priority="0" />
+      <Item value="_immortalVertices" priority="0" />
+      <Item value="TVectorType`0" priority="0" />
+      <Item value="dimension" priority="5" />
+      <Item value="MaxRows" priority="2" />
+      <Item value="MaxColumns" priority="2" />
+      <Item value="ValuesData" priority="6" />
+      <Item value="Rows" priority="10" />
+      <Item value="element" priority="0" />
+      <Item value="parents2" priority="0" />
+      <Item value="VertexIdCounter" priority="0" />
+      <Item value="TChromosome`0" priority="8" />
+      <Item value="TObject`0" priority="1" />
+      <Item value="GaObjectContract" priority="0" />
+      <Item value="ml" priority="0" />
+      <Item value="Message`0" priority="0" />
+      <Item value="MessageBoxButtons`0" priority="0" />
+      <Item value="mathPictureBox1" priority="0" />
+      <Item value="outputTB" priority="0" />
+      <Item value="RealChromosome" priority="0" />
+      <Item value="childChromosome" priority="8" />
+      <Item value="TValue" priority="0" />
+      <Item value="VectorType`0" priority="1" />
+      <Item value="str" priority="6" />
+      <Item value="OpMultiply" priority="0" />
+      <Item value="edgeList1" priority="1" />
+      <Item value="_rowPtrs" priority="5" />
+      <Item value="row" priority="0" />
+      <Item value="_values" priority="9" />
+      <Item value="_colIndices" priority="0" />
+      <Item value="Columns" priority="7" />
+      <Item value="retVec" priority="0" />
+      <Item value="retVector" priority="0" />
+      <Item value="_parameters" priority="2" />
+      <Item value="firstRowIdx" priority="1" />
+      <Item value="lastRowIdx" priority="0" />
+      <Item value="ContainsEdge`0" priority="2" />
+      <Item value="edgeId" priority="5" />
+      <Item value="ContainsVertex`0" priority="3" />
+      <Item value="retChrom" priority="1" />
+      <Item value="edges" priority="2" />
+      <Item value="edgeKey" priority="0" />
+      <Item value="ICollection" priority="3" />
+      <Item value="edge" priority="0" />
+      <Item value="extraGraph" priority="2" />
+      <Item value="edgeIdx" priority="0" />
+      <Item value="_b" priority="0" />
+      <Item value="_c" priority="0" />
+      <Item value="_d" priority="0" />
+      <Item value="_I" priority="0" />
+      <Item value="arraySize" priority="2" />
+      <Item value="_arraySize" priority="2" />
+      <Item value="presynapticNeuronIndex" priority="3" />
+      <Item value="GeneticAlgorithm`0" priority="0" />
+      <Item value="Add`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Decimal">
+      <Item value="ToDouble`0" priority="1" />
+      <Item value="ToInt32`0" priority="4" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.NumericUpDown">
+      <Item value="Value" priority="7" />
+      <Item value="Enabled" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ComboBox">
+      <Item value="SelectedItem" priority="1" />
+      <Item value="Items" priority="0" />
+      <Item value="SelectedIndex" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Diagnostics.Contracts.Contract">
+      <Item value="Requires`1" priority="358" />
+      <Item value="ForAll`1" priority="24" />
+      <Item value="Assume`0" priority="169" />
+      <Item value="Invariant`0" priority="83" />
+      <Item value="EndContractBlock`0" priority="0" />
+      <Item value="Ensures`0" priority="41" />
+      <Item value="Result`1" priority="27" />
+      <Item value="Assert`0" priority="23" />
+      <Item value="OldValue`1" priority="7" />
+      <Item value="ForAll`0" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Threading.Thread">
+      <Item value="CurrentThread" priority="2" />
+      <Item value="Sleep`0" priority="6" />
+      <Item value="VolatileWrite`0" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Threading.Thread">
+      <Item value="Name" priority="0" />
+      <Item value="ManagedThreadId" priority="0" />
+      <Item value="Start`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SpikingLibrary.SchedulerSlot">
+      <Item value="EventTimeIdx" priority="0" />
+      <Item value="EventBin" priority="2" />
+      <Item value="IdxInBin" priority="1" />
+      <Item value="IsValid" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
+      <Item value="RemoveAt`0" priority="0" />
+      <Item value="Clear`0" priority="36" />
+      <Item value="Add`0" priority="35" />
+      <Item value="Remove`0" priority="1" />
+      <Item value="Count" priority="32" />
+      <Item value="AddRange`0" priority="3" />
+      <Item value="AsEnumerable`1" priority="0" />
+      <Item value="First`1" priority="1" />
+      <Item value="Take`1" priority="2" />
+      <Item value="ToArray`0" priority="0" />
+      <Item value="Select`2" priority="2" />
+      <Item value="Find`0" priority="0" />
+      <Item value="Contains`0" priority="2" />
+      <Item value="Sum`1" priority="0" />
+      <Item value="Sort`0" priority="1" />
+      <Item value="Union`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MathLib.Statistics.INumberGenerator">
+      <Item value="Int32Number" priority="3" />
+      <Item value="Number" priority="5" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ComboBox+ObjectCollection">
+      <Item value="Add`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SpikingLibrary.Neuron">
+      <Item value="NeuronFired" priority="32" />
+      <Item value="ResetNeuron`0" priority="0" />
+      <Item value="AddAxonalSynapse`0" priority="4" />
+      <Item value="AddDendriticSynapse`0" priority="15" />
+      <Item value="V" priority="3" />
+      <Item value="U" priority="1" />
+      <Item value="Id" priority="0" />
+      <Item value="ConnectTo`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SpikingLibrary.NeuralNetwork">
+      <Item value="Add`0" priority="2" />
+      <Item value="ClockDrivenExecution" priority="2" />
+      <Item value="Start`0" priority="3" />
+      <Item value="Simulate`0" priority="4" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SpikingLibrary.NeuronFiredEventArgs">
+      <Item value="Time" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.TextBox">
+      <Item value="Clear`0" priority="1" />
+      <Item value="AppendText`0" priority="3" />
+      <Item value="Text" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@SpikingLibrary.NeuralNetwork">
+      <Item value="IsRunning" priority="3" />
+      <Item value="Stop`0" priority="6" />
+      <Item value="dt" priority="1" />
+      <Item value="SlowDown" priority="2" />
+      <Item value="Pause`0" priority="1" />
+      <Item value="Slowdown" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SpikingLibTest.CompareModesForm">
+      <Item value="Invoke`0" priority="0" />
+      <Item value="BeginInvoke`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SpikingLibrary.Scheduler">
+      <Item value="ScheduleEvent`0" priority="9" />
+      <Item value="Pause`0" priority="1" />
+      <Item value="IsRunning" priority="31" />
+      <Item value="Stop`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.ComponentModel.AsyncOperationManager">
+      <Item value="CreateOperation`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SpikingLibrary.NeuronProbe">
+      <Item value="OnNeuronProbed`0" priority="0" />
+      <Item value="onNeuronProbedDelegate" priority="1" />
+      <Item value="NeuronProbed" priority="4" />
+      <Item value="Target" priority="2" />
+      <Item value="UpdateInterval" priority="2" />
+      <Item value="Stop`0" priority="2" />
+      <Item value="NeuronType" priority="1" />
+      <Item value="U" priority="0" />
+      <Item value="ChangeNeuronType`0" priority="5" />
+      <Item value="ChangeU`0" priority="0" />
+      <Item value="ChangeV`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SpikingLibrary.NeuronProbeUpdateEventArgs">
+      <Item value="U" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SpikingLibrary.Synapse">
+      <Item value="Efficacy" priority="0" />
+      <Item value="CleanTimeStamp`0" priority="1" />
+      <Item value="Weight" priority="3" />
+      <Item value="AxonalDelay" priority="1" />
+      <Item value="PostsynapticNeuron" priority="11" />
+      <Item value="ResetStdp`0" priority="0" />
+      <Item value="ActivateSynapse`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Threading.Interlocked">
+      <Item value="Exchange`1" priority="0" />
+      <Item value="Read`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Threading.EventWaitHandle">
+      <Item value="Dispose`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.Button">
+      <Item value="Text" priority="4" />
+      <Item value="Enabled" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SpikingLibTest.FirstNetwork">
+      <Item value="Visible" priority="0" />
+      <Item value="WindowState" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SpikingLibrary.NeuronDisplayControl">
+      <Item value="WindowTarget" priority="1" />
+      <Item value="Target" priority="4" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Drawing.Color">
+      <Item value="Red" priority="1" />
+      <Item value="Black" priority="0" />
+      <Item value="Blue" priority="4" />
+      <Item value="Green" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SpikingLibrary.SynapseProbe">
+      <Item value="SynapseProbed" priority="10" />
+      <Item value="UpdateInterval" priority="0" />
+      <Item value="Start`0" priority="9" />
+      <Item value="Stop`0" priority="1" />
+      <Item value="Weight" priority="0" />
+      <Item value="GetWeight`0" priority="1" />
+      <Item value="SetAxonalDelay`0" priority="1" />
+      <Item value="SetWeight`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SpikingLibrary.SynapseProbeUpdateEventArgs">
+      <Item value="Efficacy" priority="2" />
+      <Item value="Time" priority="3" />
+      <Item value="Weight" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.Form">
+      <Item value="Show`0" priority="0" />
+      <Item value="ShowDialog`0" priority="9" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SpikingLibrary.PeriodicInputSignal">
+      <Item value="ConnectTo`0" priority="6" />
+      <Item value="Periodicity" priority="2" />
+      <Item value="Start`0" priority="3" />
+      <Item value="Stop`0" priority="1" />
+      <Item value="PeriodicInputFinished" priority="0" />
+      <Item value="ClearInjectionTimes`0" priority="1" />
+      <Item value="AddInjectionTime`0" priority="3" />
+      <Item value="MaxInputCycles" priority="0" />
+      <Item value="SetSpikeTimings`0" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SpikingLibrary.NeuronCollection">
+      <Item value="UnionWith`0" priority="3" />
+      <Item value="Add`0" priority="31" />
+      <Item value="Clear`0" priority="1" />
+      <Item value="_neuronSet" priority="0" />
+      <Item value="NeuronFired" priority="1" />
+      <Item value="Remove`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SpikingLibrary.SynapseDisplayControl">
+      <Item value="Target" priority="1" />
+      <Item value="SampleInterval" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Math">
+      <Item value="Exp`0" priority="3" />
+      <Item value="Round`0" priority="0" />
+      <Item value="Ceiling`0" priority="0" />
+      <Item value="Floor`0" priority="0" />
+      <Item value="Abs`0" priority="8" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SpikingLibrary.ISynapseFactory">
+      <Item value="CreateSynapse`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SpikingLibrary.StdpParameters">
+      <Item value="A2Neg" priority="1" />
+      <Item value="A2Pos" priority="1" />
+      <Item value="A3Neg" priority="0" />
+      <Item value="A3Pos" priority="0" />
+      <Item value="A2Positive" priority="3" />
+      <Item value="A3Positive" priority="1" />
+      <Item value="A2Negative" priority="2" />
+      <Item value="A3Negative" priority="1" />
+      <Item value="TauX" priority="2" />
+      <Item value="TauY" priority="2" />
+      <Item value="TauPositive" priority="2" />
+      <Item value="TauNegative" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@SpikingLibrary.StdpParameters">
+      <Item value="RatVisualCortexL5" priority="0" />
+      <Item value="RatVisualCortexL23" priority="7" />
+      <Item value="HippocampalCulture" priority="37" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Diagnostics.Stopwatch">
+      <Item value="StartNew`0" priority="0" />
+      <Item value="GetTimestamp`0" priority="0" />
+      <Item value="Frequency" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Diagnostics.Stopwatch">
+      <Item value="Reset`0" priority="1" />
+      <Item value="Start`0" priority="1" />
+      <Item value="ElapsedTicks" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.TrackBar">
+      <Item value="Minimum" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ZedGraph.GraphPane">
+      <Item value="XAxis" priority="24" />
+      <Item value="CurveList" priority="7" />
+      <Item value="AddCurve`0" priority="4" />
+      <Item value="AddBar`0" priority="2" />
+      <Item value="YAxis" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ZedGraph.XAxis">
+      <Item value="Scale" priority="21" />
+      <Item value="Type" priority="1" />
+      <Item value="ScaleFormatEvent" priority="0" />
+      <Item value="Title" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ZedGraph.Scale">
+      <Item value="Format" priority="2" />
+      <Item value="MajorUnit" priority="0" />
+      <Item value="Max" priority="6" />
+      <Item value="Min" priority="5" />
+      <Item value="FormatAuto" priority="0" />
+      <Item value="MaxGrace" priority="0" />
+      <Item value="MinGrace" priority="0" />
+      <Item value="TextLabels" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@ZedGraph.XDate">
+      <Item value="MinutesPerHour" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ZedGraph.CurveList">
+      <Item value="Clear`0" priority="1" />
+      <Item value="Count" priority="0" />
+      <Item value="Add`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ZedGraph.ZedGraphControl">
+      <Item value="AxisChange`0" priority="6" />
+      <Item value="Refresh`0" priority="9" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ZedGraph.CurveItem">
+      <Item value="Clear`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ZedGraph.PointPair">
+      <Item value="X" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Int32">
+      <Item value="ToString`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ZedGraph.PointPairList">
+      <Item value="Add`0" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.Application">
+      <Item value="DoEvents`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Int32">
+      <Item value="MaxValue" priority="25" />
+      <Item value="MinValue" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@SpikingLibrary.NeuralNetworkEngine">
+      <Item value="Scheduler" priority="1" />
+      <Item value="IsRunning" priority="1" />
+      <Item value="Start`0" priority="4" />
+      <Item value="SlowNeuralEngine`0" priority="5" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.ComponentModel.AsyncOperation">
+      <Item value="Post`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@SpikingLibrary.NeuronProbe+PendingUpdatesScheduled">
+      <Item value="ClassUpdateScheduled" priority="4" />
+      <Item value="VChangeScheduled" priority="2" />
+      <Item value="UChangeScheduled" priority="1" />
+      <Item value="IncrementScheduled" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SpikingLibrary.NeuronProbe+PendingUpdatesScheduled">
+      <Item value="HasFlag`0" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@SpikingLibrary.SpikingNetEngine">
+      <Item value="Add`0" priority="5" />
+      <Item value="Start`0" priority="8" />
+      <Item value="IsRunning" priority="3" />
+      <Item value="Scheduler" priority="4" />
+      <Item value="Pause`0" priority="1" />
+      <Item value="Resume`0" priority="1" />
+      <Item value="Stop`0" priority="5" />
+      <Item value="SlowNeuralEngine`0" priority="0" />
+      <Item value="CreateNeuron`0" priority="12" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.HashSet`1">
+      <Item value="Add`0" priority="5" />
+      <Item value="UnionWith`0" priority="2" />
+      <Item value="GetEnumerator`0" priority="1" />
+      <Item value="Clear`0" priority="0" />
+      <Item value="Remove`0" priority="27" />
+      <Item value="Intersect`1" priority="0" />
+      <Item value="Contains`0" priority="4" />
+      <Item value="Union`1" priority="0" />
+      <Item value="Count" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SpikingLibrary.NeuronCollectionFiringEventArgs">
+      <Item value="FiringNeuron" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Tuple`2">
+      <Item value="Item1" priority="10" />
+      <Item value="Item2" priority="23" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Util.IDeepCloneable`1">
+      <Item value="DeepClone`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MathLib.Matrices.Vector">
+      <Item value="DeepClone`0" priority="0" />
+      <Item value="Rows" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MathLib.Matrices.SparseVector`1">
+      <Item value="DeepClone`0" priority="4" />
+      <Item value="Columns" priority="0" />
+      <Item value="Rows" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MathLib.Matrices.SparseMatrixBase`3">
+      <Item value="DeepClone`0" priority="4" />
+      <Item value="ColStart" priority="1" />
+      <Item value="Columns" priority="0" />
+      <Item value="Rows" priority="0" />
+      <Item value="RowStart" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Int64">
+      <Item value="MinValue" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Diagnostics.Debug">
+      <Item value="Write`0" priority="2" />
+      <Item value="Listeners" priority="0" />
+      <Item value="WriteLine`0" priority="1" />
+      <Item value="Assert`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Diagnostics.TraceListenerCollection">
+      <Item value="Add`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Diagnostics.TextWriterTraceListener">
+      <Item value="Flush`0" priority="0" />
+      <Item value="Close`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SpikingLibrary.SpikingNetTimeNotifier">
+      <Item value="Notification" priority="1" />
+      <Item value="CreateNotification`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ZedGraph.AxisLabel">
+      <Item value="Text" priority="4" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ZedGraph.YAxis">
+      <Item value="Title" priority="2" />
+      <Item value="Tag" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ZedGraph.LineItem">
+      <Item value="Line" priority="4" />
+      <Item value="Symbol" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ZedGraph.Line">
+      <Item value="DashOn" priority="1" />
+      <Item value="Style" priority="0" />
+      <Item value="Width" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@ZedGraph.SymbolType">
+      <Item value="None" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ZedGraph.Symbol">
+      <Item value="IsVisible" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.EventArgs">
+      <Item value="Empty" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@SpikingLibTest.PairProtocol">
+      <Item value="UpdateEvent" priority="0" />
+      <Item value="RhoMax" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SpikingLibrary.IInputSource">
+      <Item value="Start`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@SpikingLibrary.InputSources">
+      <Item value="SynchroniseInputSources`0" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@SpikingLibTest.QuadrupletProtocol">
+      <Item value="UpdateEvent" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@SpikingLibTest.PrePostPreTipletProtocol">
+      <Item value="UpdateEvent" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MathLib.Matrices.ComplexMatrix">
+      <Item value="DeepClone`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MathLib.Matrices.ComplexVector">
+      <Item value="DeepClone`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@SpikingLibrary.InputSignal">
+      <Item value="SynchronizeInputSignals`0" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.IEnumerable`1">
+      <Item value="ToList`1" priority="5" />
+      <Item value="Take`1" priority="0" />
+      <Item value="Select`2" priority="4" />
+      <Item value="ToArray`1" priority="1" />
+      <Item value="Except`1" priority="0" />
+      <Item value="ToDictionary`3" priority="0" />
+      <Item value="Where`1" priority="0" />
+      <Item value="Sum`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@SpikingLibrary.NeuronClass">
+      <Item value="PhasicSpiking" priority="7" />
+      <Item value="Accommodation" priority="3" />
+      <Item value="Bistability" priority="0" />
+      <Item value="Class1" priority="0" />
+      <Item value="Class2" priority="0" />
+      <Item value="DAP" priority="0" />
+      <Item value="InhibitionInducedBursting" priority="0" />
+      <Item value="InhibitionInducedSpiking" priority="0" />
+      <Item value="Integrator" priority="0" />
+      <Item value="MixedMode" priority="0" />
+      <Item value="PhasicBursting" priority="0" />
+      <Item value="ReboundBurst" priority="0" />
+      <Item value="ReboundSpike" priority="0" />
+      <Item value="Resonator" priority="0" />
+      <Item value="SpikeFreqAdaptation" priority="0" />
+      <Item value="SpikeLatency" priority="0" />
+      <Item value="SubthresholdOscillation" priority="0" />
+      <Item value="ThresholdVariability" priority="0" />
+      <Item value="TonicBursting" priority="0" />
+      <Item value="TonicSpiking" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SpikingLibrary.NeuronClass">
+      <Item value="A" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Convert">
+      <Item value="ToDecimal`0" priority="0" />
+      <Item value="ToInt32`0" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Double">
+      <Item value="ToString`0" priority="1" />
+      <Item value="CompareTo`0" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Double">
+      <Item value="Parse`0" priority="0" />
+      <Item value="MaxValue" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SpikingLibrary.TemporalEncodedAfferent">
+      <Item value="ConnectTo`0" priority="0" />
+      <Item value="Axon" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Random">
+      <Item value="Next`0" priority="19" />
+      <Item value="NextDouble`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SpikingLibrary.TimeDelayNotification">
+      <Item value="Notification" priority="0" />
+      <Item value="CreateNotification`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SpikingLibTest.EvolvableNeuralNetwork">
+      <Item value="_neurons" priority="18" />
+      <Item value="_synapses" priority="5" />
+      <Item value="Recombine`0" priority="0" />
+      <Item value="NetworkStructure" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SpikingLibTest.NeuronDescription">
+      <Item value="_neuronId" priority="4" />
+      <Item value="_neuronType" priority="0" />
+      <Item value="NeuronId" priority="3" />
+      <Item value="Type" priority="11" />
+      <Item value="ShallowClone`0" priority="1" />
+      <Item value="NeuronParams" priority="6" />
+      <Item value="DeepClone`0" priority="1" />
+      <Item value="SetParameters`0" priority="0" />
+      <Item value="Parameters" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.Dictionary`2">
+      <Item value="Add`0" priority="10" />
+      <Item value="Keys" priority="9" />
+      <Item value="AddRange`0" priority="0" />
+      <Item value="Count" priority="3" />
+      <Item value="Comparer" priority="0" />
+      <Item value="DeepClone`2" priority="0" />
+      <Item value="ContainsKey`0" priority="4" />
+      <Item value="Union`1" priority="0" />
+      <Item value="Values" priority="7" />
+      <Item value="Remove`0" priority="4" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@SpikingLibTest.NeuronType">
+      <Item value="OutputNeuron" priority="2" />
+      <Item value="InterNeurons" priority="1" />
+      <Item value="InputNeuron" priority="6" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.KeyValuePair`2">
+      <Item value="NeuronId" priority="0" />
+      <Item value="Key" priority="7" />
+      <Item value="Value" priority="13" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SpikingLibrary.NeuronParameters">
+      <Item value="A" priority="8" />
+      <Item value="B" priority="4" />
+      <Item value="C" priority="4" />
+      <Item value="D" priority="4" />
+      <Item value="I" priority="5" />
+      <Item value="Label" priority="0" />
+      <Item value="DeepClone`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:">
+      <Item value="DeepClone`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SpikingLibTest.SynapseDescription">
+      <Item value="_postsynapticNeuron" priority="0" />
+      <Item value="_presynapticNeuron" priority="0" />
+      <Item value="_learningParameters" priority="0" />
+      <Item value="PostsynapticNeuron" priority="6" />
+      <Item value="PresynapticNeuron" priority="5" />
+      <Item value="LearningParameters" priority="5" />
+      <Item value="AxonalDelay" priority="7" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@SpikingLibrary.NeuronParameters">
+      <Item value="PhasicSpiking" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.Dictionary`2+KeyCollection">
+      <Item value="ToList`1" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MathLib.Evolution.EvolutionEngine`1">
+      <Item value="SelectFromParents" priority="0" />
+      <Item value="Evolve`0" priority="1" />
+      <Item value="NewGenerationCreated" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.SortedDictionary`2">
+      <Item value="Add`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Threading.Tasks.Task">
+      <Item value="Factory" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Threading.Tasks.TaskFactory">
+      <Item value="StartNew`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:T">
+      <Item value="Fitness`0" priority="0" />
+      <Item value="Mutate`0" priority="0" />
+      <Item value="DeepClone`0" priority="0" />
+      <Item value="IsCompatibleWith`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Threading.Tasks.Task`1">
+      <Item value="Result" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MathLib.Graph.Graph">
+      <Item value="_vertices" priority="0" />
+      <Item value="_edges" priority="2" />
+      <Item value="VertexAddedEvent" priority="0" />
+      <Item value="VertexRemovedEvent" priority="0" />
+      <Item value="EdgeAddedEvent" priority="0" />
+      <Item value="EdgeRemovedEvent" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.SortedList`2">
+      <Item value="Count" priority="1" />
+      <Item value="Add`0" priority="1" />
+      <Item value="Keys" priority="4" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MathLib.Evolution.IChromosome">
+      <Item value="GetType`0" priority="1" />
+      <Item value="IsCompatibleWith`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MathLib.Evolution.FixedLengthChromosome`1">
+      <Item value="GetType`0" priority="1" />
+      <Item value="_genes" priority="1" />
+      <Item value="IsCompatibleWith`0" priority="1" />
+      <Item value="Length" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Type">
+      <Item value="IsAssignableFrom`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.ObjectModel.Collection`1">
+      <Item value="Count" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.ICollection`1">
+      <Item value="Count" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.IList`1">
+      <Item value="Count" priority="2" />
+      <Item value="First`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Util.StaticRandom">
+      <Item value="NextDouble`0" priority="7" />
+      <Item value="Next`0" priority="4" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MathLib.Matrices.DenseMatrixBase`3">
+      <Item value="m_values" priority="0" />
+      <Item value="m_rowStart" priority="0" />
+      <Item value="m_columns" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:TGraph">
+      <Item value="DeepClone`0" priority="0" />
+      <Item value="CreateObject`0" priority="0" />
+      <Item value="CreateNewGraph`0" priority="1" />
+      <Item value="ContainsEdge`0" priority="1" />
+      <Item value="GetEdge`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SpikingLibTest.SpikingNetGraph">
+      <Item value="AddVertex`0" priority="4" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@MathLib.Evolution.GraphChromosome`1">
+      <Item value="ImmortalVertices" priority="3" />
+      <Item value="EdgeAdditionRate" priority="0" />
+      <Item value="VertexAdditionRate" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.ObjectModel.ReadOnlyCollection`1">
+      <Item value="Union`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MathLib.Graph.VertexChangeEventArgs">
+      <Item value="VertexId" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MathLib.Graph.EdgeChangeEventArgs">
+      <Item value="EdgeId" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MathLib.Evolution.GraphChromosome`1">
+      <Item value="ChromosomalGraph" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.MessageBox">
+      <Item value="Show`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.MessageBoxButtons">
+      <Item value="OK" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SpikingLibTest.NeuralEvolutionForm">
+      <Item value="Click" priority="0" />
+      <Item value="Close`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MathLib.Evolution.RealChromosome">
+      <Item value="_genes" priority="12" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:TValue">
+      <Item value="DeepClone`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@MathLib.Matrices.VectorType">
+      <Item value="RowVector" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:TObject">
+      <Item value="Chromosome" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Text.StringBuilder">
+      <Item value="Append`0" priority="2" />
+      <Item value="Length" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MathLib.Matrices.Vector`1">
+      <Item value="ValuesData" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:TVectorType">
+      <Item value="_values" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:TMatrixType">
+      <Item value="_values" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MathLib.Matrices.Matrix">
+      <Item value="Rows" priority="1" />
+      <Item value="ValuesData" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:TChromosome">
+      <Item value="IsCompatibleWith`0" priority="1" />
+      <Item value="Length" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.SortedSet`1">
+      <Item value="Contains`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Tuple`3">
+      <Item value="Item1" priority="81" />
+      <Item value="Item3" priority="161" />
+      <Item value="Item2" priority="107" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@MathLib.Evolution.GeneticAlgorithm">
+      <Item value="MutationRate" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="CSharpCodeCompletionContext">
+      <Item value="public" priority="63" />
+      <Item value="static" priority="31" />
+      <Item value="Neuron`0" priority="317" />
+      <Item value="void" priority="95" />
+      <Item value="Contract`0" priority="447" />
+      <Item value="parameters" priority="31" />
+      <Item value="null" priority="479" />
+      <Item value="n" priority="63" />
+      <Item value="if" priority="31" />
+      <Item value="Scheduler" priority="31" />
+      <Item value="NeuronRegister" priority="31" />
+      <Item value="neuron" priority="95" />
+      <Item value="_neuronSet" priority="31" />
+      <Item value="HandleNeuronFiredEvent`0" priority="31" />
+      <Item value="StdpParameters`0" priority="31" />
+      <Item value="new" priority="127" />
+      <Item value="List&lt;Tuple&lt;Synapse,Neuron&gt;&gt;" priority="28" />
+      <Item value="postsynapticNeuron" priority="159" />
+      <Item value="Tuple&lt;Synapse,Neuron&gt;" priority="28" />
+      <Item value="Tuple`0" priority="95" />
+      <Item value="Synapse`0" priority="126" />
+      <Item value="SpikingNetEngine`0" priority="31" />
+      <Item value="this" priority="31" />
+      <Item value="synapse" priority="95" />
+      <Item value="presynapticNeuron" priority="95" />
+      <Item value="using" priority="61" />
+      <Item value="System" priority="61" />
+      <Item value="ConsoleTraceListener`0" priority="30" />
+      <Item value="Collections" priority="26" />
+      <Item value="Generic" priority="26" />
+      <Item value="List" priority="31" />
+      <Item value="List&lt;Tuple&lt;Neuron,Neuron,Synapse&gt;&gt;" priority="28" />
+      <Item value="in" priority="31" />
+      <Item value="PendingConnections" priority="127" />
+      <Item value="connData" priority="319" />
+      <Item value="_createConnectionsScheduled" priority="31" />
+      <Item value="false" priority="31" />
+      <Item value="ContractInvariantMethod" priority="31" />
+      <Item value="private" priority="31" />
+      <Item value="t" priority="127" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>

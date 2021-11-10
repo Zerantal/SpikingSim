@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{22006E14-9D7C-4847-8111-D338AC8A41A3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SpikingLibrary.Tests</RootNamespace>
+    <AssemblyName>SpikingLibrary.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <CodeContractsEnableRuntimeChecking>True</CodeContractsEnableRuntimeChecking>
+    <CodeContractsRuntimeCheckingLevel>Full</CodeContractsRuntimeCheckingLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ExtendedReflection, Version=0.94.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Moles.Framework, Version=0.94.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Microsoft.Pex.Framework, Version=0.94.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Microsoft.Pex.Linq, Version=0.94.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="SpikingLibrary.Moles, Version=0.1.4131.31387, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="ZedGraph, Version=5.1.5.28844, Culture=neutral, PublicKeyToken=02a83cbd123fcd60, processorArchitecture=MSIL">
+      <HintPath>..\zedgraph_dll_v515\zedgraph_dll_v5.1.5\ZedGraph.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <CodeAnalysisDependentAssemblyPaths Condition=" '$(VS100COMNTOOLS)' != '' " Include="$(VS100COMNTOOLS)..\IDE\PrivateAssemblies">
+      <Visible>False</Visible>
+    </CodeAnalysisDependentAssemblyPaths>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\MathLib\MathLib.csproj">
+      <Project>{06119B37-8AB7-47AC-A943-672FEEEEC597}</Project>
+      <Name>MathLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Util\Util.csproj">
+      <Project>{1E22CAC4-8E90-4DD7-A754-6D1EF0845230}</Project>
+      <Name>Util</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SpikingSim\SpikingLibrary.csproj">
+      <Project>{05C62339-AB75-4C22-846E-57C2FB20EAC2}</Project>
+      <Name>SpikingLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="NeuronClassTest.Constructor01.g.cs">
+      <DependentUpon>NeuronClassTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NeuronClassTest.Constructor02.g.cs">
+      <DependentUpon>NeuronClassTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NeuronClassTest.cs" />
+    <Compile Include="NeuronClassTest.LabelGet.g.cs">
+      <DependentUpon>NeuronClassTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NeuronCollectionTest.ConnectTo.g.cs">
+      <DependentUpon>NeuronCollectionTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NeuronCollectionTest.Constructor01.g.cs">
+      <DependentUpon>NeuronCollectionTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NeuronCollectionTest.cs" />
+    <Compile Include="NeuronCollectionTest.GetObjectData.g.cs">
+      <DependentUpon>NeuronCollectionTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NeuronCollectionTest.NameGet.g.cs">
+      <DependentUpon>NeuronCollectionTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NeuronCollectionTest.NameSet.g.cs">
+      <DependentUpon>NeuronCollectionTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NeuronDisplayControlTest.Constructor.g.cs">
+      <DependentUpon>NeuronDisplayControlTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NeuronDisplayControlTest.cs" />
+    <Compile Include="NeuronProbeTest.Constructor.g.cs">
+      <DependentUpon>NeuronProbeTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NeuronProbeTest.cs" />
+    <Compile Include="NeuronProbeUpdateEventArgsTest.Constructor.g.cs">
+      <DependentUpon>NeuronProbeUpdateEventArgsTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NeuronProbeUpdateEventArgsTest.cs" />
+    <Compile Include="NeuronTest.AddSynapse.g.cs">
+      <DependentUpon>NeuronTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NeuronTest.Constructor.g.cs">
+      <DependentUpon>NeuronTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NeuronTest.cs" />
+    <Compile Include="NeuronTest.IdGet.g.cs">
+      <DependentUpon>NeuronTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NeuronTest.NeuronTypeGet.g.cs">
+      <DependentUpon>NeuronTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NeuronTest.NeuronTypeSet.g.cs">
+      <DependentUpon>NeuronTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NonLearningNoisySynapseTest.Constructor01.g.cs">
+      <DependentUpon>NonLearningNoisySynapseTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NonLearningNoisySynapseTest.cs" />
+    <Compile Include="NonLearningNoisySynapseTest.EfficacyGet.g.cs">
+      <DependentUpon>NonLearningNoisySynapseTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NonLearningNoisySynapseTest.WeightGeneratorGet.g.cs">
+      <DependentUpon>NonLearningNoisySynapseTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NonLearningNoisySynapseTest.WeightGeneratorSet.g.cs">
+      <DependentUpon>NonLearningNoisySynapseTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NonLearningSynapseFactoryTest.Constructor.g.cs">
+      <DependentUpon>NonLearningSynapseFactoryTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NonLearningSynapseFactoryTest.CreateSynapse.g.cs">
+      <DependentUpon>NonLearningSynapseFactoryTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NonLearningSynapseFactoryTest.cs" />
+    <Compile Include="NonLearningSynapseTest.Constructor.g.cs">
+      <DependentUpon>NonLearningSynapseTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NonLearningSynapseTest.cs" />
+    <Compile Include="PeriodicInputSignalTest.ConnectTo01.g.cs">
+      <DependentUpon>PeriodicInputSignalTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PeriodicInputSignalTest.Constructor.g.cs">
+      <DependentUpon>PeriodicInputSignalTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PeriodicInputSignalTest.cs" />
+    <Compile Include="PeriodicInputSignalTest.PeriodicityGet.g.cs">
+      <DependentUpon>PeriodicInputSignalTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PeriodicInputSignalTest.PeriodicitySet.g.cs">
+      <DependentUpon>PeriodicInputSignalTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PeriodicInputSignalTest.RandomNumberGeneratorGet.g.cs">
+      <DependentUpon>PeriodicInputSignalTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PeriodicInputSignalTest.RandomNumberGeneratorSet.g.cs">
+      <DependentUpon>PeriodicInputSignalTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PeriodicInputSignalTest.Start.g.cs">
+      <DependentUpon>PeriodicInputSignalTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PeriodicInputSignalTest.Stop.g.cs">
+      <DependentUpon>PeriodicInputSignalTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\PexAssemblyInfo.cs" />
+    <Compile Include="ScheduledEventItemTest.Constructor.g.cs">
+      <DependentUpon>ScheduledEventItemTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ScheduledEventItemTest.cs" />
+    <Compile Include="ScheduledEventItemTest.ScheduledEventGet.g.cs">
+      <DependentUpon>ScheduledEventItemTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ScheduledEventItemTest.ScheduledEventSet.g.cs">
+      <DependentUpon>ScheduledEventItemTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ScheduledEventItemTest.TimeIntervalGet.g.cs">
+      <DependentUpon>ScheduledEventItemTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ScheduledEventItemTest.TimeIntervalSet.g.cs">
+      <DependentUpon>ScheduledEventItemTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SynapseFactoryTest.Constructor.g.cs">
+      <DependentUpon>SynapseFactoryTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SynapseFactoryTest.CreateSynapse.g.cs">
+      <DependentUpon>SynapseFactoryTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SynapseFactoryTest.cs" />
+    <Compile Include="SynapseProbeTest.Constructor.g.cs">
+      <DependentUpon>SynapseProbeTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SynapseProbeTest.cs" />
+    <Compile Include="SynapseProbeUpdateEventArgsTest.Constructor.g.cs">
+      <DependentUpon>SynapseProbeUpdateEventArgsTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SynapseProbeUpdateEventArgsTest.cs" />
+    <Compile Include="SynapseTest.AxonalDelayGet.g.cs">
+      <DependentUpon>SynapseTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SynapseTest.Constructor01.g.cs">
+      <DependentUpon>SynapseTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SynapseTest.cs" />
+    <Compile Include="SynapseTest.PostsynapticNeuronGet.g.cs">
+      <DependentUpon>SynapseTest.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Moles Include="SpikingLibrary.moles" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

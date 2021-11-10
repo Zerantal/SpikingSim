@@ -3,3 +3,15 @@
 ################################################################################
 
 /Backup
+/PairProtocolSequence/ModelDefinition
+/PairProtocolSequence
+/SNNGui/bin
+/SNNGui/obj
+/SpikingLibrary.Tests/bin/Debug
+/SpikingLibrary.Tests/obj/Debug
+/SpikingLibTest/bin
+/SpikingLibTest/obj
+/SpikingSim/bin
+/SpikingSim/obj
+/TestResults
+/_ReSharper.SpikingSim

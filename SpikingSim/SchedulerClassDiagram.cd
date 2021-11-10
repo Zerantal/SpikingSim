@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="Scheduler is a fixed length priority queue (internally implemented as a circular array with an overflow buffer) which executes in its own thread as it endlessly iterates over it's internal queue.&#xD;&#xA;Scheduler should have a synchronous and threadsafe asynchronous 'ScheduleEvent' Method.">
+    <Position X="0.531" Y="0.5" Height="1.219" Width="3.19" />
+  </Comment>
+  <Comment CommentText="Passed to the 'ScheduleEvent' method of the Scheduler class">
+    <Position X="6.552" Y="2.208" Height="0.75" Width="1.7" />
+  </Comment>
+  <Class Name="SpikingLibrary.Scheduler" Collapsed="true">
+    <Position X="4" Y="0.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>ACAgAIAAAKAAQFBAAAAAQAAAEQBEAgAAIwAUgghAASA=</HashCode>
+      <FileName>Scheduler.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Struct Name="SpikingLibrary.ScheduledEventItem" Collapsed="true">
+    <Position X="0.5" Y="3.25" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAACAQAAAAACAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>ScheduledEventItem.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Delegate Name="SpikingLibrary.ScheduledEvent" Collapsed="true">
+    <Position X="6.25" Y="3.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Scheduler.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

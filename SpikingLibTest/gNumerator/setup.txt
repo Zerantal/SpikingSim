@@ -1,0 +1,19 @@
+Install Notes
+
+This is the second release of the mathml dom and mathml rendering
+components, there is no true install yet. There are only 2 steps 
+to set up the rendering component, and the other mathml dom component 
+needs no setup.
+
+1: copy the font files (math-roman.ttf and cm-stretchy.ttf) into your
+   font folder. The rendering component needs these fonts in order to
+   work properly.
+
+2: The renderer needs to know the location of the font config files.
+   You may specify the location of these (font-configuration-*.xml) 
+   by setting the value of the "mathml-rendering-config" property
+   in the MathML.Rendering.Test1.exe.config file. If this value is not
+   set, the renderer will look in the current directory for these files.
+
+* note - the font cm-roman.ttf is no longer used, and may be deleted.
+  It will however do no harm if left alone.

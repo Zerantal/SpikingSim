@@ -1,0 +1,2867 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SpikingLibrary.Moles</name>
+    </assembly>
+    <members>
+        <member name="T:SpikingLibrary.Moles.MInputSources">
+            <summary>Mole type of <see cref="T:SpikingLibrary.InputSources"/>
+            .</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MInputSources.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MInputSources.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MInputSources.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MInputSources.Behavior">
+            <summary>Assigns the behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MInputSources.Sched_SynchroniseInputsInt64">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.InputSources.Sched_SynchroniseInputs(System.Int64)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MInputSources.SynchronizeInputSourcesTupleOfIInputSourceInt32Array">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.InputSources.SynchronizeInputSources(System.Tuple`2{SpikingLibrary.IInputSource,System.Int32}[])"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MInputSources._SynchronizeInputSourcesb__1TupleOfIInputSourceInt32">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.InputSources.&lt;SynchronizeInputSources&gt;b__1(System.Tuple`2{SpikingLibrary.IInputSource,System.Int32})"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MInputSources._SynchronizeInputSourcesb__2TupleOfIInputSourceInt32">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.InputSources.&lt;SynchronizeInputSources&gt;b__2(System.Tuple`2{SpikingLibrary.IInputSource,System.Int32})"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MInputSources._SynchronizeInputSourcesb__3TupleOfIInputSourceInt32">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.InputSources.&lt;SynchronizeInputSources&gt;b__3(System.Tuple`2{SpikingLibrary.IInputSource,System.Int32})"/>
+            </summary>
+        </member>
+        <member name="T:SpikingLibrary.Moles.MNeuron">
+            <summary>Mole type of <see cref="T:SpikingLibrary.Neuron"/>
+            .</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MNeuron.#ctor">
+            <summary>Initializes a new mole</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MNeuron.#ctor(SpikingLibrary.Neuron)">
+            <summary>Initializes a new mole for the given instance</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MNeuron.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MNeuron.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuron.AddAxonalSynapseSynapse">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.Neuron.AddAxonalSynapse(SpikingLibrary.Synapse)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuron.AddDendriticSynapseSynapse">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.Neuron.AddDendriticSynapse(SpikingLibrary.Synapse)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuron.Behavior">
+            <summary>Assigns the behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuron.ConstructorNeuronClass">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.Neuron.#ctor(SpikingLibrary.NeuronClass)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuron.IdGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.Neuron.Id"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuron.IncrementNeuronState">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.Neuron.IncrementNeuronState"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuron.NeuronFiredAddEventHandlerOfNeuronFiredEventArgs">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.Neuron.add_NeuronFired(System.EventHandler`1{SpikingLibrary.NeuronFiredEventArgs})"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuron.NeuronFiredRemoveEventHandlerOfNeuronFiredEventArgs">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.Neuron.remove_NeuronFired(System.EventHandler`1{SpikingLibrary.NeuronFiredEventArgs})"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuron.NeuronTypeGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.Neuron.NeuronType"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuron.NeuronTypeSetNeuronClass">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.Neuron.NeuronType"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuron.OnNeuronFiredNeuronFiredEventArgs">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.Neuron.OnNeuronFired(SpikingLibrary.NeuronFiredEventArgs)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuron.ReportNeuronFiringObject">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.Neuron.ReportNeuronFiring(System.Object)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuron.TriggerNeuronSpikeInt64">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.Neuron.TriggerNeuronSpike(System.Int64)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuron.UGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.Neuron.U"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuron.USetDouble">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.Neuron.U"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuron.VGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.Neuron.V"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuron.VSetDouble">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.Neuron.V"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuron._InvariantMethod">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.Neuron.$InvariantMethod$"/>
+            </summary>
+        </member>
+        <member name="T:SpikingLibrary.Moles.MNeuron.AllInstances">
+            <summary>Define moles for all instances members</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuron.AllInstances.AddAxonalSynapseSynapse">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.Neuron.AddAxonalSynapse(SpikingLibrary.Synapse)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuron.AllInstances.AddDendriticSynapseSynapse">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.Neuron.AddDendriticSynapse(SpikingLibrary.Synapse)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuron.AllInstances.IdGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.Neuron.Id"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuron.AllInstances.IncrementNeuronState">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.Neuron.IncrementNeuronState"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuron.AllInstances.NeuronFiredAddEventHandlerOfNeuronFiredEventArgs">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.Neuron.add_NeuronFired(System.EventHandler`1{SpikingLibrary.NeuronFiredEventArgs})"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuron.AllInstances.NeuronFiredRemoveEventHandlerOfNeuronFiredEventArgs">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.Neuron.remove_NeuronFired(System.EventHandler`1{SpikingLibrary.NeuronFiredEventArgs})"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuron.AllInstances.NeuronTypeGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.Neuron.NeuronType"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuron.AllInstances.NeuronTypeSetNeuronClass">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.Neuron.NeuronType"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuron.AllInstances.OnNeuronFiredNeuronFiredEventArgs">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.Neuron.OnNeuronFired(SpikingLibrary.NeuronFiredEventArgs)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuron.AllInstances.ReportNeuronFiringObject">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.Neuron.ReportNeuronFiring(System.Object)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuron.AllInstances.TriggerNeuronSpikeInt64">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.Neuron.TriggerNeuronSpike(System.Int64)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuron.AllInstances.UGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.Neuron.U"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuron.AllInstances.USetDouble">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.Neuron.U"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuron.AllInstances.VGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.Neuron.V"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuron.AllInstances.VSetDouble">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.Neuron.V"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuron.AllInstances._InvariantMethod">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.Neuron.$InvariantMethod$"/>
+            </summary>
+        </member>
+        <member name="T:SpikingLibrary.Moles.MNeuronClass">
+            <summary>Mole type of <see cref="T:SpikingLibrary.NeuronClass"/>
+            .</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MNeuronClass.#ctor">
+            <summary>Initializes a new mole</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MNeuronClass.#ctor(SpikingLibrary.NeuronClass)">
+            <summary>Initializes a new mole for the given instance</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MNeuronClass.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MNeuronClass.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronClass.Behavior">
+            <summary>Assigns the behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronClass.CalcNextStateDoubleRefDoubleRef">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronClass.CalcNextState(System.Double@,System.Double@)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronClass.Constructor">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronClass.#ctor"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronClass.ConstructorDoubleDoubleDoubleDoubleDouble">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronClass.#ctor(System.Double,System.Double,System.Double,System.Double,System.Double)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronClass.ConstructorDoubleDoubleDoubleDoubleDoubleString">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronClass.#ctor(System.Double,System.Double,System.Double,System.Double,System.Double,System.String)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronClass.DefaultUGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.NeuronClass.DefaultU"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronClass.DefaultUSetDouble">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.NeuronClass.DefaultU"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronClass.DefaultVGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.NeuronClass.DefaultV"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronClass.DefaultVSetDouble">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.NeuronClass.DefaultV"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronClass.DuDoubleDouble">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronClass.Du(System.Double,System.Double)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronClass.DvDoubleDouble">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronClass.Dv(System.Double,System.Double)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronClass.LabelGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.NeuronClass.Label"/>
+            </summary>
+        </member>
+        <member name="T:SpikingLibrary.Moles.MNeuronClass.AllInstances">
+            <summary>Define moles for all instances members</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronClass.AllInstances.CalcNextStateDoubleRefDoubleRef">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronClass.CalcNextState(System.Double@,System.Double@)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronClass.AllInstances.DefaultUGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.NeuronClass.DefaultU"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronClass.AllInstances.DefaultUSetDouble">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.NeuronClass.DefaultU"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronClass.AllInstances.DefaultVGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.NeuronClass.DefaultV"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronClass.AllInstances.DefaultVSetDouble">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.NeuronClass.DefaultV"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronClass.AllInstances.DuDoubleDouble">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronClass.Du(System.Double,System.Double)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronClass.AllInstances.DvDoubleDouble">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronClass.Dv(System.Double,System.Double)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronClass.AllInstances.LabelGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.NeuronClass.Label"/>
+            </summary>
+        </member>
+        <member name="T:SpikingLibrary.Moles.MNeuronCollection">
+            <summary>Mole type of <see cref="T:SpikingLibrary.NeuronCollection"/>
+            .</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MNeuronCollection.#ctor">
+            <summary>Initializes a new mole</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MNeuronCollection.#ctor(SpikingLibrary.NeuronCollection)">
+            <summary>Initializes a new mole for the given instance</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MNeuronCollection.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MNeuronCollection.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MNeuronCollection.Bind(Util.IShallowCloneable{SpikingLibrary.NeuronCollection})">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MNeuronCollection.Bind(System.Collections.IEnumerable)">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MNeuronCollection.Bind(System.Collections.Generic.IEnumerable{SpikingLibrary.Neuron})">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronCollection.AddNeuron">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronCollection.Add(SpikingLibrary.Neuron)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronCollection.AddNeuronCollection">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronCollection.Add(SpikingLibrary.NeuronCollection)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronCollection.Behavior">
+            <summary>Assigns the behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronCollection.Clear">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronCollection.Clear"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronCollection.ConnectToNeuronCollectionISynapseFactory">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronCollection.ConnectTo(SpikingLibrary.NeuronCollection,SpikingLibrary.ISynapseFactory)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronCollection.Constructor">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronCollection.#ctor"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronCollection.ConstructorString">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronCollection.#ctor(System.String)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronCollection.GetEnumerator">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronCollection.GetEnumerator"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronCollection.HandleNeuronFiredEventObjectNeuronFiredEventArgs">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronCollection.HandleNeuronFiredEvent(System.Object,SpikingLibrary.NeuronFiredEventArgs)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronCollection.NameGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.NeuronCollection.Name"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronCollection.NameSetString">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.NeuronCollection.Name"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronCollection.NeuronFiredAddEventHandlerOfNeuronCollectionFiringEventArgs">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronCollection.add_NeuronFired(System.EventHandler`1{SpikingLibrary.NeuronCollectionFiringEventArgs})"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronCollection.NeuronFiredRemoveEventHandlerOfNeuronCollectionFiringEventArgs">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronCollection.remove_NeuronFired(System.EventHandler`1{SpikingLibrary.NeuronCollectionFiringEventArgs})"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronCollection.OnNeuronFiredNeuronCollectionFiringEventArgs">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronCollection.OnNeuronFired(SpikingLibrary.NeuronCollectionFiringEventArgs)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronCollection.Sched_ConnectionEventInt64">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronCollection.Sched_ConnectionEvent(System.Int64)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronCollection.ShallowClone">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronCollection.ShallowClone"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronCollection.SystemCollectionsIEnumerableGetEnumerator">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronCollection.System.Collections.IEnumerable.GetEnumerator"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronCollection._ConnectTob__1Neuron">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronCollection.&lt;ConnectTo&gt;b__1(SpikingLibrary.Neuron)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronCollection._InvariantMethod">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronCollection.$InvariantMethod$"/>
+            </summary>
+        </member>
+        <member name="T:SpikingLibrary.Moles.MNeuronCollection.AllInstances">
+            <summary>Define moles for all instances members</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronCollection.AllInstances.AddNeuron">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronCollection.Add(SpikingLibrary.Neuron)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronCollection.AllInstances.AddNeuronCollection">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronCollection.Add(SpikingLibrary.NeuronCollection)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronCollection.AllInstances.Clear">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronCollection.Clear"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronCollection.AllInstances.ConnectToNeuronCollectionISynapseFactory">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronCollection.ConnectTo(SpikingLibrary.NeuronCollection,SpikingLibrary.ISynapseFactory)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronCollection.AllInstances.GetEnumerator">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronCollection.GetEnumerator"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronCollection.AllInstances.HandleNeuronFiredEventObjectNeuronFiredEventArgs">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronCollection.HandleNeuronFiredEvent(System.Object,SpikingLibrary.NeuronFiredEventArgs)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronCollection.AllInstances.NameGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.NeuronCollection.Name"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronCollection.AllInstances.NameSetString">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.NeuronCollection.Name"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronCollection.AllInstances.NeuronFiredAddEventHandlerOfNeuronCollectionFiringEventArgs">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronCollection.add_NeuronFired(System.EventHandler`1{SpikingLibrary.NeuronCollectionFiringEventArgs})"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronCollection.AllInstances.NeuronFiredRemoveEventHandlerOfNeuronCollectionFiringEventArgs">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronCollection.remove_NeuronFired(System.EventHandler`1{SpikingLibrary.NeuronCollectionFiringEventArgs})"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronCollection.AllInstances.OnNeuronFiredNeuronCollectionFiringEventArgs">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronCollection.OnNeuronFired(SpikingLibrary.NeuronCollectionFiringEventArgs)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronCollection.AllInstances.Sched_ConnectionEventInt64">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronCollection.Sched_ConnectionEvent(System.Int64)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronCollection.AllInstances.ShallowClone">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronCollection.ShallowClone"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronCollection.AllInstances.SystemCollectionsIEnumerableGetEnumerator">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronCollection.System.Collections.IEnumerable.GetEnumerator"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronCollection.AllInstances._InvariantMethod">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronCollection.$InvariantMethod$"/>
+            </summary>
+        </member>
+        <member name="T:SpikingLibrary.Moles.MNeuronCollectionFiringEventArgs">
+            <summary>Mole type of <see cref="T:SpikingLibrary.NeuronCollectionFiringEventArgs"/>
+            .</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MNeuronCollectionFiringEventArgs.#ctor">
+            <summary>Initializes a new mole</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MNeuronCollectionFiringEventArgs.#ctor(SpikingLibrary.NeuronCollectionFiringEventArgs)">
+            <summary>Initializes a new mole for the given instance</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MNeuronCollectionFiringEventArgs.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MNeuronCollectionFiringEventArgs.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronCollectionFiringEventArgs.Behavior">
+            <summary>Assigns the behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronCollectionFiringEventArgs.ConstructorNeuronInt64">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronCollectionFiringEventArgs.#ctor(SpikingLibrary.Neuron,System.Int64)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronCollectionFiringEventArgs.FiringNeuronGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.NeuronCollectionFiringEventArgs.FiringNeuron"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronCollectionFiringEventArgs.FiringNeuronSetNeuron">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.NeuronCollectionFiringEventArgs.FiringNeuron"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronCollectionFiringEventArgs.TimeGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.NeuronCollectionFiringEventArgs.Time"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronCollectionFiringEventArgs.TimeSetInt64">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.NeuronCollectionFiringEventArgs.Time"/>
+            </summary>
+        </member>
+        <member name="T:SpikingLibrary.Moles.MNeuronCollectionFiringEventArgs.AllInstances">
+            <summary>Define moles for all instances members</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronCollectionFiringEventArgs.AllInstances.FiringNeuronGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.NeuronCollectionFiringEventArgs.FiringNeuron"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronCollectionFiringEventArgs.AllInstances.FiringNeuronSetNeuron">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.NeuronCollectionFiringEventArgs.FiringNeuron"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronCollectionFiringEventArgs.AllInstances.TimeGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.NeuronCollectionFiringEventArgs.Time"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronCollectionFiringEventArgs.AllInstances.TimeSetInt64">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.NeuronCollectionFiringEventArgs.Time"/>
+            </summary>
+        </member>
+        <member name="T:SpikingLibrary.Moles.MNeuronDisplayControl">
+            <summary>Mole type of <see cref="T:SpikingLibrary.NeuronDisplayControl"/>
+            .</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MNeuronDisplayControl.#ctor">
+            <summary>Initializes a new mole</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MNeuronDisplayControl.#ctor(SpikingLibrary.NeuronDisplayControl)">
+            <summary>Initializes a new mole for the given instance</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MNeuronDisplayControl.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MNeuronDisplayControl.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MNeuronDisplayControl.Bind(System.ComponentModel.IComponent)">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MNeuronDisplayControl.Bind(System.ComponentModel.ISynchronizeInvoke)">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MNeuronDisplayControl.Bind(System.Windows.Forms.IBindableComponent)">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MNeuronDisplayControl.Bind(System.Windows.Forms.IContainerControl)">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MNeuronDisplayControl.Bind(System.Windows.Forms.IDropTarget)">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MNeuronDisplayControl.Bind(System.Windows.Forms.IWin32Window)">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MNeuronDisplayControl.Bind(System.IDisposable)">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronDisplayControl.Behavior">
+            <summary>Assigns the behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronDisplayControl.Constructor">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronDisplayControl.#ctor"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronDisplayControl.DisposeBoolean">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronDisplayControl.Dispose(System.Boolean)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronDisplayControl.InitializeComponent">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronDisplayControl.InitializeComponent"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronDisplayControl.RefreshGraph">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronDisplayControl.RefreshGraph"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronDisplayControl.TargetGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.NeuronDisplayControl.Target"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronDisplayControl.TargetSetNeuron">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.NeuronDisplayControl.Target"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronDisplayControl.TracePeriodGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.NeuronDisplayControl.TracePeriod"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronDisplayControl.TracePeriodSetInt32">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.NeuronDisplayControl.TracePeriod"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronDisplayControl._InvariantMethod">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronDisplayControl.$InvariantMethod$"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronDisplayControl._probe_NeuronProbedObjectNeuronProbeUpdateEventArgs">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronDisplayControl._probe_NeuronProbed(System.Object,SpikingLibrary.NeuronProbeUpdateEventArgs)"/>
+            </summary>
+        </member>
+        <member name="T:SpikingLibrary.Moles.MNeuronDisplayControl.AllInstances">
+            <summary>Define moles for all instances members</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronDisplayControl.AllInstances.DisposeBoolean">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronDisplayControl.Dispose(System.Boolean)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronDisplayControl.AllInstances.InitializeComponent">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronDisplayControl.InitializeComponent"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronDisplayControl.AllInstances.RefreshGraph">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronDisplayControl.RefreshGraph"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronDisplayControl.AllInstances.TargetGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.NeuronDisplayControl.Target"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronDisplayControl.AllInstances.TargetSetNeuron">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.NeuronDisplayControl.Target"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronDisplayControl.AllInstances.TracePeriodGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.NeuronDisplayControl.TracePeriod"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronDisplayControl.AllInstances.TracePeriodSetInt32">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.NeuronDisplayControl.TracePeriod"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronDisplayControl.AllInstances._InvariantMethod">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronDisplayControl.$InvariantMethod$"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronDisplayControl.AllInstances._probe_NeuronProbedObjectNeuronProbeUpdateEventArgs">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronDisplayControl._probe_NeuronProbed(System.Object,SpikingLibrary.NeuronProbeUpdateEventArgs)"/>
+            </summary>
+        </member>
+        <member name="T:SpikingLibrary.Moles.MNeuronFiredEventArgs">
+            <summary>Mole type of <see cref="T:SpikingLibrary.NeuronFiredEventArgs"/>
+            .</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MNeuronFiredEventArgs.#ctor">
+            <summary>Initializes a new mole</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MNeuronFiredEventArgs.#ctor(SpikingLibrary.NeuronFiredEventArgs)">
+            <summary>Initializes a new mole for the given instance</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MNeuronFiredEventArgs.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MNeuronFiredEventArgs.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronFiredEventArgs.Behavior">
+            <summary>Assigns the behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronFiredEventArgs.ConstructorInt64">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronFiredEventArgs.#ctor(System.Int64)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronFiredEventArgs.TimeGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.NeuronFiredEventArgs.Time"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronFiredEventArgs.TimeSetInt64">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.NeuronFiredEventArgs.Time"/>
+            </summary>
+        </member>
+        <member name="T:SpikingLibrary.Moles.MNeuronFiredEventArgs.AllInstances">
+            <summary>Define moles for all instances members</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronFiredEventArgs.AllInstances.TimeGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.NeuronFiredEventArgs.Time"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronFiredEventArgs.AllInstances.TimeSetInt64">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.NeuronFiredEventArgs.Time"/>
+            </summary>
+        </member>
+        <member name="T:SpikingLibrary.Moles.MNeuronProbe">
+            <summary>Mole type of <see cref="T:SpikingLibrary.NeuronProbe"/>
+            .</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MNeuronProbe.#ctor">
+            <summary>Initializes a new mole</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MNeuronProbe.#ctor(SpikingLibrary.NeuronProbe)">
+            <summary>Initializes a new mole for the given instance</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MNeuronProbe.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MNeuronProbe.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronProbe.Behavior">
+            <summary>Assigns the behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronProbe.ChangeNeuronTypeNeuronClass">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronProbe.ChangeNeuronType(SpikingLibrary.NeuronClass)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronProbe.ChangeUDouble">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronProbe.ChangeU(System.Double)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronProbe.ChangeVDouble">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronProbe.ChangeV(System.Double)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronProbe.ConstructorNeuronInt32">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronProbe.#ctor(SpikingLibrary.Neuron,System.Int32)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronProbe.IncrementStateDoubleDouble">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronProbe.IncrementState(System.Double,System.Double)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronProbe.NeuronProbedAddEventHandlerOfNeuronProbeUpdateEventArgs">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronProbe.add_NeuronProbed(System.EventHandler`1{SpikingLibrary.NeuronProbeUpdateEventArgs})"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronProbe.NeuronProbedRemoveEventHandlerOfNeuronProbeUpdateEventArgs">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronProbe.remove_NeuronProbed(System.EventHandler`1{SpikingLibrary.NeuronProbeUpdateEventArgs})"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronProbe.OnNeuronProbedNeuronProbeUpdateEventArgs">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronProbe.OnNeuronProbed(SpikingLibrary.NeuronProbeUpdateEventArgs)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronProbe.ReportNeuronStateObject">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronProbe.ReportNeuronState(System.Object)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronProbe.Sched_ChangeClassInt64">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronProbe.Sched_ChangeClass(System.Int64)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronProbe.Sched_ChangeUInt64">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronProbe.Sched_ChangeU(System.Int64)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronProbe.Sched_ChangeVInt64">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronProbe.Sched_ChangeV(System.Int64)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronProbe.Sched_IncrementStateInt64">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronProbe.Sched_IncrementState(System.Int64)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronProbe.Sched_ProbeNeuronInt64">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronProbe.Sched_ProbeNeuron(System.Int64)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronProbe.Start">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronProbe.Start"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronProbe.Stop">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronProbe.Stop"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronProbe.TargetGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.NeuronProbe.Target"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronProbe.TargetSetNeuron">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.NeuronProbe.Target"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronProbe.UpdateIntervalGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.NeuronProbe.UpdateInterval"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronProbe.UpdateIntervalSetInt32">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.NeuronProbe.UpdateInterval"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronProbe._InvariantMethod">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronProbe.$InvariantMethod$"/>
+            </summary>
+        </member>
+        <member name="T:SpikingLibrary.Moles.MNeuronProbe.AllInstances">
+            <summary>Define moles for all instances members</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronProbe.AllInstances.ChangeNeuronTypeNeuronClass">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronProbe.ChangeNeuronType(SpikingLibrary.NeuronClass)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronProbe.AllInstances.ChangeUDouble">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronProbe.ChangeU(System.Double)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronProbe.AllInstances.ChangeVDouble">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronProbe.ChangeV(System.Double)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronProbe.AllInstances.IncrementStateDoubleDouble">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronProbe.IncrementState(System.Double,System.Double)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronProbe.AllInstances.NeuronProbedAddEventHandlerOfNeuronProbeUpdateEventArgs">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronProbe.add_NeuronProbed(System.EventHandler`1{SpikingLibrary.NeuronProbeUpdateEventArgs})"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronProbe.AllInstances.NeuronProbedRemoveEventHandlerOfNeuronProbeUpdateEventArgs">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronProbe.remove_NeuronProbed(System.EventHandler`1{SpikingLibrary.NeuronProbeUpdateEventArgs})"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronProbe.AllInstances.OnNeuronProbedNeuronProbeUpdateEventArgs">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronProbe.OnNeuronProbed(SpikingLibrary.NeuronProbeUpdateEventArgs)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronProbe.AllInstances.ReportNeuronStateObject">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronProbe.ReportNeuronState(System.Object)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronProbe.AllInstances.Sched_ChangeClassInt64">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronProbe.Sched_ChangeClass(System.Int64)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronProbe.AllInstances.Sched_ChangeUInt64">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronProbe.Sched_ChangeU(System.Int64)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronProbe.AllInstances.Sched_ChangeVInt64">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronProbe.Sched_ChangeV(System.Int64)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronProbe.AllInstances.Sched_IncrementStateInt64">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronProbe.Sched_IncrementState(System.Int64)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronProbe.AllInstances.Sched_ProbeNeuronInt64">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronProbe.Sched_ProbeNeuron(System.Int64)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronProbe.AllInstances.Start">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronProbe.Start"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronProbe.AllInstances.Stop">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronProbe.Stop"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronProbe.AllInstances.TargetGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.NeuronProbe.Target"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronProbe.AllInstances.TargetSetNeuron">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.NeuronProbe.Target"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronProbe.AllInstances.UpdateIntervalGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.NeuronProbe.UpdateInterval"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronProbe.AllInstances.UpdateIntervalSetInt32">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.NeuronProbe.UpdateInterval"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronProbe.AllInstances._InvariantMethod">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronProbe.$InvariantMethod$"/>
+            </summary>
+        </member>
+        <member name="T:SpikingLibrary.Moles.MNeuronProbeUpdateEventArgs">
+            <summary>Mole type of <see cref="T:SpikingLibrary.NeuronProbeUpdateEventArgs"/>
+            .</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MNeuronProbeUpdateEventArgs.#ctor">
+            <summary>Initializes a new mole</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MNeuronProbeUpdateEventArgs.#ctor(SpikingLibrary.NeuronProbeUpdateEventArgs)">
+            <summary>Initializes a new mole for the given instance</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MNeuronProbeUpdateEventArgs.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MNeuronProbeUpdateEventArgs.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronProbeUpdateEventArgs.Behavior">
+            <summary>Assigns the behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronProbeUpdateEventArgs.ConstructorInt64DoubleDouble">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NeuronProbeUpdateEventArgs.#ctor(System.Int64,System.Double,System.Double)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronProbeUpdateEventArgs.TimeGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.NeuronProbeUpdateEventArgs.Time"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronProbeUpdateEventArgs.TimeSetInt64">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.NeuronProbeUpdateEventArgs.Time"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronProbeUpdateEventArgs.UGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.NeuronProbeUpdateEventArgs.U"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronProbeUpdateEventArgs.USetDouble">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.NeuronProbeUpdateEventArgs.U"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronProbeUpdateEventArgs.VGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.NeuronProbeUpdateEventArgs.V"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronProbeUpdateEventArgs.VSetDouble">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.NeuronProbeUpdateEventArgs.V"/>
+            </summary>
+        </member>
+        <member name="T:SpikingLibrary.Moles.MNeuronProbeUpdateEventArgs.AllInstances">
+            <summary>Define moles for all instances members</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronProbeUpdateEventArgs.AllInstances.TimeGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.NeuronProbeUpdateEventArgs.Time"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronProbeUpdateEventArgs.AllInstances.TimeSetInt64">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.NeuronProbeUpdateEventArgs.Time"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronProbeUpdateEventArgs.AllInstances.UGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.NeuronProbeUpdateEventArgs.U"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronProbeUpdateEventArgs.AllInstances.USetDouble">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.NeuronProbeUpdateEventArgs.U"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronProbeUpdateEventArgs.AllInstances.VGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.NeuronProbeUpdateEventArgs.V"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNeuronProbeUpdateEventArgs.AllInstances.VSetDouble">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.NeuronProbeUpdateEventArgs.V"/>
+            </summary>
+        </member>
+        <member name="T:SpikingLibrary.Moles.MNonLearningNoisySynapse">
+            <summary>Mole type of <see cref="T:SpikingLibrary.NonLearningNoisySynapse"/>
+            .</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MNonLearningNoisySynapse.#ctor">
+            <summary>Initializes a new mole</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MNonLearningNoisySynapse.#ctor(SpikingLibrary.NonLearningNoisySynapse)">
+            <summary>Initializes a new mole for the given instance</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MNonLearningNoisySynapse.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MNonLearningNoisySynapse.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNonLearningNoisySynapse.ActivateSynapseInt64">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NonLearningNoisySynapse.ActivateSynapse(System.Int64)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNonLearningNoisySynapse.BapInt64">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NonLearningNoisySynapse.Bap(System.Int64)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNonLearningNoisySynapse.Behavior">
+            <summary>Assigns the behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNonLearningNoisySynapse.ConstructorNeuronInt32DoubleINumberGenerator">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NonLearningNoisySynapse.#ctor(SpikingLibrary.Neuron,System.Int32,System.Double,MathLib.Statistics.INumberGenerator)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNonLearningNoisySynapse._InvariantMethod">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NonLearningNoisySynapse.$InvariantMethod$"/>
+            </summary>
+        </member>
+        <member name="T:SpikingLibrary.Moles.MNonLearningNoisySynapse.AllInstances">
+            <summary>Define moles for all instances members</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNonLearningNoisySynapse.AllInstances.ActivateSynapseInt64">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NonLearningNoisySynapse.ActivateSynapse(System.Int64)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNonLearningNoisySynapse.AllInstances.BapInt64">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NonLearningNoisySynapse.Bap(System.Int64)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNonLearningNoisySynapse.AllInstances._InvariantMethod">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NonLearningNoisySynapse.$InvariantMethod$"/>
+            </summary>
+        </member>
+        <member name="T:SpikingLibrary.Moles.MNonLearningNoisySynapseFactory">
+            <summary>Mole type of <see cref="T:SpikingLibrary.NonLearningNoisySynapseFactory"/>
+            .</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MNonLearningNoisySynapseFactory.#ctor">
+            <summary>Initializes a new mole</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MNonLearningNoisySynapseFactory.#ctor(SpikingLibrary.NonLearningNoisySynapseFactory)">
+            <summary>Initializes a new mole for the given instance</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MNonLearningNoisySynapseFactory.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MNonLearningNoisySynapseFactory.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MNonLearningNoisySynapseFactory.Bind(SpikingLibrary.ISynapseFactory)">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MNonLearningNoisySynapseFactory.Bind(Util.IDeepCloneable{SpikingLibrary.ISynapseFactory})">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNonLearningNoisySynapseFactory.Behavior">
+            <summary>Assigns the behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNonLearningNoisySynapseFactory.ConstructorINumberGeneratorINumberGeneratorINumberGenerator">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NonLearningNoisySynapseFactory.#ctor(MathLib.Statistics.INumberGenerator,MathLib.Statistics.INumberGenerator,MathLib.Statistics.INumberGenerator)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNonLearningNoisySynapseFactory.CreateSynapseNeuron">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NonLearningNoisySynapseFactory.CreateSynapse(SpikingLibrary.Neuron)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNonLearningNoisySynapseFactory.DeepClone">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NonLearningNoisySynapseFactory.DeepClone"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNonLearningNoisySynapseFactory._InvariantMethod">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NonLearningNoisySynapseFactory.$InvariantMethod$"/>
+            </summary>
+        </member>
+        <member name="T:SpikingLibrary.Moles.MNonLearningNoisySynapseFactory.AllInstances">
+            <summary>Define moles for all instances members</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNonLearningNoisySynapseFactory.AllInstances.CreateSynapseNeuron">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NonLearningNoisySynapseFactory.CreateSynapse(SpikingLibrary.Neuron)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNonLearningNoisySynapseFactory.AllInstances.DeepClone">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NonLearningNoisySynapseFactory.DeepClone"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNonLearningNoisySynapseFactory.AllInstances._InvariantMethod">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NonLearningNoisySynapseFactory.$InvariantMethod$"/>
+            </summary>
+        </member>
+        <member name="T:SpikingLibrary.Moles.MNonLearningSynapse">
+            <summary>Mole type of <see cref="T:SpikingLibrary.NonLearningSynapse"/>
+            .</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MNonLearningSynapse.#ctor">
+            <summary>Initializes a new mole</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MNonLearningSynapse.#ctor(SpikingLibrary.NonLearningSynapse)">
+            <summary>Initializes a new mole for the given instance</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MNonLearningSynapse.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MNonLearningSynapse.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNonLearningSynapse.ActivateSynapseInt64">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NonLearningSynapse.ActivateSynapse(System.Int64)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNonLearningSynapse.BapInt64">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NonLearningSynapse.Bap(System.Int64)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNonLearningSynapse.Behavior">
+            <summary>Assigns the behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNonLearningSynapse.ConstructorNeuronInt32Int32">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NonLearningSynapse.#ctor(SpikingLibrary.Neuron,System.Int32,System.Int32)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNonLearningSynapse._InvariantMethod">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NonLearningSynapse.$InvariantMethod$"/>
+            </summary>
+        </member>
+        <member name="T:SpikingLibrary.Moles.MNonLearningSynapse.AllInstances">
+            <summary>Define moles for all instances members</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNonLearningSynapse.AllInstances.ActivateSynapseInt64">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NonLearningSynapse.ActivateSynapse(System.Int64)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNonLearningSynapse.AllInstances.BapInt64">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NonLearningSynapse.Bap(System.Int64)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNonLearningSynapse.AllInstances._InvariantMethod">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NonLearningSynapse.$InvariantMethod$"/>
+            </summary>
+        </member>
+        <member name="T:SpikingLibrary.Moles.MNonLearningSynapseFactory">
+            <summary>Mole type of <see cref="T:SpikingLibrary.NonLearningSynapseFactory"/>
+            .</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MNonLearningSynapseFactory.#ctor">
+            <summary>Initializes a new mole</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MNonLearningSynapseFactory.#ctor(SpikingLibrary.NonLearningSynapseFactory)">
+            <summary>Initializes a new mole for the given instance</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MNonLearningSynapseFactory.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MNonLearningSynapseFactory.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MNonLearningSynapseFactory.Bind(SpikingLibrary.ISynapseFactory)">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MNonLearningSynapseFactory.Bind(Util.IDeepCloneable{SpikingLibrary.ISynapseFactory})">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNonLearningSynapseFactory.Behavior">
+            <summary>Assigns the behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNonLearningSynapseFactory.ConstructorINumberGeneratorINumberGenerator">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NonLearningSynapseFactory.#ctor(MathLib.Statistics.INumberGenerator,MathLib.Statistics.INumberGenerator)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNonLearningSynapseFactory.CreateSynapseNeuron">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NonLearningSynapseFactory.CreateSynapse(SpikingLibrary.Neuron)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNonLearningSynapseFactory.DeepClone">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NonLearningSynapseFactory.DeepClone"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNonLearningSynapseFactory._InvariantMethod">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NonLearningSynapseFactory.$InvariantMethod$"/>
+            </summary>
+        </member>
+        <member name="T:SpikingLibrary.Moles.MNonLearningSynapseFactory.AllInstances">
+            <summary>Define moles for all instances members</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNonLearningSynapseFactory.AllInstances.CreateSynapseNeuron">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NonLearningSynapseFactory.CreateSynapse(SpikingLibrary.Neuron)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNonLearningSynapseFactory.AllInstances.DeepClone">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NonLearningSynapseFactory.DeepClone"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MNonLearningSynapseFactory.AllInstances._InvariantMethod">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.NonLearningSynapseFactory.$InvariantMethod$"/>
+            </summary>
+        </member>
+        <member name="T:SpikingLibrary.Moles.MPeriodicInputSignal">
+            <summary>Mole type of <see cref="T:SpikingLibrary.PeriodicInputSignal"/>
+            .</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MPeriodicInputSignal.#ctor">
+            <summary>Initializes a new mole</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MPeriodicInputSignal.#ctor(SpikingLibrary.PeriodicInputSignal)">
+            <summary>Initializes a new mole for the given instance</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MPeriodicInputSignal.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MPeriodicInputSignal.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MPeriodicInputSignal.Bind(SpikingLibrary.IInputSource)">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MPeriodicInputSignal.Behavior">
+            <summary>Assigns the behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MPeriodicInputSignal.ConnectToNeuronCollectionISynapseFactory">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.PeriodicInputSignal.ConnectTo(SpikingLibrary.NeuronCollection,SpikingLibrary.ISynapseFactory)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MPeriodicInputSignal.ConnectToSynapse">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.PeriodicInputSignal.ConnectTo(SpikingLibrary.Synapse)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MPeriodicInputSignal.ConstructorInt32Int32">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.PeriodicInputSignal.#ctor(System.Int32,System.Int32)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MPeriodicInputSignal.MaxInputCyclesGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.PeriodicInputSignal.MaxInputCycles"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MPeriodicInputSignal.MaxInputCyclesSetInt32">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.PeriodicInputSignal.MaxInputCycles"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MPeriodicInputSignal.OnInputFinishedEventArgs">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.PeriodicInputSignal.OnInputFinished(System.EventArgs)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MPeriodicInputSignal.PeriodicInputFinishedAddEventHandler">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.PeriodicInputSignal.add_PeriodicInputFinished(System.EventHandler)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MPeriodicInputSignal.PeriodicInputFinishedRemoveEventHandler">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.PeriodicInputSignal.remove_PeriodicInputFinished(System.EventHandler)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MPeriodicInputSignal.ReportInputFinishedObject">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.PeriodicInputSignal.ReportInputFinished(System.Object)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MPeriodicInputSignal.Sched_ChangeSpikeTimingInt64">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.PeriodicInputSignal.Sched_ChangeSpikeTiming(System.Int64)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MPeriodicInputSignal.Sched_ConnectionEventInt64">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.PeriodicInputSignal.Sched_ConnectionEvent(System.Int64)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MPeriodicInputSignal.Sched_InjectSpikeInt64">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.PeriodicInputSignal.Sched_InjectSpike(System.Int64)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MPeriodicInputSignal.Sched_SynapseConnectionEventInt64">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.PeriodicInputSignal.Sched_SynapseConnectionEvent(System.Int64)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MPeriodicInputSignal.SetSpikeTimingsInt32Array">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.PeriodicInputSignal.SetSpikeTimings(System.Int32[])"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MPeriodicInputSignal.StartInt32">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.PeriodicInputSignal.Start(System.Int32)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MPeriodicInputSignal.Stop">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.PeriodicInputSignal.Stop"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MPeriodicInputSignal._ConnectTob__5Neuron">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.PeriodicInputSignal.&lt;ConnectTo&gt;b__5(SpikingLibrary.Neuron)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MPeriodicInputSignal._InvariantMethod">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.PeriodicInputSignal.$InvariantMethod$"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MPeriodicInputSignal._SetSpikeTimingsb__1Int32">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.PeriodicInputSignal.&lt;SetSpikeTimings&gt;b__1(System.Int32)"/>
+            </summary>
+        </member>
+        <member name="T:SpikingLibrary.Moles.MPeriodicInputSignal.AllInstances">
+            <summary>Define moles for all instances members</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MPeriodicInputSignal.AllInstances.ConnectToNeuronCollectionISynapseFactory">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.PeriodicInputSignal.ConnectTo(SpikingLibrary.NeuronCollection,SpikingLibrary.ISynapseFactory)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MPeriodicInputSignal.AllInstances.ConnectToSynapse">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.PeriodicInputSignal.ConnectTo(SpikingLibrary.Synapse)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MPeriodicInputSignal.AllInstances.MaxInputCyclesGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.PeriodicInputSignal.MaxInputCycles"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MPeriodicInputSignal.AllInstances.MaxInputCyclesSetInt32">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.PeriodicInputSignal.MaxInputCycles"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MPeriodicInputSignal.AllInstances.OnInputFinishedEventArgs">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.PeriodicInputSignal.OnInputFinished(System.EventArgs)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MPeriodicInputSignal.AllInstances.PeriodicInputFinishedAddEventHandler">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.PeriodicInputSignal.add_PeriodicInputFinished(System.EventHandler)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MPeriodicInputSignal.AllInstances.PeriodicInputFinishedRemoveEventHandler">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.PeriodicInputSignal.remove_PeriodicInputFinished(System.EventHandler)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MPeriodicInputSignal.AllInstances.ReportInputFinishedObject">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.PeriodicInputSignal.ReportInputFinished(System.Object)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MPeriodicInputSignal.AllInstances.Sched_ChangeSpikeTimingInt64">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.PeriodicInputSignal.Sched_ChangeSpikeTiming(System.Int64)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MPeriodicInputSignal.AllInstances.Sched_ConnectionEventInt64">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.PeriodicInputSignal.Sched_ConnectionEvent(System.Int64)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MPeriodicInputSignal.AllInstances.Sched_InjectSpikeInt64">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.PeriodicInputSignal.Sched_InjectSpike(System.Int64)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MPeriodicInputSignal.AllInstances.Sched_SynapseConnectionEventInt64">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.PeriodicInputSignal.Sched_SynapseConnectionEvent(System.Int64)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MPeriodicInputSignal.AllInstances.SetSpikeTimingsInt32Array">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.PeriodicInputSignal.SetSpikeTimings(System.Int32[])"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MPeriodicInputSignal.AllInstances.StartInt32">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.PeriodicInputSignal.Start(System.Int32)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MPeriodicInputSignal.AllInstances.Stop">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.PeriodicInputSignal.Stop"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MPeriodicInputSignal.AllInstances._InvariantMethod">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.PeriodicInputSignal.$InvariantMethod$"/>
+            </summary>
+        </member>
+        <member name="T:SpikingLibrary.Moles.MRollingPointListWithStaticX">
+            <summary>Mole type of <see cref="T:SpikingLibrary.RollingPointListWithStaticX"/>
+            .</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MRollingPointListWithStaticX.#ctor">
+            <summary>Initializes a new mole</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MRollingPointListWithStaticX.#ctor(SpikingLibrary.RollingPointListWithStaticX)">
+            <summary>Initializes a new mole for the given instance</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MRollingPointListWithStaticX.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MRollingPointListWithStaticX.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MRollingPointListWithStaticX.Bind(ZedGraph.IPointList)">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MRollingPointListWithStaticX.Bind(ZedGraph.IPointListEdit)">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MRollingPointListWithStaticX.Bind(System.ICloneable)">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MRollingPointListWithStaticX.Bind(System.Runtime.Serialization.ISerializable)">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MRollingPointListWithStaticX.AddDouble">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.RollingPointListWithStaticX.Add(System.Double)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MRollingPointListWithStaticX.AddDoubleDouble">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.RollingPointListWithStaticX.Add(System.Double,System.Double)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MRollingPointListWithStaticX.AddIPointList">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.RollingPointListWithStaticX.Add(ZedGraph.IPointList)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MRollingPointListWithStaticX.AddPointPair">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.RollingPointListWithStaticX.Add(ZedGraph.PointPair)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MRollingPointListWithStaticX.Behavior">
+            <summary>Assigns the behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MRollingPointListWithStaticX.CapacityGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.RollingPointListWithStaticX.Capacity"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MRollingPointListWithStaticX.CapacitySetInt32">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.RollingPointListWithStaticX.Capacity"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MRollingPointListWithStaticX.Clear">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.RollingPointListWithStaticX.Clear"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MRollingPointListWithStaticX.Clone">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.RollingPointListWithStaticX.Clone"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MRollingPointListWithStaticX.ConstructorInt32DoubleDouble">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.RollingPointListWithStaticX.#ctor(System.Int32,System.Double,System.Double)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MRollingPointListWithStaticX.ConstructorSerializationInfoStreamingContext">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.RollingPointListWithStaticX.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MRollingPointListWithStaticX.CountGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.RollingPointListWithStaticX.Count"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MRollingPointListWithStaticX.GetNextIndex">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.RollingPointListWithStaticX.GetNextIndex"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MRollingPointListWithStaticX.GetObjectDataSerializationInfoStreamingContext">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.RollingPointListWithStaticX.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MRollingPointListWithStaticX.HeadIdxGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.RollingPointListWithStaticX.HeadIdx"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MRollingPointListWithStaticX.HeadIdxSetInt32">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.RollingPointListWithStaticX.HeadIdx"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MRollingPointListWithStaticX.IsEmptyGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.RollingPointListWithStaticX.IsEmpty"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MRollingPointListWithStaticX.ItemGetInt32">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.RollingPointListWithStaticX.Item(System.Int32)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MRollingPointListWithStaticX.ItemSetInt32PointPair">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.RollingPointListWithStaticX.Item(System.Int32)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MRollingPointListWithStaticX.MaxGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.RollingPointListWithStaticX.Max"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MRollingPointListWithStaticX.MaxSetDouble">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.RollingPointListWithStaticX.Max"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MRollingPointListWithStaticX.MinGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.RollingPointListWithStaticX.Min"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MRollingPointListWithStaticX.MinSetDouble">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.RollingPointListWithStaticX.Min"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MRollingPointListWithStaticX.Peek">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.RollingPointListWithStaticX.Peek"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MRollingPointListWithStaticX.Pop">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.RollingPointListWithStaticX.Pop"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MRollingPointListWithStaticX.Remove">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.RollingPointListWithStaticX.Remove"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MRollingPointListWithStaticX.RemoveAtInt32">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.RollingPointListWithStaticX.RemoveAt(System.Int32)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MRollingPointListWithStaticX.RemoveRangeInt32Int32">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.RollingPointListWithStaticX.RemoveRange(System.Int32,System.Int32)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MRollingPointListWithStaticX.SystemICloneableClone">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.RollingPointListWithStaticX.System.ICloneable.Clone"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MRollingPointListWithStaticX.TailIdxGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.RollingPointListWithStaticX.TailIdx"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MRollingPointListWithStaticX.TailIdxSetInt32">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.RollingPointListWithStaticX.TailIdx"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MRollingPointListWithStaticX.XValuesGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.RollingPointListWithStaticX.XValues"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MRollingPointListWithStaticX.XValuesSetDoubleArray">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.RollingPointListWithStaticX.XValues"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MRollingPointListWithStaticX.YValuesGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.RollingPointListWithStaticX.YValues"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MRollingPointListWithStaticX.YValuesSetDoubleArray">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.RollingPointListWithStaticX.YValues"/>
+            </summary>
+        </member>
+        <member name="T:SpikingLibrary.Moles.MRollingPointListWithStaticX.AllInstances">
+            <summary>Define moles for all instances members</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MRollingPointListWithStaticX.AllInstances.AddDouble">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.RollingPointListWithStaticX.Add(System.Double)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MRollingPointListWithStaticX.AllInstances.AddDoubleDouble">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.RollingPointListWithStaticX.Add(System.Double,System.Double)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MRollingPointListWithStaticX.AllInstances.AddIPointList">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.RollingPointListWithStaticX.Add(ZedGraph.IPointList)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MRollingPointListWithStaticX.AllInstances.AddPointPair">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.RollingPointListWithStaticX.Add(ZedGraph.PointPair)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MRollingPointListWithStaticX.AllInstances.CapacityGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.RollingPointListWithStaticX.Capacity"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MRollingPointListWithStaticX.AllInstances.CapacitySetInt32">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.RollingPointListWithStaticX.Capacity"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MRollingPointListWithStaticX.AllInstances.Clear">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.RollingPointListWithStaticX.Clear"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MRollingPointListWithStaticX.AllInstances.Clone">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.RollingPointListWithStaticX.Clone"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MRollingPointListWithStaticX.AllInstances.CountGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.RollingPointListWithStaticX.Count"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MRollingPointListWithStaticX.AllInstances.GetNextIndex">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.RollingPointListWithStaticX.GetNextIndex"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MRollingPointListWithStaticX.AllInstances.GetObjectDataSerializationInfoStreamingContext">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.RollingPointListWithStaticX.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MRollingPointListWithStaticX.AllInstances.HeadIdxGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.RollingPointListWithStaticX.HeadIdx"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MRollingPointListWithStaticX.AllInstances.HeadIdxSetInt32">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.RollingPointListWithStaticX.HeadIdx"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MRollingPointListWithStaticX.AllInstances.IsEmptyGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.RollingPointListWithStaticX.IsEmpty"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MRollingPointListWithStaticX.AllInstances.ItemGetInt32">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.RollingPointListWithStaticX.Item(System.Int32)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MRollingPointListWithStaticX.AllInstances.ItemSetInt32PointPair">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.RollingPointListWithStaticX.Item(System.Int32)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MRollingPointListWithStaticX.AllInstances.MaxGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.RollingPointListWithStaticX.Max"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MRollingPointListWithStaticX.AllInstances.MaxSetDouble">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.RollingPointListWithStaticX.Max"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MRollingPointListWithStaticX.AllInstances.MinGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.RollingPointListWithStaticX.Min"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MRollingPointListWithStaticX.AllInstances.MinSetDouble">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.RollingPointListWithStaticX.Min"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MRollingPointListWithStaticX.AllInstances.Peek">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.RollingPointListWithStaticX.Peek"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MRollingPointListWithStaticX.AllInstances.Pop">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.RollingPointListWithStaticX.Pop"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MRollingPointListWithStaticX.AllInstances.Remove">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.RollingPointListWithStaticX.Remove"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MRollingPointListWithStaticX.AllInstances.RemoveAtInt32">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.RollingPointListWithStaticX.RemoveAt(System.Int32)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MRollingPointListWithStaticX.AllInstances.RemoveRangeInt32Int32">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.RollingPointListWithStaticX.RemoveRange(System.Int32,System.Int32)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MRollingPointListWithStaticX.AllInstances.SystemICloneableClone">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.RollingPointListWithStaticX.System.ICloneable.Clone"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MRollingPointListWithStaticX.AllInstances.TailIdxGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.RollingPointListWithStaticX.TailIdx"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MRollingPointListWithStaticX.AllInstances.TailIdxSetInt32">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.RollingPointListWithStaticX.TailIdx"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MRollingPointListWithStaticX.AllInstances.XValuesGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.RollingPointListWithStaticX.XValues"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MRollingPointListWithStaticX.AllInstances.XValuesSetDoubleArray">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.RollingPointListWithStaticX.XValues"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MRollingPointListWithStaticX.AllInstances.YValuesGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.RollingPointListWithStaticX.YValues"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MRollingPointListWithStaticX.AllInstances.YValuesSetDoubleArray">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.RollingPointListWithStaticX.YValues"/>
+            </summary>
+        </member>
+        <member name="T:SpikingLibrary.Moles.MScheduledEventItem">
+            <summary>Mole type of <see cref="T:SpikingLibrary.ScheduledEventItem"/>
+            .</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MScheduledEventItem.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MScheduledEventItem.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MScheduledEventItem.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MScheduledEventItem.Behavior">
+            <summary>Assigns the behavior for all methods of the moled type</summary>
+        </member>
+        <member name="T:SpikingLibrary.Moles.MScheduledEventItem.AllInstances">
+            <summary>Define moles for all instances members</summary>
+        </member>
+        <member name="T:SpikingLibrary.Moles.MScheduler">
+            <summary>Mole type of <see cref="T:SpikingLibrary.Scheduler"/>
+            .</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MScheduler.#ctor">
+            <summary>Initializes a new mole</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MScheduler.#ctor(SpikingLibrary.Scheduler)">
+            <summary>Initializes a new mole for the given instance</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MScheduler.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MScheduler.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MScheduler.Bind(System.IDisposable)">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MScheduler.AddEventScheduledEventInt32">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.Scheduler.AddEvent(SpikingLibrary.ScheduledEvent,System.Int32)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MScheduler.AddPendingEvents">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.Scheduler.AddPendingEvents"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MScheduler.Behavior">
+            <summary>Assigns the behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MScheduler.ConstructorInt32">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.Scheduler.#ctor(System.Int32)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MScheduler.Dispose">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.Scheduler.Dispose"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MScheduler.ExecuteSchedulerString">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.Scheduler.ExecuteScheduler(System.String)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MScheduler.IsRunningGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.Scheduler.IsRunning"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MScheduler.Pause">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.Scheduler.Pause"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MScheduler.PurgeScheduler">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.Scheduler.PurgeScheduler"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MScheduler.Resume">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.Scheduler.Resume"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MScheduler.ScheduleEventCollectionOfScheduledEventItem">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.Scheduler.ScheduleEvent(System.Collections.ObjectModel.Collection`1{SpikingLibrary.ScheduledEventItem})"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MScheduler.ScheduleEventScheduledEventInt32">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.Scheduler.ScheduleEvent(SpikingLibrary.ScheduledEvent,System.Int32)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MScheduler.StartAsyncString">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.Scheduler.StartAsync(System.String)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MScheduler.Stop">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.Scheduler.Stop"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MScheduler._InvariantMethod">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.Scheduler.$InvariantMethod$"/>
+            </summary>
+        </member>
+        <member name="T:SpikingLibrary.Moles.MScheduler.AllInstances">
+            <summary>Define moles for all instances members</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MScheduler.AllInstances.AddEventScheduledEventInt32">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.Scheduler.AddEvent(SpikingLibrary.ScheduledEvent,System.Int32)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MScheduler.AllInstances.AddPendingEvents">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.Scheduler.AddPendingEvents"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MScheduler.AllInstances.Dispose">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.Scheduler.Dispose"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MScheduler.AllInstances.ExecuteSchedulerString">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.Scheduler.ExecuteScheduler(System.String)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MScheduler.AllInstances.IsRunningGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.Scheduler.IsRunning"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MScheduler.AllInstances.Pause">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.Scheduler.Pause"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MScheduler.AllInstances.PurgeScheduler">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.Scheduler.PurgeScheduler"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MScheduler.AllInstances.Resume">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.Scheduler.Resume"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MScheduler.AllInstances.ScheduleEventCollectionOfScheduledEventItem">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.Scheduler.ScheduleEvent(System.Collections.ObjectModel.Collection`1{SpikingLibrary.ScheduledEventItem})"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MScheduler.AllInstances.ScheduleEventScheduledEventInt32">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.Scheduler.ScheduleEvent(SpikingLibrary.ScheduledEvent,System.Int32)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MScheduler.AllInstances.StartAsyncString">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.Scheduler.StartAsync(System.String)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MScheduler.AllInstances.Stop">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.Scheduler.Stop"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MScheduler.AllInstances._InvariantMethod">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.Scheduler.$InvariantMethod$"/>
+            </summary>
+        </member>
+        <member name="T:SpikingLibrary.Moles.MSpikingNetEngine">
+            <summary>Mole type of <see cref="T:SpikingLibrary.SpikingNetEngine"/>
+            .</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MSpikingNetEngine.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MSpikingNetEngine.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MSpikingNetEngine.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSpikingNetEngine.AddNeuron">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.SpikingNetEngine.Add(SpikingLibrary.Neuron)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSpikingNetEngine.AddNeuronCollection">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.SpikingNetEngine.Add(SpikingLibrary.NeuronCollection)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSpikingNetEngine.Behavior">
+            <summary>Assigns the behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSpikingNetEngine.IsRunningGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.SpikingNetEngine.IsRunning"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSpikingNetEngine.IsStoppingGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.SpikingNetEngine.IsStopping"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSpikingNetEngine.IsStoppingSetBoolean">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.SpikingNetEngine.IsStopping"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSpikingNetEngine.Pause">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.SpikingNetEngine.Pause"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSpikingNetEngine.Resume">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.SpikingNetEngine.Resume"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSpikingNetEngine.Sched_AddNeuronsInt64">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.SpikingNetEngine.Sched_AddNeurons(System.Int64)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSpikingNetEngine.Sched_DelayExecutionInt64">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.SpikingNetEngine.Sched_DelayExecution(System.Int64)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSpikingNetEngine.Sched_StopEngineInt64">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.SpikingNetEngine.Sched_StopEngine(System.Int64)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSpikingNetEngine.Sched_UpdateNeuronStatesInt64">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.SpikingNetEngine.Sched_UpdateNeuronStates(System.Int64)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSpikingNetEngine.SchedulerGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.SpikingNetEngine.Scheduler"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSpikingNetEngine.SlowNeuralEngineInt32">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.SpikingNetEngine.SlowNeuralEngine(System.Int32)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSpikingNetEngine.StartString">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.SpikingNetEngine.Start(System.String)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSpikingNetEngine.Stop">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.SpikingNetEngine.Stop"/>
+            </summary>
+        </member>
+        <member name="T:SpikingLibrary.Moles.MSpikingNetTimeNotifier">
+            <summary>Mole type of <see cref="T:SpikingLibrary.SpikingNetTimeNotifier"/>
+            .</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MSpikingNetTimeNotifier.#ctor">
+            <summary>Initializes a new mole</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MSpikingNetTimeNotifier.#ctor(SpikingLibrary.SpikingNetTimeNotifier)">
+            <summary>Initializes a new mole for the given instance</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MSpikingNetTimeNotifier.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MSpikingNetTimeNotifier.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSpikingNetTimeNotifier.Behavior">
+            <summary>Assigns the behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSpikingNetTimeNotifier.Constructor">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.SpikingNetTimeNotifier.#ctor"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSpikingNetTimeNotifier.CreateNotificationInt32">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.SpikingNetTimeNotifier.CreateNotification(System.Int32)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSpikingNetTimeNotifier.NotificationAddEventHandler">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.SpikingNetTimeNotifier.add_Notification(System.EventHandler)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSpikingNetTimeNotifier.NotificationRemoveEventHandler">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.SpikingNetTimeNotifier.remove_Notification(System.EventHandler)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSpikingNetTimeNotifier.OnNotificationEventArgs">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.SpikingNetTimeNotifier.OnNotification(System.EventArgs)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSpikingNetTimeNotifier.ReportNotificationObject">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.SpikingNetTimeNotifier.ReportNotification(System.Object)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSpikingNetTimeNotifier.Sched_NotifyClientInt64">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.SpikingNetTimeNotifier.Sched_NotifyClient(System.Int64)"/>
+            </summary>
+        </member>
+        <member name="T:SpikingLibrary.Moles.MSpikingNetTimeNotifier.AllInstances">
+            <summary>Define moles for all instances members</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSpikingNetTimeNotifier.AllInstances.CreateNotificationInt32">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.SpikingNetTimeNotifier.CreateNotification(System.Int32)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSpikingNetTimeNotifier.AllInstances.NotificationAddEventHandler">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.SpikingNetTimeNotifier.add_Notification(System.EventHandler)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSpikingNetTimeNotifier.AllInstances.NotificationRemoveEventHandler">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.SpikingNetTimeNotifier.remove_Notification(System.EventHandler)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSpikingNetTimeNotifier.AllInstances.OnNotificationEventArgs">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.SpikingNetTimeNotifier.OnNotification(System.EventArgs)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSpikingNetTimeNotifier.AllInstances.ReportNotificationObject">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.SpikingNetTimeNotifier.ReportNotification(System.Object)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSpikingNetTimeNotifier.AllInstances.Sched_NotifyClientInt64">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.SpikingNetTimeNotifier.Sched_NotifyClient(System.Int64)"/>
+            </summary>
+        </member>
+        <member name="T:SpikingLibrary.Moles.MStdpParameters">
+            <summary>Mole type of <see cref="T:SpikingLibrary.StdpParameters"/>
+            .</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MStdpParameters.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MStdpParameters.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MStdpParameters.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MStdpParameters.Behavior">
+            <summary>Assigns the behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MStdpParameters.HippocampalCultureGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.StdpParameters.HippocampalCulture"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MStdpParameters.RatVisualCortexL23Get">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.StdpParameters.RatVisualCortexL23"/>
+            </summary>
+        </member>
+        <member name="T:SpikingLibrary.Moles.MStdpParameters.AllInstances">
+            <summary>Define moles for all instances members</summary>
+        </member>
+        <member name="T:SpikingLibrary.Moles.MSynapse">
+            <summary>Mole type of <see cref="T:SpikingLibrary.Synapse"/>
+            .</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MSynapse.#ctor">
+            <summary>Initializes a new mole</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MSynapse.#ctor(SpikingLibrary.Synapse)">
+            <summary>Initializes a new mole for the given instance</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MSynapse.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MSynapse.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapse.ActivateSynapseInt64">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.Synapse.ActivateSynapse(System.Int64)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapse.AxonalDelayGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.Synapse.AxonalDelay"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapse.AxonalDelaySetInt32">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.Synapse.AxonalDelay"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapse.BapInt64">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.Synapse.Bap(System.Int64)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapse.Behavior">
+            <summary>Assigns the behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapse.ConstructorNeuronInt32Double">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.Synapse.#ctor(SpikingLibrary.Neuron,System.Int32,System.Double)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapse.ConstructorNeuronInt32DoubleStdpParameters">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.Synapse.#ctor(SpikingLibrary.Neuron,System.Int32,System.Double,SpikingLibrary.StdpParameters)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapse.IdGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.Synapse.Id"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapse.PostsynapticNeuronGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.Synapse.PostsynapticNeuron"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapse.WeightGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.Synapse.Weight"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapse.WeightSetDouble">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.Synapse.Weight"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapse._InvariantMethod">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.Synapse.$InvariantMethod$"/>
+            </summary>
+        </member>
+        <member name="T:SpikingLibrary.Moles.MSynapse.AllInstances">
+            <summary>Define moles for all instances members</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapse.AllInstances.ActivateSynapseInt64">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.Synapse.ActivateSynapse(System.Int64)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapse.AllInstances.AxonalDelayGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.Synapse.AxonalDelay"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapse.AllInstances.AxonalDelaySetInt32">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.Synapse.AxonalDelay"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapse.AllInstances.BapInt64">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.Synapse.Bap(System.Int64)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapse.AllInstances.IdGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.Synapse.Id"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapse.AllInstances.PostsynapticNeuronGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.Synapse.PostsynapticNeuron"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapse.AllInstances.WeightGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.Synapse.Weight"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapse.AllInstances.WeightSetDouble">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.Synapse.Weight"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapse.AllInstances._InvariantMethod">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.Synapse.$InvariantMethod$"/>
+            </summary>
+        </member>
+        <member name="T:SpikingLibrary.Moles.MSynapseDisplayControl">
+            <summary>Mole type of <see cref="T:SpikingLibrary.SynapseDisplayControl"/>
+            .</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MSynapseDisplayControl.#ctor">
+            <summary>Initializes a new mole</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MSynapseDisplayControl.#ctor(SpikingLibrary.SynapseDisplayControl)">
+            <summary>Initializes a new mole for the given instance</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MSynapseDisplayControl.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MSynapseDisplayControl.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MSynapseDisplayControl.Bind(System.ComponentModel.IComponent)">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MSynapseDisplayControl.Bind(System.ComponentModel.ISynchronizeInvoke)">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MSynapseDisplayControl.Bind(System.Windows.Forms.IBindableComponent)">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MSynapseDisplayControl.Bind(System.Windows.Forms.IContainerControl)">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MSynapseDisplayControl.Bind(System.Windows.Forms.IDropTarget)">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MSynapseDisplayControl.Bind(System.Windows.Forms.IWin32Window)">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MSynapseDisplayControl.Bind(System.IDisposable)">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapseDisplayControl.Behavior">
+            <summary>Assigns the behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapseDisplayControl.ClearTrace">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.SynapseDisplayControl.ClearTrace"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapseDisplayControl.Constructor">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.SynapseDisplayControl.#ctor"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapseDisplayControl.DisposeBoolean">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.SynapseDisplayControl.Dispose(System.Boolean)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapseDisplayControl.InitializeComponent">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.SynapseDisplayControl.InitializeComponent"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapseDisplayControl.RefreshGraph">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.SynapseDisplayControl.RefreshGraph"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapseDisplayControl.TargetGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.SynapseDisplayControl.Target"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapseDisplayControl.TargetSetSynapse">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.SynapseDisplayControl.Target"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapseDisplayControl.TracePeriodGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.SynapseDisplayControl.TracePeriod"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapseDisplayControl.TracePeriodSetInt32">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.SynapseDisplayControl.TracePeriod"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapseDisplayControl._InvariantMethod">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.SynapseDisplayControl.$InvariantMethod$"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapseDisplayControl._probe_SynapseProbedObjectSynapseProbeUpdateEventArgs">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.SynapseDisplayControl._probe_SynapseProbed(System.Object,SpikingLibrary.SynapseProbeUpdateEventArgs)"/>
+            </summary>
+        </member>
+        <member name="T:SpikingLibrary.Moles.MSynapseDisplayControl.AllInstances">
+            <summary>Define moles for all instances members</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapseDisplayControl.AllInstances.ClearTrace">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.SynapseDisplayControl.ClearTrace"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapseDisplayControl.AllInstances.DisposeBoolean">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.SynapseDisplayControl.Dispose(System.Boolean)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapseDisplayControl.AllInstances.InitializeComponent">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.SynapseDisplayControl.InitializeComponent"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapseDisplayControl.AllInstances.RefreshGraph">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.SynapseDisplayControl.RefreshGraph"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapseDisplayControl.AllInstances.TargetGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.SynapseDisplayControl.Target"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapseDisplayControl.AllInstances.TargetSetSynapse">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.SynapseDisplayControl.Target"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapseDisplayControl.AllInstances.TracePeriodGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.SynapseDisplayControl.TracePeriod"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapseDisplayControl.AllInstances.TracePeriodSetInt32">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.SynapseDisplayControl.TracePeriod"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapseDisplayControl.AllInstances._InvariantMethod">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.SynapseDisplayControl.$InvariantMethod$"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapseDisplayControl.AllInstances._probe_SynapseProbedObjectSynapseProbeUpdateEventArgs">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.SynapseDisplayControl._probe_SynapseProbed(System.Object,SpikingLibrary.SynapseProbeUpdateEventArgs)"/>
+            </summary>
+        </member>
+        <member name="T:SpikingLibrary.Moles.MSynapseFactory">
+            <summary>Mole type of <see cref="T:SpikingLibrary.SynapseFactory"/>
+            .</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MSynapseFactory.#ctor">
+            <summary>Initializes a new mole</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MSynapseFactory.#ctor(SpikingLibrary.SynapseFactory)">
+            <summary>Initializes a new mole for the given instance</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MSynapseFactory.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MSynapseFactory.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MSynapseFactory.Bind(SpikingLibrary.ISynapseFactory)">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MSynapseFactory.Bind(Util.IDeepCloneable{SpikingLibrary.ISynapseFactory})">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapseFactory.Behavior">
+            <summary>Assigns the behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapseFactory.ConstructorINumberGeneratorINumberGenerator">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.SynapseFactory.#ctor(MathLib.Statistics.INumberGenerator,MathLib.Statistics.INumberGenerator)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapseFactory.ConstructorINumberGeneratorINumberGeneratorStdpParameters">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.SynapseFactory.#ctor(MathLib.Statistics.INumberGenerator,MathLib.Statistics.INumberGenerator,SpikingLibrary.StdpParameters)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapseFactory.CreateSynapseNeuron">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.SynapseFactory.CreateSynapse(SpikingLibrary.Neuron)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapseFactory.DeepClone">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.SynapseFactory.DeepClone"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapseFactory._InvariantMethod">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.SynapseFactory.$InvariantMethod$"/>
+            </summary>
+        </member>
+        <member name="T:SpikingLibrary.Moles.MSynapseFactory.AllInstances">
+            <summary>Define moles for all instances members</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapseFactory.AllInstances.CreateSynapseNeuron">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.SynapseFactory.CreateSynapse(SpikingLibrary.Neuron)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapseFactory.AllInstances.DeepClone">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.SynapseFactory.DeepClone"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapseFactory.AllInstances._InvariantMethod">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.SynapseFactory.$InvariantMethod$"/>
+            </summary>
+        </member>
+        <member name="T:SpikingLibrary.Moles.MSynapseProbe">
+            <summary>Mole type of <see cref="T:SpikingLibrary.SynapseProbe"/>
+            .</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MSynapseProbe.#ctor">
+            <summary>Initializes a new mole</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MSynapseProbe.#ctor(SpikingLibrary.SynapseProbe)">
+            <summary>Initializes a new mole for the given instance</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MSynapseProbe.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MSynapseProbe.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapseProbe.Behavior">
+            <summary>Assigns the behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapseProbe.ConstructorSynapseInt32">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.SynapseProbe.#ctor(SpikingLibrary.Synapse,System.Int32)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapseProbe.GetWeight">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.SynapseProbe.GetWeight"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapseProbe.OnSynapseProbedSynapseProbeUpdateEventArgs">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.SynapseProbe.OnSynapseProbed(SpikingLibrary.SynapseProbeUpdateEventArgs)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapseProbe.ReportSynapseStateObject">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.SynapseProbe.ReportSynapseState(System.Object)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapseProbe.Sched_GetWeightInt64">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.SynapseProbe.Sched_GetWeight(System.Int64)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapseProbe.Sched_ProbeSynapseInt64">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.SynapseProbe.Sched_ProbeSynapse(System.Int64)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapseProbe.Sched_SetAxonalDelayInt64">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.SynapseProbe.Sched_SetAxonalDelay(System.Int64)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapseProbe.Sched_SetWeightInt64">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.SynapseProbe.Sched_SetWeight(System.Int64)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapseProbe.SetAxonalDelayInt32">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.SynapseProbe.SetAxonalDelay(System.Int32)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapseProbe.SetWeightDouble">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.SynapseProbe.SetWeight(System.Double)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapseProbe.Start">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.SynapseProbe.Start"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapseProbe.Stop">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.SynapseProbe.Stop"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapseProbe.SynapseProbedAddEventHandlerOfSynapseProbeUpdateEventArgs">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.SynapseProbe.add_SynapseProbed(System.EventHandler`1{SpikingLibrary.SynapseProbeUpdateEventArgs})"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapseProbe.SynapseProbedRemoveEventHandlerOfSynapseProbeUpdateEventArgs">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.SynapseProbe.remove_SynapseProbed(System.EventHandler`1{SpikingLibrary.SynapseProbeUpdateEventArgs})"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapseProbe.TargetGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.SynapseProbe.Target"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapseProbe.TargetSetSynapse">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.SynapseProbe.Target"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapseProbe.UpdateIntervalGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.SynapseProbe.UpdateInterval"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapseProbe.UpdateIntervalSetInt32">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.SynapseProbe.UpdateInterval"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapseProbe._InvariantMethod">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.SynapseProbe.$InvariantMethod$"/>
+            </summary>
+        </member>
+        <member name="T:SpikingLibrary.Moles.MSynapseProbe.AllInstances">
+            <summary>Define moles for all instances members</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapseProbe.AllInstances.GetWeight">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.SynapseProbe.GetWeight"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapseProbe.AllInstances.OnSynapseProbedSynapseProbeUpdateEventArgs">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.SynapseProbe.OnSynapseProbed(SpikingLibrary.SynapseProbeUpdateEventArgs)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapseProbe.AllInstances.ReportSynapseStateObject">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.SynapseProbe.ReportSynapseState(System.Object)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapseProbe.AllInstances.Sched_GetWeightInt64">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.SynapseProbe.Sched_GetWeight(System.Int64)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapseProbe.AllInstances.Sched_ProbeSynapseInt64">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.SynapseProbe.Sched_ProbeSynapse(System.Int64)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapseProbe.AllInstances.Sched_SetAxonalDelayInt64">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.SynapseProbe.Sched_SetAxonalDelay(System.Int64)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapseProbe.AllInstances.Sched_SetWeightInt64">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.SynapseProbe.Sched_SetWeight(System.Int64)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapseProbe.AllInstances.SetAxonalDelayInt32">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.SynapseProbe.SetAxonalDelay(System.Int32)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapseProbe.AllInstances.SetWeightDouble">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.SynapseProbe.SetWeight(System.Double)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapseProbe.AllInstances.Start">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.SynapseProbe.Start"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapseProbe.AllInstances.Stop">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.SynapseProbe.Stop"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapseProbe.AllInstances.SynapseProbedAddEventHandlerOfSynapseProbeUpdateEventArgs">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.SynapseProbe.add_SynapseProbed(System.EventHandler`1{SpikingLibrary.SynapseProbeUpdateEventArgs})"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapseProbe.AllInstances.SynapseProbedRemoveEventHandlerOfSynapseProbeUpdateEventArgs">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.SynapseProbe.remove_SynapseProbed(System.EventHandler`1{SpikingLibrary.SynapseProbeUpdateEventArgs})"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapseProbe.AllInstances.TargetGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.SynapseProbe.Target"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapseProbe.AllInstances.TargetSetSynapse">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.SynapseProbe.Target"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapseProbe.AllInstances.UpdateIntervalGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.SynapseProbe.UpdateInterval"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapseProbe.AllInstances.UpdateIntervalSetInt32">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.SynapseProbe.UpdateInterval"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapseProbe.AllInstances._InvariantMethod">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.SynapseProbe.$InvariantMethod$"/>
+            </summary>
+        </member>
+        <member name="T:SpikingLibrary.Moles.MSynapseProbeUpdateEventArgs">
+            <summary>Mole type of <see cref="T:SpikingLibrary.SynapseProbeUpdateEventArgs"/>
+            .</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MSynapseProbeUpdateEventArgs.#ctor">
+            <summary>Initializes a new mole</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MSynapseProbeUpdateEventArgs.#ctor(SpikingLibrary.SynapseProbeUpdateEventArgs)">
+            <summary>Initializes a new mole for the given instance</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MSynapseProbeUpdateEventArgs.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.MSynapseProbeUpdateEventArgs.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapseProbeUpdateEventArgs.Behavior">
+            <summary>Assigns the behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapseProbeUpdateEventArgs.ConstructorInt64Double">
+            <summary>Sets the mole of <see cref="M:SpikingLibrary.SynapseProbeUpdateEventArgs.#ctor(System.Int64,System.Double)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapseProbeUpdateEventArgs.TimeGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.SynapseProbeUpdateEventArgs.Time"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapseProbeUpdateEventArgs.TimeSetInt64">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.SynapseProbeUpdateEventArgs.Time"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapseProbeUpdateEventArgs.WeightGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.SynapseProbeUpdateEventArgs.Weight"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapseProbeUpdateEventArgs.WeightSetDouble">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.SynapseProbeUpdateEventArgs.Weight"/>
+            </summary>
+        </member>
+        <member name="T:SpikingLibrary.Moles.MSynapseProbeUpdateEventArgs.AllInstances">
+            <summary>Define moles for all instances members</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapseProbeUpdateEventArgs.AllInstances.TimeGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.SynapseProbeUpdateEventArgs.Time"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapseProbeUpdateEventArgs.AllInstances.TimeSetInt64">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.SynapseProbeUpdateEventArgs.Time"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapseProbeUpdateEventArgs.AllInstances.WeightGet">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.SynapseProbeUpdateEventArgs.Weight"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.MSynapseProbeUpdateEventArgs.AllInstances.WeightSetDouble">
+            <summary>Sets the mole of <see cref="P:SpikingLibrary.SynapseProbeUpdateEventArgs.Weight"/>
+            </summary>
+        </member>
+        <member name="T:SpikingLibrary.Moles.SIInputSource">
+            <summary>Stub type of <see cref="T:SpikingLibrary.IInputSource"/>
+            .</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.SIInputSource.#ctor">
+            <summary>Initializes a new instance of type SIInputSource</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.SIInputSource.sl::SpikingLibrary#IInputSource#Start(System.Int32)">
+            <summary>Sets the stub of <see cref="M:SpikingLibrary.IInputSource.Start(System.Int32)"/>
+            </summary>
+        </member>
+        <member name="F:SpikingLibrary.Moles.SIInputSource.StartInt32">
+            <summary>Sets the stub of <see cref="M:SpikingLibrary.IInputSource.Start(System.Int32)"/>
+            </summary>
+        </member>
+        <member name="T:SpikingLibrary.Moles.SISynapseFactory">
+            <summary>Stub type of <see cref="T:SpikingLibrary.ISynapseFactory"/>
+            .</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.SISynapseFactory.#ctor">
+            <summary>Initializes a new instance of type SISynapseFactory</summary>
+        </member>
+        <member name="F:SpikingLibrary.Moles.SISynapseFactory.CreateSynapseNeuron">
+            <summary>Sets the stub of <see cref="M:SpikingLibrary.ISynapseFactory.CreateSynapse(SpikingLibrary.Neuron)"/>
+            </summary>
+        </member>
+        <member name="F:SpikingLibrary.Moles.SISynapseFactory.DeepClone">
+            <summary>Sets the stub of <see cref="M:Util.IDeepCloneable`1.DeepClone"/>
+            </summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.SISynapseFactory.sl::SpikingLibrary#ISynapseFactory#CreateSynapse(SpikingLibrary.Neuron)">
+            <summary>Sets the stub of <see cref="M:SpikingLibrary.ISynapseFactory.CreateSynapse(SpikingLibrary.Neuron)"/>
+            </summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.SISynapseFactory.u::Util#IDeepCloneable{SpikingLibrary#ISynapseFactory}#DeepClone">
+            <summary>Sets the stub of <see cref="M:Util.IDeepCloneable`1.DeepClone"/>
+            </summary>
+        </member>
+        <member name="T:SpikingLibrary.Moles.SNeuron">
+            <summary>Stub type of <see cref="T:SpikingLibrary.Neuron"/>
+            .</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.SNeuron.#ctor(SpikingLibrary.NeuronClass)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.SNeuron.InitializeStub">
+            <summary>Initializes a new instance of type SNeuron</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.SNeuron.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.SNeuron.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="T:SpikingLibrary.Moles.SNeuronClass">
+            <summary>Stub type of <see cref="T:SpikingLibrary.NeuronClass"/>
+            .</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.SNeuronClass.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.SNeuronClass.#ctor(System.Double,System.Double,System.Double,System.Double,System.Double)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.SNeuronClass.#ctor(System.Double,System.Double,System.Double,System.Double,System.Double,System.String)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.SNeuronClass.InitializeStub">
+            <summary>Initializes a new instance of type SNeuronClass</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.SNeuronClass.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.SNeuronClass.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="T:SpikingLibrary.Moles.SNeuronCollection">
+            <summary>Stub type of <see cref="T:SpikingLibrary.NeuronCollection"/>
+            .</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.SNeuronCollection.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.SNeuronCollection.#ctor(System.String)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.SNeuronCollection.InitializeStub">
+            <summary>Initializes a new instance of type SNeuronCollection</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.SNeuronCollection.OnNeuronFired(SpikingLibrary.NeuronCollectionFiringEventArgs)">
+            <summary>Sets the stub of <see cref="M:SpikingLibrary.NeuronCollection.OnNeuronFired(SpikingLibrary.NeuronCollectionFiringEventArgs)"/>
+            </summary>
+        </member>
+        <member name="F:SpikingLibrary.Moles.SNeuronCollection.OnNeuronFiredNeuronCollectionFiringEventArgs">
+            <summary>Sets the stub of <see cref="M:SpikingLibrary.NeuronCollection.OnNeuronFired(SpikingLibrary.NeuronCollectionFiringEventArgs)"/>
+            </summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.SNeuronCollection.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.SNeuronCollection.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="T:SpikingLibrary.Moles.SNeuronCollectionFiringEventArgs">
+            <summary>Stub type of <see cref="T:SpikingLibrary.NeuronCollectionFiringEventArgs"/>
+            .</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.SNeuronCollectionFiringEventArgs.#ctor(SpikingLibrary.Neuron,System.Int64)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.SNeuronCollectionFiringEventArgs.InitializeStub">
+            <summary>Initializes a new instance of type SNeuronCollectionFiringEventArgs</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.SNeuronCollectionFiringEventArgs.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.SNeuronCollectionFiringEventArgs.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="T:SpikingLibrary.Moles.SNeuronDisplayControl">
+            <summary>Stub type of <see cref="T:SpikingLibrary.NeuronDisplayControl"/>
+            .</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.SNeuronDisplayControl.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.SNeuronDisplayControl.Dispose(System.Boolean)">
+            <summary>Sets the stub of <see cref="M:SpikingLibrary.NeuronDisplayControl.Dispose(System.Boolean)"/>
+            </summary>
+        </member>
+        <member name="F:SpikingLibrary.Moles.SNeuronDisplayControl.DisposeBoolean">
+            <summary>Sets the stub of <see cref="M:SpikingLibrary.NeuronDisplayControl.Dispose(System.Boolean)"/>
+            </summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.SNeuronDisplayControl.InitializeStub">
+            <summary>Initializes a new instance of type SNeuronDisplayControl</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.SNeuronDisplayControl.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.SNeuronDisplayControl.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="T:SpikingLibrary.Moles.SNeuronFiredEventArgs">
+            <summary>Stub type of <see cref="T:SpikingLibrary.NeuronFiredEventArgs"/>
+            .</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.SNeuronFiredEventArgs.#ctor(System.Int64)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.SNeuronFiredEventArgs.InitializeStub">
+            <summary>Initializes a new instance of type SNeuronFiredEventArgs</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.SNeuronFiredEventArgs.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.SNeuronFiredEventArgs.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="T:SpikingLibrary.Moles.SNeuronProbe">
+            <summary>Stub type of <see cref="T:SpikingLibrary.NeuronProbe"/>
+            .</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.SNeuronProbe.#ctor(SpikingLibrary.Neuron,System.Int32)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.SNeuronProbe.InitializeStub">
+            <summary>Initializes a new instance of type SNeuronProbe</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.SNeuronProbe.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.SNeuronProbe.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="T:SpikingLibrary.Moles.SNeuronProbeUpdateEventArgs">
+            <summary>Stub type of <see cref="T:SpikingLibrary.NeuronProbeUpdateEventArgs"/>
+            .</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.SNeuronProbeUpdateEventArgs.#ctor(System.Int64,System.Double,System.Double)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.SNeuronProbeUpdateEventArgs.InitializeStub">
+            <summary>Initializes a new instance of type SNeuronProbeUpdateEventArgs</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.SNeuronProbeUpdateEventArgs.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.SNeuronProbeUpdateEventArgs.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="T:SpikingLibrary.Moles.SNonLearningNoisySynapse">
+            <summary>Stub type of <see cref="T:SpikingLibrary.NonLearningNoisySynapse"/>
+            .</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.SNonLearningNoisySynapse.#ctor(SpikingLibrary.Neuron,System.Int32,System.Double,MathLib.Statistics.INumberGenerator)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.SNonLearningNoisySynapse.InitializeStub">
+            <summary>Initializes a new instance of type SNonLearningNoisySynapse</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.SNonLearningNoisySynapse.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.SNonLearningNoisySynapse.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="T:SpikingLibrary.Moles.SNonLearningNoisySynapseFactory">
+            <summary>Stub type of <see cref="T:SpikingLibrary.NonLearningNoisySynapseFactory"/>
+            .</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.SNonLearningNoisySynapseFactory.#ctor(MathLib.Statistics.INumberGenerator,MathLib.Statistics.INumberGenerator,MathLib.Statistics.INumberGenerator)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.SNonLearningNoisySynapseFactory.InitializeStub">
+            <summary>Initializes a new instance of type SNonLearningNoisySynapseFactory</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.SNonLearningNoisySynapseFactory.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.SNonLearningNoisySynapseFactory.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="T:SpikingLibrary.Moles.SNonLearningSynapse">
+            <summary>Stub type of <see cref="T:SpikingLibrary.NonLearningSynapse"/>
+            .</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.SNonLearningSynapse.#ctor(SpikingLibrary.Neuron,System.Int32,System.Int32)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.SNonLearningSynapse.InitializeStub">
+            <summary>Initializes a new instance of type SNonLearningSynapse</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.SNonLearningSynapse.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.SNonLearningSynapse.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="T:SpikingLibrary.Moles.SNonLearningSynapseFactory">
+            <summary>Stub type of <see cref="T:SpikingLibrary.NonLearningSynapseFactory"/>
+            .</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.SNonLearningSynapseFactory.#ctor(MathLib.Statistics.INumberGenerator,MathLib.Statistics.INumberGenerator)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.SNonLearningSynapseFactory.InitializeStub">
+            <summary>Initializes a new instance of type SNonLearningSynapseFactory</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.SNonLearningSynapseFactory.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.SNonLearningSynapseFactory.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="T:SpikingLibrary.Moles.SPeriodicInputSignal">
+            <summary>Stub type of <see cref="T:SpikingLibrary.PeriodicInputSignal"/>
+            .</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.SPeriodicInputSignal.#ctor(System.Int32,System.Int32)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.SPeriodicInputSignal.InitializeStub">
+            <summary>Initializes a new instance of type SPeriodicInputSignal</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.SPeriodicInputSignal.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.SPeriodicInputSignal.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="T:SpikingLibrary.Moles.SRollingPointListWithStaticX">
+            <summary>Stub type of <see cref="T:SpikingLibrary.RollingPointListWithStaticX"/>
+            .</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.SRollingPointListWithStaticX.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.SRollingPointListWithStaticX.#ctor(System.Int32,System.Double,System.Double)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.SRollingPointListWithStaticX.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>Sets the stub of <see cref="M:SpikingLibrary.RollingPointListWithStaticX.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)"/>
+            </summary>
+        </member>
+        <member name="F:SpikingLibrary.Moles.SRollingPointListWithStaticX.GetObjectDataSerializationInfoStreamingContext">
+            <summary>Sets the stub of <see cref="M:SpikingLibrary.RollingPointListWithStaticX.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)"/>
+            </summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.SRollingPointListWithStaticX.InitializeStub">
+            <summary>Initializes a new instance of type SRollingPointListWithStaticX</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.SRollingPointListWithStaticX.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.SRollingPointListWithStaticX.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="T:SpikingLibrary.Moles.SSpikingNetTimeNotifier">
+            <summary>Stub type of <see cref="T:SpikingLibrary.SpikingNetTimeNotifier"/>
+            .</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.SSpikingNetTimeNotifier.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.SSpikingNetTimeNotifier.InitializeStub">
+            <summary>Initializes a new instance of type SSpikingNetTimeNotifier</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.SSpikingNetTimeNotifier.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.SSpikingNetTimeNotifier.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="T:SpikingLibrary.Moles.SSynapse">
+            <summary>Stub type of <see cref="T:SpikingLibrary.Synapse"/>
+            .</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.SSynapse.#ctor(SpikingLibrary.Neuron,System.Int32,System.Double)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.SSynapse.#ctor(SpikingLibrary.Neuron,System.Int32,System.Double,SpikingLibrary.StdpParameters)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.SSynapse.InitializeStub">
+            <summary>Initializes a new instance of type SSynapse</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.SSynapse.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.SSynapse.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="T:SpikingLibrary.Moles.SSynapseDisplayControl">
+            <summary>Stub type of <see cref="T:SpikingLibrary.SynapseDisplayControl"/>
+            .</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.SSynapseDisplayControl.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.SSynapseDisplayControl.Dispose(System.Boolean)">
+            <summary>Sets the stub of <see cref="M:SpikingLibrary.SynapseDisplayControl.Dispose(System.Boolean)"/>
+            </summary>
+        </member>
+        <member name="F:SpikingLibrary.Moles.SSynapseDisplayControl.DisposeBoolean">
+            <summary>Sets the stub of <see cref="M:SpikingLibrary.SynapseDisplayControl.Dispose(System.Boolean)"/>
+            </summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.SSynapseDisplayControl.InitializeStub">
+            <summary>Initializes a new instance of type SSynapseDisplayControl</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.SSynapseDisplayControl.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.SSynapseDisplayControl.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="T:SpikingLibrary.Moles.SSynapseFactory">
+            <summary>Stub type of <see cref="T:SpikingLibrary.SynapseFactory"/>
+            .</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.SSynapseFactory.#ctor(MathLib.Statistics.INumberGenerator,MathLib.Statistics.INumberGenerator)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.SSynapseFactory.#ctor(MathLib.Statistics.INumberGenerator,MathLib.Statistics.INumberGenerator,SpikingLibrary.StdpParameters)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.SSynapseFactory.InitializeStub">
+            <summary>Initializes a new instance of type SSynapseFactory</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.SSynapseFactory.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.SSynapseFactory.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="T:SpikingLibrary.Moles.SSynapseProbe">
+            <summary>Stub type of <see cref="T:SpikingLibrary.SynapseProbe"/>
+            .</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.SSynapseProbe.#ctor(SpikingLibrary.Synapse,System.Int32)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.SSynapseProbe.InitializeStub">
+            <summary>Initializes a new instance of type SSynapseProbe</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.SSynapseProbe.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.SSynapseProbe.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="T:SpikingLibrary.Moles.SSynapseProbeUpdateEventArgs">
+            <summary>Stub type of <see cref="T:SpikingLibrary.SynapseProbeUpdateEventArgs"/>
+            .</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.SSynapseProbeUpdateEventArgs.#ctor(System.Int64,System.Double)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:SpikingLibrary.Moles.SSynapseProbeUpdateEventArgs.InitializeStub">
+            <summary>Initializes a new instance of type SSynapseProbeUpdateEventArgs</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.SSynapseProbeUpdateEventArgs.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:SpikingLibrary.Moles.SSynapseProbeUpdateEventArgs.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+    </members>
+</doc>

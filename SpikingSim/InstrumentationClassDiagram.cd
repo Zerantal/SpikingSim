@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SpikingLibrary.NeuronProbe" Collapsed="true">
+    <Position X="2.5" Y="2.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAQAAAxAAKAAAEAAAAALECAAQwCAgJAAJIQQAAAAAAA=</HashCode>
+      <FileName>NeuronProbe.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Target" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SpikingLibrary.Neuron" Collapsed="true">
+    <Position X="2.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAQCBiQBAAAAAAAAAABAAAAAAACAAAAAgABQECAS4AA=</HashCode>
+      <FileName>Neuron.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpikingLibrary.SynapseProbe" Collapsed="true">
+    <Position X="4.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAARAAKAAgAAAAAAAECACQgBAAAAAIIBQAAAAAAA=</HashCode>
+      <FileName>SynapseProbe.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_target" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SpikingLibrary.Synapse" Collapsed="true">
+    <Position X="4.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAQAAAACBAAAAAAACAAAAAAAAAAQAIAAACUgAACA=</HashCode>
+      <FileName>Synapse.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

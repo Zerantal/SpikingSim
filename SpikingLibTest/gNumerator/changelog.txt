@@ -1,0 +1,73 @@
+Change Log:
+version 0.33:
+1: correct and compatible (with design science's math player} implementation 
+of action elements. 
+2: lots of new events including 
+	ActionElementMouseClick 
+	ActionElementMouseEnter
+	ActionElementMouseLeave 
+	ElementMouseClick
+	ElementMouseEnter
+	ElementMouseHover  
+	ElementMouseLeave 
+3: improvements in documentation.
+
+version 0.32:
+1: element selection working well.
+2: performance improvments by caching of areas.
+3: control listens for document events, whenver a node is changed, the control
+will automatically perform an re-layout and re-draw.
+4: new AfterSelect event, will be fired whenever a element is selected.
+5: bug fixes in MathML DOM, do not return non-MathMLElements in an arguments
+list
+6: bug fixes in parsing attributes
+7: cache misc DOM attributes
+8: control is not true double buffered, eliminated flicker.
+9: enabled experimental editing support, USE AT YOUR OWN RISK
+
+version 0.31:
+1: fixed bug in row-spanning cells
+
+version 0.3:
+1: Implementation of new table layout code, correctly renders tables including
+   spanning cells.
+
+2: Considerable small changes
+
+3: stretchy operators correctly render
+
+4: updates to fonts, implement missing glyphs
+
+5: selection partially implemented
+
+6: export as metafile
+
+version 0.21:
+1: Fixed nasty bug with parsing floating point values from the config file
+   in non US locales. Tested with non US locales, and all seems to be
+   working OK.
+
+version 0.2:
+1: New Fonts: the old font, cm-roman is no longer used, instead the standard
+   times new roman font, along with a new font, math-roman.ttf. This new
+   font fills in many of the holes of times new roman, such as math operators, 
+   symbols, and arrows.
+
+2: many new mathml elements such as mfenced, merror, mphantom, and a few
+   others are now implemented.
+
+3: color attributes are now implemented, including both font, and background
+   colors. Both the new 'mathcolor' and the deprecated 'color' attributes 
+   are respected.
+
+4: rendering is now double buffered. The mathml document is read, parsed, and
+   formatted only once, and is drawn to a memory bitmap. The bitmap is 
+   blt'ed to the screen at each re-draw.
+
+5: control now supports pasting to the clipboard, and also to saving to
+   a variety of different image formats.
+
+6: due to popular demand, rendering to a bitmap, and saving to image files
+   is now cleanly implemented, and should be easy to follow. 
+
+7: minor clean up of creating measurment context for glyphs.
