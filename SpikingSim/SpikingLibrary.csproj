@@ -174,16 +174,6 @@
     <None Include="SchedulerClassDiagram.cd" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\MathLib\MathLib.csproj">
-      <Project>{06119B37-8AB7-47AC-A943-672FEEEEC597}</Project>
-      <Name>MathLib</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Util\Util.csproj">
-      <Project>{1e22cac4-8e90-4dd7-a754-6d1ef0845230}</Project>
-      <Name>Util</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
       <Visible>False</Visible>
       <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
@@ -211,8 +201,18 @@
       <DependentUpon>SynapseDisplayControl.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MathLib\MathLib.csproj">
+      <Project>{06119b37-8ab7-47ac-a943-672feeeec597}</Project>
+      <Name>MathLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Util\Util.csproj">
+      <Project>{1e22cac4-8e90-4dd7-a754-6d1ef0845230}</Project>
+      <Name>Util</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>

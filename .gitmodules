@@ -1,0 +1,6 @@
+[submodule "MathLib"]
+	path = MathLib
+	url = https://github.com/Zerantal/MathLib.git
+[submodule "Util"]
+	path = Util
+	url = https://github.com/Zerantal/Util.git
