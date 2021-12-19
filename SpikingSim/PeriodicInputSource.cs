@@ -182,7 +182,6 @@ namespace SpikingLibrary
             set => _maxInputCycles = value;
         }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1026:DefaultParametersShouldNotBeUsed")]
         public override void Start(int startTime = 1)
         {
             if (!_running)

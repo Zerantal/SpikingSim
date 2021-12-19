@@ -22,7 +22,6 @@ namespace SpikingLibrary
         private int _maxTime = 1800; // time period of trace in seconds. 
         private const int NumTracePoints = 10000;
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters", MessageId = "ZedGraph.Label.set_Text(System.String)")]
         public SynapseDisplayControl()
         {
             InitializeComponent();

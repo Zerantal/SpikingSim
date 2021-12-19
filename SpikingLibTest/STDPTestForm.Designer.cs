@@ -32,6 +32,7 @@ namespace SpikingLibTest
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.synapseDisplayControl1 = new SpikingLibrary.SynapseDisplayControl();
             this.panel1 = new System.Windows.Forms.Panel();
             this.freqUD = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
@@ -39,7 +40,6 @@ namespace SpikingLibTest
             this.label2 = new System.Windows.Forms.Label();
             this.stopBtn = new System.Windows.Forms.Button();
             this.startBtn = new System.Windows.Forms.Button();
-            this.synapseDisplayControl1 = new SpikingLibrary.SynapseDisplayControl();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.freqUD)).BeginInit();
@@ -60,6 +60,15 @@ namespace SpikingLibTest
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 27.85515F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(407, 359);
             this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // synapseDisplayControl1
+            // 
+            this.synapseDisplayControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.synapseDisplayControl1.Location = new System.Drawing.Point(3, 3);
+            this.synapseDisplayControl1.Name = "synapseDisplayControl1";
+            this.synapseDisplayControl1.Size = new System.Drawing.Size(401, 253);
+            this.synapseDisplayControl1.TabIndex = 0;
+            this.synapseDisplayControl1.Target = null;
             // 
             // panel1
             // 
@@ -92,7 +101,7 @@ namespace SpikingLibTest
             this.freqUD.Size = new System.Drawing.Size(86, 20);
             this.freqUD.TabIndex = 9;
             this.freqUD.Value = new decimal(new int[] {
-            1,
+            2,
             0,
             0,
             0});
@@ -158,16 +167,7 @@ namespace SpikingLibTest
             this.startBtn.UseVisualStyleBackColor = true;
             this.startBtn.Click += new System.EventHandler(this.startBtn_Click);
             // 
-            // synapseDisplayControl1
-            // 
-            this.synapseDisplayControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.synapseDisplayControl1.Location = new System.Drawing.Point(3, 3);
-            this.synapseDisplayControl1.Name = "synapseDisplayControl1";
-            this.synapseDisplayControl1.Size = new System.Drawing.Size(401, 253);
-            this.synapseDisplayControl1.TabIndex = 0;
-            this.synapseDisplayControl1.Target = null;
-            // 
-            // STDPTestForm
+            // StdpTestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;

@@ -22,7 +22,7 @@ namespace SpikingLibTest
             _neuron = SpikingNetEngine.CreateNeuron(new NeuronParameters(0.02, -0.1, -55, 0, 0));
 
             SpikingNetEngine.Start();
-            SpikingNetEngine.SlowNeuralEngine(0);                   
+            SpikingNetEngine.SlowNeuralEngine(1);                   
         }
 
         private void startBtn_Click(object sender, EventArgs e)
