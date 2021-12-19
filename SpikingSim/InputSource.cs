@@ -4,7 +4,6 @@ using System.Diagnostics.Contracts;
 
 namespace SpikingLibrary
 {
-    [ContractClass(typeof(InputSourceContract))]
     public abstract class InputSource
     {
         private static readonly List<Tuple<InputSource, int>> PendingInputsToSynchronise =
@@ -25,19 +24,19 @@ namespace SpikingLibrary
                 PendingInputsToSynchronise.AddRange(signals);
                 if (_synchronisationEventScheduled) return;
 
-                SpikingNetEngine.Scheduler.ScheduleEvent(new ScheduledEvent(Sched_SynchroniseInputs), 1);
+                SpikingNetEngine.Scheduler.ScheduleEvent(Scheduler_SynchroniseInputs, 1);
                 _synchronisationEventScheduled = true;
             }
         }
 
-        private static void Sched_SynchroniseInputs(long time)
+        private static void Scheduler_SynchroniseInputs(long timeInterval)
         {
             lock (ObjSync)
             {
-                foreach (Tuple<InputSource, int> t in PendingInputsToSynchronise)
+                foreach (var (source, time) in PendingInputsToSynchronise)
                 {
-                    Contract.Assume(t.Item2 > 0);
-                    t.Item1.Start(t.Item2);
+                    Contract.Assume(time > 0);
+                    source.Start(time);
                 }
                 PendingInputsToSynchronise.Clear();
                 _synchronisationEventScheduled = false;
@@ -46,7 +45,7 @@ namespace SpikingLibrary
 
         public abstract void Start(int startTime = 1);
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1716:IdentifiersShouldNotMatchKeywords", MessageId = "Stop")]
+        // ReSharper disable once UnusedMemberInSuper.Global
         public abstract void Stop();
 
         [ContractInvariantMethod]

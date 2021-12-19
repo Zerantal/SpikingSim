@@ -3,7 +3,7 @@
 namespace SpikingLibTest
 {
     [ContractVerification(false)]
-    partial class STDPTestForm
+    partial class StdpTestForm
     {
         /// <summary>
         /// Required designer variable.
@@ -173,7 +173,7 @@ namespace SpikingLibTest
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(407, 359);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Name = "STDPTestForm";
+            this.Name = "StdpTestForm";
             this.Text = "STDPTestForm";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.STDPTestForm_FormClosed);
             this.tableLayoutPanel1.ResumeLayout(false);

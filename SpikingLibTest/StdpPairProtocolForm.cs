@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics.CodeAnalysis;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
@@ -6,15 +7,18 @@ using System.Diagnostics.Contracts;
 
 using ZedGraph;
 using SpikingLibrary;
+// ReSharper disable InconsistentNaming
+// ReSharper disable IdentifierTypo
 
 namespace SpikingLibTest
 {
     [ContractVerification(false)]
+    [SuppressMessage("ReSharper", "UnusedVariable")]
     public partial class StdpPairProtocolForm : Form
     {
         // Pair protocol values
         private const double PairProtocolTimeInterval1 = -10;  // time between pre and post synaptic spikes (in ms)
-        private const double PairProtocolTimeinterval2 = 10;
+        private const double PairProtocolTimeInterval2 = 10;
         private PointPairList _pairList1;
         private PointPairList _pairList2;                
         
@@ -25,11 +29,11 @@ namespace SpikingLibTest
         private PointPairList _quadrupletList2;
 
         // pre-post-pre triplet parameters
-        private readonly double[,] _prepostpreTriplets = new double[4,2] {{5, -5}, {10, -10}, {15, -5}, {5, -15}};
+        private readonly double[,] _prepostpreTriplets = {{5, -5}, {10, -10}, {15, -5}, {5, -15}};
         private PointPairList _prepostpreTripletList;
 
         // post-pre-post triplet parameters
-        private readonly double[,] _postprepostTriplets = new double[4, 2] {{-5, 5}, {-10, 10}, {-5, 15}, {-15, 5}};
+        private readonly double[,] _postprepostTriplets = {{-5, 5}, {-10, 10}, {-5, 15}, {-15, 5}};
         private PointPairList _postprepostTripletList;
         
         public StdpPairProtocolForm()
@@ -45,14 +49,14 @@ namespace SpikingLibTest
 
             
             PairProtocol p1 = new PairProtocol(_pairList1, PairProtocolTimeInterval1);
-            PairProtocol p2 = new PairProtocol(_pairList2, PairProtocolTimeinterval2);
+            PairProtocol p2 = new PairProtocol(_pairList2, PairProtocolTimeInterval2);
             QuadrupletProtocol q1 = new QuadrupletProtocol(_quadrupletList1, TMin, -5);
             QuadrupletProtocol q2 = new QuadrupletProtocol(_quadrupletList2, 5, TMax);
             PrePostPreTipletProtocol t1 = new PrePostPreTipletProtocol(_prepostpreTripletList, _prepostpreTriplets);
             PostPrePostTripletProtocol t2 = new PostPrePostTripletProtocol(_postprepostTripletList, _postprepostTriplets);
         }
 
-        void UpdateGraphs(object sender, EventArgs e)
+        private void UpdateGraphs(object sender, EventArgs e)
         {
             zgc.AxisChange();
             zgc.Refresh();            
@@ -76,7 +80,7 @@ namespace SpikingLibTest
             c1.Symbol.IsVisible = false;
             c1.Line.Style = DashStyle.Dash;
             c1.Line.Width = 2;
-            LineItem c2 = pairPane.AddCurve("Δt = " + PairProtocolTimeinterval2, _pairList2, Color.Blue, SymbolType.None);
+            LineItem c2 = pairPane.AddCurve("Δt = " + PairProtocolTimeInterval2, _pairList2, Color.Blue, SymbolType.None);
             c2.Symbol.IsVisible = false;
             c2.Line.Width = 2;
             
@@ -101,7 +105,7 @@ namespace SpikingLibTest
             tripletPane1.YAxis.Title.Text = "Δw";
             _prepostpreTripletList = new PointPairList();
             tripletPane1.AddBar("", _prepostpreTripletList, Color.Blue);
-            String[] str1 = new string[_prepostpreTriplets.GetLength(0)];
+            string[] str1 = new string[_prepostpreTriplets.GetLength(0)];
             for (int i = 0; i < str1.Length; i++)
                 str1[i] = "(" + _prepostpreTriplets[i,0] + "," + _prepostpreTriplets[i,1] + ")";
             tripletPane1.XAxis.Scale.TextLabels = str1;
@@ -113,7 +117,7 @@ namespace SpikingLibTest
             tripletPane2.YAxis.Title.Text = "Δw";
             _postprepostTripletList = new PointPairList();
             tripletPane2.AddBar("", _postprepostTripletList, Color.Blue);
-            String[] str2 = new string[_postprepostTriplets.GetLength(0)];
+            string[] str2 = new string[_postprepostTriplets.GetLength(0)];
             for (int i = 0; i < str2.Length; i++)
                 str2[i] = "(" + _postprepostTriplets[i, 0] + "," + _postprepostTriplets[i, 1] + ")";
             tripletPane2.XAxis.Scale.TextLabels = str2;

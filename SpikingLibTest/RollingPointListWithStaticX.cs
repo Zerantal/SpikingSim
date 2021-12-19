@@ -18,7 +18,6 @@
 //Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 //=============================================================================
 using System;
-using System.Text;
 using System.Runtime.Serialization;
 using System.Security.Permissions;
 using System.Diagnostics.Contracts;
@@ -38,7 +37,7 @@ namespace SpikingLibTest
     /// The queue is constructed with a fixed capacity and new points can be enqueued. When the 
     /// capacity is reached the oldest (first in) PointPair is overwritten. However, when 
     /// accessing via <see cref="IPointList" />, the <see cref="PointPair" /> objects are
-    /// seen in the order in which they were enqeued.
+    /// seen in the order in which they were enqueued.
     ///
     /// RollingPointPairList supports data editing through the <see cref="IPointListEdit" />
     /// interface.
@@ -48,26 +47,26 @@ namespace SpikingLibTest
     /// </summary>
     [Serializable]
     [ContractVerification(false)]
-    public class RollingPointListWithStaticX : IPointList, ISerializable, IPointListEdit
+    public class RollingPointListWithStaticX : ISerializable, IPointListEdit
     {
 
         #region Fields
 
-        protected double [] xValues;
-        protected double [] yValues;        
+        private double [] _xValues;
+        private double [] _yValues;        
 
         /// <summary>
         /// The index of the previously enqueued item. -1 if buffer is empty.
         /// </summary>
-        protected int _headIdx;
+        private int _headIdx;
 
         /// <summary>
         /// The index of the next item to be dequeued. -1 if buffer is empty.
         /// </summary>
-        protected int _tailIdx;
+        private int _tailIdx;
 
-        protected int _capacity;
-        protected double _min, _max;
+        private double _min;
+        private double _max;
 
         #endregion
 
@@ -78,23 +77,25 @@ namespace SpikingLibTest
         /// </summary>
         /// <param name="capacity">Number of elements in the rolling list.  This number
         /// cannot be changed once the RollingPointPairList is constructed.</param>
+        /// <param name="min"></param>
+        /// <param name="max"></param>
         public RollingPointListWithStaticX(int capacity, double min, double max)        
         {
             // Contract.Requires(capacity >= 0);
             // Contract.Requires(min <= max);
             
-            xValues = new double[capacity];
-            yValues = new double[capacity];
+            _xValues = new double[capacity];
+            _yValues = new double[capacity];
             
             _headIdx = _tailIdx = -1;
-            _capacity = capacity;
+            Capacity = capacity;
             _min = min;
             _max = max;
 
             double xStep = (max - min) / capacity;
             double x = min;
             for (int xIdx = 0; xIdx < capacity; xIdx++, x+=xStep)
-                xValues[xIdx] = x;
+                _xValues[xIdx] = x;
         }
 
         #endregion
@@ -104,10 +105,7 @@ namespace SpikingLibTest
         /// <summary>
         /// Gets the capacity of the rolling buffer.
         /// </summary>
-        public int Capacity
-        {
-            get { return _capacity; }
-        }
+        public int Capacity { get; }
 
         /// <summary>
         /// Gets the count of items within the rolling buffer. Note that this may be less than
@@ -121,23 +119,20 @@ namespace SpikingLibTest
                     return 0;
 
                 if (_headIdx > _tailIdx)
-                    return (_headIdx - _tailIdx) + 1;
+                    return _headIdx - _tailIdx + 1;
 
                 if (_tailIdx > _headIdx)
-                    return (Capacity - _tailIdx) + _headIdx + 1;
+                    return Capacity - _tailIdx + _headIdx + 1;
 
                 return 1;
             }
         }
 
         /// <summary>
-        /// Gets a bolean that indicates if the buffer is empty.
+        /// Gets a boolean that indicates if the buffer is empty.
         /// Alternatively you can test Count==0.
         /// </summary>
-        public bool IsEmpty
-        {
-            get { return _headIdx == -1; }
-        }
+        public bool IsEmpty => _headIdx == -1;
 
         /// <summary>
         /// Gets or sets the <see cref="PointPair" /> at the specified index in the buffer.
@@ -150,19 +145,13 @@ namespace SpikingLibTest
         {
             get
             {
-                int yIdx, xIdx;                                
-
-                xIdx = index;
-                yIdx = index + _tailIdx;
-                if (yIdx >= _capacity)
+                var yIdx = index + _tailIdx;
+                if (yIdx >= Capacity)
                     yIdx -= Capacity;
 
-                return new PointPair(xValues[xIdx], yValues[yIdx]);
+                return new PointPair(_xValues[index], _yValues[yIdx]);
             }
-            set
-            {
-                throw new NotSupportedException();                
-            }
+            set => throw new NotSupportedException();
         }
 
         #endregion
@@ -170,23 +159,25 @@ namespace SpikingLibTest
         #region Public Methods
 
         /// <summary>
-        /// Implement the <see cref="ICloneable" /> interface in a typesafe manner by just
+        /// Implement the <see cref="ICloneable" /> interface in a type safe manner by just
         /// calling the typed version of <see cref="Clone" />
         /// </summary>
         /// <returns>A deep copy of this object</returns>
         object ICloneable.Clone()
         {
-            return this.Clone();
+            return Clone();
         }
 
         /// <summary>
-        /// Typesafe, deep-copy clone method.
+        /// Type safe, deep-copy clone method.
         /// </summary>
         /// <returns>A new, independent copy of this class</returns>
         public RollingPointListWithStaticX Clone()
         {
-            RollingPointListWithStaticX copy = new RollingPointListWithStaticX(Capacity, _min, _max);
-            copy.xValues = (double [])this.xValues.Clone();
+            RollingPointListWithStaticX copy = new RollingPointListWithStaticX(Capacity, _min, _max)
+            {
+                _xValues = (double [])_xValues.Clone()
+            };
 
             return copy;
         }
@@ -202,7 +193,7 @@ namespace SpikingLibTest
 
         /// <summary>
         /// Calculate that the next index in the buffer that should receive a new data point.
-        /// Note that this method actually advances the buffer, so a datapoint should be
+        /// Note that this method actually advances the buffer, so a data point should be
         /// added at _mBuffer[_headIdx].
         /// </summary>
         /// <returns>The index position of the new head element</returns>
@@ -215,17 +206,16 @@ namespace SpikingLibTest
             else
             {
                 // Determine the index to write to.
-                if (++_headIdx == _capacity)
+                if (++_headIdx == Capacity)
                 {	// Wrap around.
                     _headIdx = 0;
                 }
 
-                if (_headIdx == _tailIdx)
-                {	// Buffer overflow. Increment tailIdx.
-                    if (++_tailIdx == _capacity)
-                    {	// Wrap around.
-                        _tailIdx = 0;
-                    }
+                if (_headIdx != _tailIdx) return _headIdx;
+                // Buffer overflow. Increment tailIdx.
+                if (++_tailIdx == Capacity)
+                {	// Wrap around.
+                    _tailIdx = 0;
                 }
             }
 
@@ -272,7 +262,7 @@ namespace SpikingLibTest
                 throw new InvalidOperationException("buffer is empty.");
             }
 
-            PointPair o = new PointPair(xValues[0], yValues[_tailIdx]);
+            PointPair o = new PointPair(_xValues[0], _yValues[_tailIdx]);
 
             if (_tailIdx == _headIdx)
             {	// The buffer is now empty.
@@ -280,7 +270,7 @@ namespace SpikingLibTest
                 return o;
             }
 
-            if (++_tailIdx == _capacity)
+            if (++_tailIdx == Capacity)
             {	// Wrap around.
                 _tailIdx = 0;
             }
@@ -301,7 +291,7 @@ namespace SpikingLibTest
         /// </param>
         public void RemoveAt(int index)
         {
-            int count = this.Count;
+            int count = Count;
 
             if (index >= count || index < 0)
                 throw new ArgumentOutOfRangeException();
@@ -309,10 +299,10 @@ namespace SpikingLibTest
             // shift all the items that lie after index back by 1
             for (int i = index + _tailIdx; i < _tailIdx + count - 1; i++)
             {
-                i = (i >= _capacity) ? 0 : i;
+                i = i >= Capacity ? 0 : i;
                 int j = i + 1;
-                j = (j >= _capacity) ? 0 : j;
-                yValues[i] = yValues[j];
+                j = j >= Capacity ? 0 : j;
+                _yValues[i] = _yValues[j];
             }
 
             // Remove the item from the head (it's been duplicated already)
@@ -335,13 +325,13 @@ namespace SpikingLibTest
         /// or greater than the total available items in the queue</param>
         public void RemoveRange(int index, int count)
         {
-            int totalCount = this.Count;
+            int totalCount = Count;
 
             if (index >= totalCount || index < 0 || count < 0 || count > totalCount)
                 throw new ArgumentOutOfRangeException();
 
             for (int i = 0; i < count; i++)
-                this.RemoveAt(index);
+                RemoveAt(index);
         }
 
         /// <summary>
@@ -355,7 +345,7 @@ namespace SpikingLibTest
                 throw new InvalidOperationException("buffer is empty.");
             }
 
-            PointPair o = new PointPair(xValues[_capacity-1], yValues[_headIdx]);
+            PointPair o = new PointPair(_xValues[Capacity-1], _yValues[_headIdx]);
 
             if (_tailIdx == _headIdx)
             {	// The buffer is now empty.
@@ -365,7 +355,7 @@ namespace SpikingLibTest
 
             if (--_headIdx == -1)
             {	// Wrap around.
-                _headIdx = _capacity - 1;
+                _headIdx = Capacity - 1;
             }
 
             return o;
@@ -384,7 +374,7 @@ namespace SpikingLibTest
                 throw new InvalidOperationException("buffer is empty.");
             }
 
-            return new PointPair(xValues[_capacity - 1], yValues[_headIdx]);
+            return new PointPair(_xValues[Capacity - 1], _yValues[_headIdx]);
         }
 
         #endregion
@@ -396,7 +386,7 @@ namespace SpikingLibTest
             // advance the rolling list
             GetNextIndex();
 
-            yValues[_headIdx] = y;            
+            _yValues[_headIdx] = y;            
         }
 
         /// <summary>
@@ -429,7 +419,7 @@ namespace SpikingLibTest
         /// <summary>
         /// Current schema value that defines the version of the serialized file
         /// </summary>
-        public const int schema = 10;
+        public const int Schema = 10;
 
         /// <summary>
         /// Constructor for deserializing objects
@@ -442,16 +432,18 @@ namespace SpikingLibTest
         {
             // The schema value is just a file version parameter.  You can use it to make future versions
             // backwards compatible as new member variables are added to classes
+            // ReSharper disable once SuggestVarOrType_BuiltInTypes
+            // ReSharper disable once UnusedVariable
             int sch = info.GetInt32("schema");
 
             _headIdx = info.GetInt32("headIdx");
             _tailIdx = info.GetInt32("tailIdx");
             
-            _capacity = info.GetInt32("capacity");
+            Capacity = info.GetInt32("capacity");
             _min = info.GetDouble("minRange");
             _max = info.GetDouble("maxRange");
-            xValues = (double[])info.GetValue("xValues", typeof(double[]));
-            yValues = (double[])info.GetValue("yValues", typeof(double[]));            
+            _xValues = (double[])info.GetValue("xValues", typeof(double[]));
+            _yValues = (double[])info.GetValue("yValues", typeof(double[]));            
         }
         /// <summary>
         /// Populates a <see cref="SerializationInfo"/> instance with the data needed to serialize the target object
@@ -461,14 +453,14 @@ namespace SpikingLibTest
         [SecurityPermissionAttribute(SecurityAction.Demand, SerializationFormatter = true)]
         public virtual void GetObjectData(SerializationInfo info, StreamingContext context)
         {
-            info.AddValue("schema", schema);
+            info.AddValue("schema", Schema);
             info.AddValue("headIdx", _headIdx);
             info.AddValue("tailIdx", _tailIdx);
-            info.AddValue("capacity", _capacity);
+            info.AddValue("capacity", Capacity);
             info.AddValue("minRange", _min);
             info.AddValue("maxRange", _max);
-            info.AddValue("xValues", xValues);
-            info.AddValue("yValues", yValues);            
+            info.AddValue("xValues", _xValues);
+            info.AddValue("yValues", _yValues);            
         }
 
         #endregion

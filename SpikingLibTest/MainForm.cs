@@ -10,10 +10,10 @@ namespace SpikingLibTest
             InitializeComponent();
         }
 
-        private void schedTestBtn_Click(object sender, EventArgs e)
+        private void schedulerTestBtn_Click(object sender, EventArgs e)
         {
-            Form schedTestForm = new ScheduleTestForm();            
-            schedTestForm.ShowDialog();
+            Form schedulerTestForm = new ScheduleTestForm();            
+            schedulerTestForm.ShowDialog();
         }
 
         private void neuronSimBtn_Click(object sender, EventArgs e)
@@ -41,7 +41,7 @@ namespace SpikingLibTest
 
         private void displaySTDPTestBtn_Click(object sender, EventArgs e)
         {
-            Form showStdpTestForm = new STDPTestForm();
+            Form showStdpTestForm = new StdpTestForm();
             showStdpTestForm.ShowDialog();
         }
 
@@ -64,7 +64,7 @@ namespace SpikingLibTest
 
         }
 
-        private void NeuralEvolBtn_Click(object sender, EventArgs e)
+        private void NeuralEvolutionBtn_Click(object sender, EventArgs e)
         {
             Form evolutionTestForm = new NeuralEvolutionForm();
             evolutionTestForm.ShowDialog();

@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Diagnostics.Contracts;
 using System;
+// ReSharper disable PrivateFieldCanBeConvertedToLocalVariable
 
 namespace SpikingLibrary
 {
@@ -35,6 +36,7 @@ namespace SpikingLibrary
             // Contract.Requires(synapse != null);
 
             // prevent possible race condition
+            // ReSharper disable once EmptyEmbeddedStatement
             while (SpikingNetEngine.IsStopping && SpikingNetEngine.IsRunning) ;
 
             if (!SpikingNetEngine.IsRunning)
@@ -48,27 +50,24 @@ namespace SpikingLibrary
                 lock (_syncObj)
                 {
                     _pendingNeuronConnections.Add(new Tuple<Neuron, Synapse>(postsynapticNeuron, synapse));
-                    if (!_neuronConnectionEventScheduled)
-                    {
-                        _neuronConnectionEventScheduled = true;
-                        SpikingNetEngine.Scheduler.ScheduleEvent(new ScheduledEvent(Sched_SynapseConnectionEvent), 1);
-                    }
+                    if (_neuronConnectionEventScheduled) return;
+
+                    _neuronConnectionEventScheduled = true;
+                    SpikingNetEngine.Scheduler.ScheduleEvent(Scheduler_SynapseConnectionEvent, 1);
                 }
             }
         }
 
-        private void Sched_SynapseConnectionEvent(long time)
+        private void Scheduler_SynapseConnectionEvent(long time)
         {
             lock (_syncObj)
             {
-                foreach (Tuple<Neuron, Synapse> t in _pendingNeuronConnections)
+                foreach (var (postSynapticNeuron, synapse) in _pendingNeuronConnections)
                 {
-                    Neuron postSynapticNeuron = t.Item1;
-                    Synapse syn = t.Item2;
                     Contract.Assume(postSynapticNeuron != null);
-                    syn.PostsynapticNeuron = postSynapticNeuron;
-                    Axon.Add(syn);
-                    postSynapticNeuron.AddDendriticSynapse(syn);
+                    synapse.PostsynapticNeuron = postSynapticNeuron;
+                    Axon.Add(synapse);
+                    postSynapticNeuron.AddDendriticSynapse(synapse);
                 }
                 _pendingNeuronConnections.Clear();
                 _neuronConnectionEventScheduled = false;
@@ -78,25 +77,18 @@ namespace SpikingLibrary
         public override void Stimulate(double value)
         {
             int timeInterval = (int) (value/_range*_timeSlice);
-            if (timeInterval <= 0)      // clamp signel range
+            if (timeInterval <= 0)      // clamp signal range
                 timeInterval = 1;
             if (timeInterval > _timeSlice)
                 timeInterval = _timeSlice;
             
-            SpikingNetEngine.Scheduler.ScheduleEvent(new ScheduledEvent(Sched_signal), timeInterval);            
+            SpikingNetEngine.Scheduler.ScheduleEvent(Scheduler_signal, timeInterval);            
         }
 
-        private void Sched_signal(long time)
+        private void Scheduler_signal(long time)
         {
-            foreach (Synapse s in Axon)
+            foreach (var s in Axon)
                 s.ActivateSynapse(time);
-        }
-
-        [ContractInvariantMethod]
-        private void ObjectInvariant()
-        {
-            Contract.Invariant(_min < _max);
-            Contract.Invariant(_timeSlice >= 10);            
         }
     }
 }

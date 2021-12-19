@@ -1,12 +1,9 @@
-﻿using System;
-using System.Diagnostics.Contracts;
-
-namespace SpikingLibrary
+﻿namespace SpikingLibrary
 {   
     public class NonLearningSynapse : Synapse
     {
         public NonLearningSynapse(int delay, double efficacy) :
-            base(delay, efficacy, default(StdpParameters))
+            base(delay, efficacy, default)
         {            
             //Contract.Requires<ArgumentOutOfRangeException>(delay >= 1);
         }
@@ -18,7 +15,6 @@ namespace SpikingLibrary
 
         internal override void Bap(long time)
         {
-            return;
         }
     }
 }

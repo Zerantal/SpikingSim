@@ -86,10 +86,7 @@ namespace SpikingLibrary
 
         protected virtual void OnNeuronFired(NeuronCollectionFiringEventArgs e)
         {
-            if (NeuronFired != null)
-            {
-                NeuronFired(this, e);
-            }
+            NeuronFired?.Invoke(this, e);
         }
 
         public void ConnectTo(NeuronCollection neuronGroup, ISynapseFactory synapseFactory)
@@ -123,27 +120,26 @@ namespace SpikingLibrary
                 {                    
                     _pendingConnection.Add(new Tuple<NeuronCollection, ISynapseFactory>(
                                                neuronGroup.ShallowClone(), synapseFactory.DeepClone()));
-                    if (!_connectionEventScheduled)
-                    {
-                        _connectionEventScheduled = true;
-                        SpikingNetEngine.Scheduler.ScheduleEvent(Sched_ConnectionEvent, 1);
-                    }
+                    if (_connectionEventScheduled) return;
+
+                    _connectionEventScheduled = true;
+                    SpikingNetEngine.Scheduler.ScheduleEvent(Scheduler_ConnectionEvent, 1);
                 }
             }
         }    
         
-        private void Sched_ConnectionEvent(long time)
+        private void Scheduler_ConnectionEvent(long time)
         {
             lock (_syncObj)
             {
-                foreach (Tuple<NeuronCollection, ISynapseFactory> connInfo in _pendingConnection)
+                foreach (var (neuralNetwork, synapseFactory) in _pendingConnection)
                 {
                     foreach (Neuron preSynapticNeuron in this)
                     {
-                        foreach (Neuron postSynapticNeuron in connInfo.Item1)
+                        foreach (Neuron postSynapticNeuron in neuralNetwork)
                         {
                             Contract.Assume(postSynapticNeuron != null);
-                            Synapse syn = connInfo.Item2.CreateSynapse();
+                            Synapse syn = synapseFactory.CreateSynapse();
                             syn.PostsynapticNeuron = postSynapticNeuron;
                             preSynapticNeuron.AddAxonalSynapse(syn);
                             postSynapticNeuron.AddDendriticSynapse(syn);
@@ -157,16 +153,8 @@ namespace SpikingLibrary
 
         public string Name
         {
-            get 
-            {
-                //Contract.Ensures(Contract.Result<string>() != null);
-                return _label; 
-            }
-            set
-            {
-                //Contract.Requires<ArgumentNullException>(value != null);
-                _label = value; 
-            }
+            get => _label;
+            set => _label = value;
         }        
 
         #region IEnumerable<Neuron> Members
@@ -198,12 +186,5 @@ namespace SpikingLibrary
 
         #endregion
 
-        [ContractInvariantMethod]
-        private void ObjectInvariants()
-        {
-            Contract.Invariant(_label != null);
-            Contract.Invariant(_pendingConnection != null);
-            Contract.Invariant(_neuronSet != null);
-        }
     }
 }

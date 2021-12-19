@@ -1,5 +1,4 @@
-﻿using System.Diagnostics.Contracts;
-using System;
+﻿using System;
 
 using MathLib.Statistics;
 
@@ -47,10 +46,5 @@ namespace SpikingLibrary
 
         #endregion
 
-        [ContractInvariantMethod]
-        private void ObjectInvariant()
-        {
-            Contract.Invariant(_noiseSource != null);
-        }
     }
 }

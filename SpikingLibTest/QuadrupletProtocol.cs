@@ -2,11 +2,13 @@
 using ZedGraph;
 using SpikingLibrary;
 using System.Diagnostics.Contracts;
+// ReSharper disable InconsistentNaming
+// ReSharper disable PrivateFieldCanBeConvertedToLocalVariable
 
 namespace SpikingLibTest
 {
     [ContractVerification(false)]
-    class QuadrupletProtocol
+    internal class QuadrupletProtocol
     {
         public static double InitWeight = 0.25;
         public static int NumPairs = 60;
@@ -22,8 +24,8 @@ namespace SpikingLibTest
         private readonly PeriodicInputSource _postInput;
         private readonly TimeDelayNotification _delayNotification;
         private double _T;
-        private readonly double _TMin = -100;
-        private readonly double _TMax = 100;
+        private readonly double _TMin;
+        private readonly double _TMax;
 
         public QuadrupletProtocol(PointPairList ptList, double TMin, double TMax)
         {            
@@ -53,9 +55,9 @@ namespace SpikingLibTest
             ExecuteQuadrupletProtocol();
         }
 
-        void preInput_PeriodicInputFinished(object sender, EventArgs e)
+        private void preInput_PeriodicInputFinished(object sender, EventArgs e)
         {
-            // delay for 5s to allow input to finish propogating to synapse
+            // delay for 5s to allow input to finish propagating to synapse
             _delayNotification.CreateNotification(50000);
         }
 
@@ -93,10 +95,8 @@ namespace SpikingLibTest
                                                postInterval,
                                                (int) (1/Frequency*10000 - postInterval)
                                            });
-            double preInputStartTime;
-            double postInputStartTime;
 
-            FindInputStartTimes(out preInputStartTime, out postInputStartTime);
+            FindInputStartTimes(out var preInputStartTime, out var postInputStartTime);
 
             InputSource.SynchronizeInputSignals(new[]
                                                      {
@@ -122,38 +122,22 @@ namespace SpikingLibTest
             
 
             // find start time for input sources
-            if (t1Pre < t2Pre)
-                preInputStartTime = t1Pre;
-            else            
-                preInputStartTime = t2Pre;
-            if (t1Post < t2Post)
-                postInputStartTime = t1Post;
-            else
-                postInputStartTime = t2Post;
+            preInputStartTime = t1Pre < t2Pre ? t1Pre : t2Pre;
+            postInputStartTime = t1Post < t2Post ? t1Post : t2Post;
 
-            double minStartTime;
-            if (preInputStartTime < postInputStartTime)
-                minStartTime = preInputStartTime;
-            else
-            {
-                minStartTime = postInputStartTime;
-            }
+            var minStartTime = preInputStartTime < postInputStartTime ? preInputStartTime : postInputStartTime;
 
-            if (minStartTime < 1)
-            {
-                preInputStartTime += -minStartTime + 1;
-                postInputStartTime += -minStartTime + 1;
-            }
+            if (!(minStartTime < 1)) return;
+
+            preInputStartTime += -minStartTime + 1;
+            postInputStartTime += -minStartTime + 1;
         }
 
         protected virtual void OnUpdateEvent(EventArgs e)
         {
             EventHandler handler = UpdateEvent;
 
-            if (handler != null)
-            {
-                handler(this, e);
-            }
+            handler?.Invoke(this, e);
         }
     }
 }

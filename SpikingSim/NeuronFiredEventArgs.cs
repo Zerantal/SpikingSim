@@ -9,6 +9,6 @@ namespace SpikingLibrary
             Time = time;
         }
 
-        public long Time { get; private set; }
+        public long Time { get; }
     }
 }

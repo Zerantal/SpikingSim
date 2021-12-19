@@ -1,6 +1,5 @@
 ﻿using System.Drawing;
 using System.Windows.Forms;
-using System.Diagnostics.Contracts;
 using System.ComponentModel;
 
 using ZedGraph;
@@ -10,18 +9,16 @@ namespace SpikingLibrary
     public partial class NeuronDisplayControl : UserControl
     {
         private  Neuron _target;
-        private readonly int _sampleInterval = 1;
+        private readonly int _sampleInterval;
         private NeuronProbe _probe;
 
-        readonly GraphPane _voltagePane;
-        RollingPointListWithStaticX _neuronTrace;
-        private readonly MasterPane _master;
+        private readonly GraphPane _voltagePane;
+        private RollingPointListWithStaticX _neuronTrace;
 
         private int _maxTime = 100;
         private const int UpdateFreq = 20;
         private int _updateCounter;
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters", MessageId = "ZedGraph.Label.set_Text(System.String)")]
         public NeuronDisplayControl()
         {
             InitializeComponent();
@@ -33,9 +30,9 @@ namespace SpikingLibrary
             _voltagePane = new GraphPane();
             _neuronTrace = new RollingPointListWithStaticX(_maxTime*10, 0, _maxTime);
 
-            _master =  zgc.MasterPane;
-            _master.PaneList.Clear();
-            _master.Margin.All = 10;
+            var master = zgc.MasterPane;
+            master.PaneList.Clear();
+            master.Margin.All = 10;
 
             _voltagePane.Title.Text = "Neuron Trace";
             _voltagePane.XAxis.Title.Text = "time (ms)";
@@ -47,7 +44,7 @@ namespace SpikingLibrary
             _voltagePane.YAxis.Scale.Max = 40;
             _voltagePane.YAxis.MajorGrid.IsZeroLine = false;
 
-            _master.Add(_voltagePane);
+            master.Add(_voltagePane);
             zgc.AxisChange();
 
             LineItem voltageCurve = _voltagePane.AddCurve("", _neuronTrace, Color.Black, SymbolType.None);
@@ -59,9 +56,10 @@ namespace SpikingLibrary
         [Category("Appearance")]
         [Description("Maximum time period fo neuron trace (in ms)")]
         [DefaultValue(100)]
+        // ReSharper disable once UnusedMember.Global
         public int TracePeriod
         {
-            get { return _maxTime; }
+            get => _maxTime;
             set
             {
                 // Contract.Requires(value >= 10);
@@ -82,7 +80,7 @@ namespace SpikingLibrary
         [Browsable(false)]
         public Neuron Target
         {
-            get { return _target; }
+            get => _target;
             set
             {
                 if (_probe != null)
@@ -117,16 +115,6 @@ namespace SpikingLibrary
         {            
              zgc.AxisChange();
              zgc.Invalidate();            
-        }
-
-        [ContractInvariantMethod]
-        private void ObjectInvariant()
-        {
-            Contract.Invariant(zgc != null);
-            Contract.Invariant(_neuronTrace != null);
-            Contract.Invariant(_sampleInterval > 0);
-            Contract.Invariant(_maxTime >= 10 && _maxTime <= 1000);
-            Contract.Invariant(_voltagePane != null);
         }
     }
 }

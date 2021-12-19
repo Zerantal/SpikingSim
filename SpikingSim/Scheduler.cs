@@ -57,13 +57,7 @@ namespace SpikingLibrary
         }
 
         // Thread safe
-        public bool IsRunning
-        {
-            get
-            {
-                return _running;                
-            }
-        }
+        public bool IsRunning => _running;
 
         #region IDisposable Members
 
@@ -162,7 +156,7 @@ namespace SpikingLibrary
             
             while (!_schedulingCancelled)
             {                    
-                // If new event schedulings are pending, add them to tree
+                // If new event scheduling are pending, add them to tree
                 lock (_pendingEventAdditions)
                 {
                     if (_pendingEventAdditions.Count > 0)
@@ -185,8 +179,8 @@ namespace SpikingLibrary
                         Tuple<int, ScheduledEvent>[] tmp = _overflowBuffer.ToArray();
                         _numEvents -= _overflowBuffer.Count;
                         _overflowBuffer = new List<Tuple<int, ScheduledEvent>>();
-                        foreach (Tuple<int, ScheduledEvent> ev in tmp)
-                            AddEvent(ev.Item2, ev.Item1 - _numberOfEventBins);
+                        foreach (var (timeInterval, scheduledEvent) in tmp)
+                            AddEvent(scheduledEvent, timeInterval - _numberOfEventBins);
                     }
                 }
 
@@ -198,7 +192,7 @@ namespace SpikingLibrary
             }
 
 
-                PurgeScheduler();                     
+            PurgeScheduler();                     
         }
 
         // Purge all events from scheduler and leave scheduler in a clean state
@@ -212,14 +206,14 @@ namespace SpikingLibrary
                     _schedulingBins[i].Clear();
             }
 
-                _currentEventBin = 0;
-                //_currentTime = 0;
-                _numEvents = 0;
-                _overflowBuffer.Clear();
-                _running = false;  
-                _paused = false;
-                _schedulingCancelled = false;
-                _threadSuspended = false;          
+            _currentEventBin = 0;
+            //_currentTime = 0;
+            _numEvents = 0;
+            _overflowBuffer.Clear();
+            _running = false;  
+            _paused = false;
+            _schedulingCancelled = false;
+            _threadSuspended = false;          
         }
 
         public void Stop()
@@ -259,17 +253,6 @@ namespace SpikingLibrary
                 AddEvent(ev.ScheduledEvent, ev.TimeInterval);
             }
             _pendingEventAdditions.Clear();
-        }
-       
-        [ContractInvariantMethod]
-        private void ObjectInvariant()
-        {
-            Contract.Invariant(_pendingEventAdditions != null);
-            Contract.Invariant(_waitHandle != null);
-            Contract.Invariant(_currentTime >= 0);
-            Contract.Invariant(_schedulingBins != null);
-            Contract.Invariant(_schedulingBins.Length == _numberOfEventBins);
-            Contract.Invariant(_overflowBuffer != null);
         }
 
         #region Nested type: SchedulerThreadDelegate

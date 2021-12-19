@@ -1,6 +1,5 @@
 ﻿using System;
 using System.ComponentModel;
-using System.Diagnostics.Contracts;
 using System.Threading;
 
 namespace SpikingLibrary
@@ -24,9 +23,8 @@ namespace SpikingLibrary
         private bool _weightUpdateScheduled;
 
         private double _weightValue;
-        private volatile bool _weightsuccessfullyRetrieved;
+        private volatile bool _weightSuccessfullyRetrieved;
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1026:DefaultParametersShouldNotBeUsed")]
         public SynapseProbe(Synapse target, int updateInterval = int.MaxValue)
         {
             // Contract.Requires(target != null);
@@ -34,37 +32,29 @@ namespace SpikingLibrary
 
             Target = target;
             UpdateInterval = updateInterval;            
-            _onSynapseProbedDelegate = new SendOrPostCallback(ReportSynapseState);
+            _onSynapseProbedDelegate = ReportSynapseState;
             _asyncOp = AsyncOperationManager.CreateOperation(null);
         }
 
         public int UpdateInterval
         {
-            get { return _updateTime; }
-            set
-            {
-                // Contract.Requires(value > 0);
-
-                _updateTime = value;
-            }
+            get => _updateTime;
+            set => _updateTime = value;
         }
 
         public Synapse Target
         {
-            get { return _target; }
-            set
-            {
+            get => _target;
+            set =>
                 // Contract.Requires(value != null);
-
                 _target = value;
-            }
         }
 
         public void Start()
         {
             if (_started) return;
 
-            SpikingNetEngine.Scheduler.ScheduleEvent(Sched_ProbeSynapse, _updateTime);
+            SpikingNetEngine.Scheduler.ScheduleEvent(Scheduler_ProbeSynapse, _updateTime);
             _started = true;
             _stopping = false;
         }
@@ -77,9 +67,9 @@ namespace SpikingLibrary
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1024:UsePropertiesWhereAppropriate")]
         public double GetWeight()
         {
-            _weightsuccessfullyRetrieved = false;
-            SpikingNetEngine.Scheduler.ScheduleEvent(new ScheduledEvent(Sched_GetWeight), 1);
-            while (!_weightsuccessfullyRetrieved)
+            _weightSuccessfullyRetrieved = false;
+            SpikingNetEngine.Scheduler.ScheduleEvent(Scheduler_GetWeight, 1);
+            while (!_weightSuccessfullyRetrieved)
             {
                 Thread.Sleep(0);
             }
@@ -87,10 +77,10 @@ namespace SpikingLibrary
             return _weightValue;            
         }
 
-        private void Sched_GetWeight(long time)
+        private void Scheduler_GetWeight(long time)
         {
             _weightValue = _target.Weight;
-            _weightsuccessfullyRetrieved = true;
+            _weightSuccessfullyRetrieved = true;
         }
 
         public void SetWeight(double weight)
@@ -101,17 +91,16 @@ namespace SpikingLibrary
             {
                 lock (_syncObj)
                 {
-                    _pendingWeightUpdate = weight;                    
-                    if (!_weightUpdateScheduled)
-                    {
-                        _weightUpdateScheduled = true;
-                        SpikingNetEngine.Scheduler.ScheduleEvent(Sched_SetWeight, 1);
-                    }
+                    _pendingWeightUpdate = weight;
+                    if (_weightUpdateScheduled) return;
+
+                    _weightUpdateScheduled = true;
+                    SpikingNetEngine.Scheduler.ScheduleEvent(Scheduler_SetWeight, 1);
                 }
             }
         }
 
-        private void Sched_SetWeight(long time)
+        private void Scheduler_SetWeight(long time)
         {
             lock (_syncObj)
             {
@@ -131,16 +120,15 @@ namespace SpikingLibrary
                 lock (_syncObj)
                 {
                     _pendingAxonalDelayUpdate = time;
-                    if (!_axonalDelayUpdateScheduled)
-                    {
-                        _axonalDelayUpdateScheduled = true;
-                        SpikingNetEngine.Scheduler.ScheduleEvent(Sched_SetAxonalDelay, 1);
-                    }
+                    if (_axonalDelayUpdateScheduled) return;
+
+                    _axonalDelayUpdateScheduled = true;
+                    SpikingNetEngine.Scheduler.ScheduleEvent(Scheduler_SetAxonalDelay, 1);
                 }
             }
         }
 
-        private void Sched_SetAxonalDelay(long time)
+        private void Scheduler_SetAxonalDelay(long time)
         {
             lock (_syncObj)
             {
@@ -151,7 +139,7 @@ namespace SpikingLibrary
 
         // callback used by scheduler. i.e., this method is executed 
         // on the neural network thread
-        private void Sched_ProbeSynapse(long time)
+        private void Scheduler_ProbeSynapse(long time)
         {
             // Contract.Requires(time >= 1);
 
@@ -162,7 +150,7 @@ namespace SpikingLibrary
             _asyncOp.Post(_onSynapseProbedDelegate, e);
 
             if (!_stopping)
-                SpikingNetEngine.Scheduler.ScheduleEvent(Sched_ProbeSynapse, _updateTime);
+                SpikingNetEngine.Scheduler.ScheduleEvent(Scheduler_ProbeSynapse, _updateTime);
         }
 
         // This method is invoked via the AsyncOperation object,
@@ -176,19 +164,7 @@ namespace SpikingLibrary
 
         protected void OnSynapseProbed(SynapseProbeUpdateEventArgs e)
         {
-            if (SynapseProbed != null)
-            {
-                SynapseProbed(this, e);
-            }
-        }
-
-        [ContractInvariantMethod]
-        private void ObjectInvariant()
-        {
-            Contract.Invariant(_updateTime > 0);
-            Contract.Invariant(_target != null);
-            Contract.Invariant(_asyncOp != null);
-            Contract.Invariant(_pendingAxonalDelayUpdate >= 1);
+            SynapseProbed?.Invoke(this, e);
         }
     }
 }

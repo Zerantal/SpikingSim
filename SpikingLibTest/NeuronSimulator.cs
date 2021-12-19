@@ -14,17 +14,15 @@ namespace SpikingLibTest
     public partial class NeuronSimulator : Form
     {
         private double _a, _b, _c, _d, _biasCurrent;
-        
-        private readonly Neuron _neuron;
 
-        private readonly Object[,] _presetParams =
+        private readonly object[,] _presetParams =
             {
                 {"Tonic spiking", 0.02, 0.2, -65, 6, 14},
                 {"Phasic spiking", 0.02, 0.25, -65, 6, 0.5},
                 {"Tonic bursting", 0.02, 0.2, -50, 2, 15},
                 {"Phasic bursting", 0.02, 0.25, -55, 0.05, 0.6},
                 {"Mixed mode", 0.02, 0.2, -55, 4, 10},
-                {"Spike frequency adaptaion", 0.01, 0.2, -65, 8, 30},
+                {"Spike frequency adaptation", 0.01, 0.2, -65, 8, 30},
                 {"Class 1", 0.02, -0.1, -55, 6, 0},
                 {"Class 2", 0.2, 0.26, -65, 0, 0},
                 {"Spike latency", 0.02, 0.2, -65, 6, 7},
@@ -36,7 +34,7 @@ namespace SpikingLibTest
                 {"Threshold variability", 0.03, 0.25, -60, 4, 0},
                 {"Bistability", 1, 1.5, -60, 0, -67},
                 {"DAP", 1, 0.2, -60, -21, 0},
-                {"Accomodation", 0.02, 1, -55, 4, 0},
+                {"Accommodation", 0.02, 1, -55, 4, 0},
                 {"Inhibition-induced spiking", -0.02, -1, -60, 8, 80},
                 {"Inhibition-induced bursting", -0.026, -1, -45, 0, 80}
             };
@@ -69,10 +67,10 @@ namespace SpikingLibTest
             InitialiseGraphDisplay();
             
             // Create network            
-            _neuron = SpikingNetEngine.CreateNeuron(new NeuronParameters());            
+            var neuron = SpikingNetEngine.CreateNeuron(new NeuronParameters());            
             SpikingNetEngine.Start();
             SpikingNetEngine.SlowNeuralEngine(10000); // otherwise gui will hang
-            _probe = new NeuronProbe(_neuron, 1);
+            _probe = new NeuronProbe(neuron, 1);
             _probe.NeuronProbed += ProbeCallBack;            
             _probe.Start();
 
@@ -130,7 +128,7 @@ namespace SpikingLibTest
             _master.Add(_uPane);
             _master.Add(_phasePane);
 
-            // Refigure the axis ranges for the GraphPanes
+            // Reconfigure the axis ranges for the GraphPanes
             zg1.AxisChange();
 
             // Layout the GraphPanes using a default Pane Layout
@@ -169,7 +167,7 @@ namespace SpikingLibTest
         {
             PlotDv();
             zg1.Refresh();
-            _biasCurrent = Decimal.ToDouble(biasCurrentUpDown.Value);
+            _biasCurrent = decimal.ToDouble(biasCurrentUpDown.Value);
             UpdateNeuronClass();
         }
 
@@ -187,7 +185,7 @@ namespace SpikingLibTest
 
             _dv.Clear();
 
-            double I = Decimal.ToDouble(biasCurrentUpDown.Value);
+            double I = decimal.ToDouble(biasCurrentUpDown.Value);
 
             for (v = vMin; v <= vMax; v += vStep)
             {
@@ -208,8 +206,8 @@ namespace SpikingLibTest
         {
             _resetPot.Clear();
             // plot reset potential on phase portrait
-            _resetPot.AddPoint(new PointPair(Decimal.ToDouble(cParamUpDown.Value), _phasePane.YAxis.Scale.Min));
-            _resetPot.AddPoint(new PointPair(Decimal.ToDouble(cParamUpDown.Value), _phasePane.YAxis.Scale.Max));
+            _resetPot.AddPoint(new PointPair(decimal.ToDouble(cParamUpDown.Value), _phasePane.YAxis.Scale.Min));
+            _resetPot.AddPoint(new PointPair(decimal.ToDouble(cParamUpDown.Value), _phasePane.YAxis.Scale.Max));
         }
 
         private void BParamUpDownValueChanged(object sender, EventArgs e)
@@ -227,7 +225,7 @@ namespace SpikingLibTest
             double vMax = _phasePane.XAxis.Scale.Max;
             double vStep = (vMax - vMin)/100.0;
             double v;
-            double b = Decimal.ToDouble(bParamUpDown.Value);
+            double b = decimal.ToDouble(bParamUpDown.Value);
 
             _du.Clear();
 
@@ -276,8 +274,8 @@ namespace SpikingLibTest
 
         private void RescaleGraphs()
         {
-            double I = Decimal.ToDouble(biasCurrentUpDown.Value);
-            // rescale phaseplane
+            double I = decimal.ToDouble(biasCurrentUpDown.Value);
+            // rescale phase plane
             _phasePane.XAxis.Scale.Min = -100;
             _phasePane.XAxis.Scale.Max = 0;
             _phasePane.YAxis.Scale.Min = I - 50;
@@ -295,7 +293,7 @@ namespace SpikingLibTest
             _vPane.YAxis.Scale.Min = -100;
             _vPane.YAxis.Scale.Max = 40;
 
-            // Replot graphs
+            // Re-plot graphs
             PlotDv();
             PlotResetPotential();
         }
@@ -337,7 +335,7 @@ namespace SpikingLibTest
             _probe.IncrementState(0, 10);            
         }
 
-        private void InhibPulseBtnClick(object sender, EventArgs e)
+        private void InhibitoryPulseBtnClick(object sender, EventArgs e)
         {
             _probe.IncrementState(0,-10);            
         }
@@ -352,7 +350,7 @@ namespace SpikingLibTest
             if (pauseBtn.Text == @"Pause")
             {
                 SpikingNetEngine.Pause();
-                pauseBtn.Text = @"Unpause";
+                pauseBtn.Text = @"Resume";
             }
             else
             {
@@ -378,22 +376,19 @@ namespace SpikingLibTest
 
         private bool Zg1MouseDownEvent(ZedGraphControl sender, MouseEventArgs e)
         {
-            if (_settingPoint)
-            {
-                double u, v;
-                Scale uScale = _phasePane.YAxis.Scale;
-                Scale vScale = _phasePane.XAxis.Scale;
-                _phasePane.ReverseTransform(new PointF(e.X, e.Y), out v, out u);
-                if (u < uScale.Min || u > uScale.Max || v < vScale.Min || v > vScale.Max)
-                    return false; // if user clicks doesn't click on phase pane
-                _probe.ChangeU(u);
-                _probe.ChangeV(v);  
-                _phasePortrait.Clear();
-                PauseBtnClick(sender, new EventArgs());
-                _settingPoint = false;
-                return true;
-            }
-            return default(bool);
+            if (!_settingPoint) return default;
+
+            Scale uScale = _phasePane.YAxis.Scale;
+            Scale vScale = _phasePane.XAxis.Scale;
+            _phasePane.ReverseTransform(new PointF(e.X, e.Y), out var v, out var u);
+            if (u < uScale.Min || u > uScale.Max || v < vScale.Min || v > vScale.Max)
+                return false; // if user clicks doesn't click on phase pane
+            _probe.ChangeU(u);
+            _probe.ChangeV(v);  
+            _phasePortrait.Clear();
+            PauseBtnClick(sender, EventArgs.Empty);
+            _settingPoint = false;
+            return true;
         }
 
         private void AParamUpDownValueChanged(object sender, EventArgs e)

@@ -8,7 +8,7 @@ namespace SpikingLibrary
     {
         #region IInputSource Members
 
-        public override void Start(int startTime)
+        public override void Start(int startTime = 1)
         {
             // Contract.Requires(startTime > 0);
             throw new NotImplementedException();

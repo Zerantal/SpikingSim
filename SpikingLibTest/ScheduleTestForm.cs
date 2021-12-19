@@ -1,48 +1,39 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
-using System.Threading;
-
 using SpikingLibrary;
 
 namespace SpikingLibTest
 {
     public partial class ScheduleTestForm : Form
     {
-        private Scheduler s;
+        private readonly Scheduler _s;
 
         public ScheduleTestForm()
         {
             InitializeComponent();
 
-            s = new Scheduler(10000);                                 
+            _s = new Scheduler(10000);                                 
         }
 
         private void PrintPriority(long time)
         {
-            if (this.InvokeRequired)
+            if (InvokeRequired)
             {
-                this.BeginInvoke(new ScheduledEvent(PrintPriority), time);
+                BeginInvoke(new ScheduledEvent(PrintPriority), time);
             }
             else
             {
 
                 testOutput.AppendText(time + " ");
-                Console.Write(time + " ");
+                Console.Write(time + @" ");
             }
         }
 
         private void AddBtn_Click(object sender, EventArgs e)
         {
             Random r = new Random();
-            int p;
-            int tmin = Convert.ToInt32(minTimeUpDown.Value);
             int priorityRange = Convert.ToInt32(maxTimeUpDown.Value - minTimeUpDown.Value);            
             List<ScheduledEventItem> eventList = new List<ScheduledEventItem>(Convert.ToInt32(numEventsUpDown.Value));
 
@@ -51,11 +42,11 @@ namespace SpikingLibTest
                 "with the following priorities: ");
             for (int i = 0; i < numEventsUpDown.Value; i++)
             {
-                p = r.Next(priorityRange) + Convert.ToInt32(minTimeUpDown.Value);
-                eventList.Add(new ScheduledEventItem(new ScheduledEvent(PrintPriority), p));                
+                var p = r.Next(priorityRange) + Convert.ToInt32(minTimeUpDown.Value);
+                eventList.Add(new ScheduledEventItem(PrintPriority, p));                
                 testOutput.AppendText(p + " ");
             }
-            s.ScheduleEvent(new Collection<ScheduledEventItem>(eventList));       
+            _s.ScheduleEvent(new Collection<ScheduledEventItem>(eventList));       
             testOutput.AppendText(Environment.NewLine);
         }
 
@@ -67,7 +58,7 @@ namespace SpikingLibTest
             if (priorityDlgBox.ShowDialog() == DialogResult.OK)
             {
                 testOutput.AppendText("Event added to schedule with priority: " + priorityDlgBox.Priority);
-                s.ScheduleEvent(new ScheduledEvent(PrintPriority), priorityDlgBox.Priority);
+                _s.ScheduleEvent(PrintPriority, priorityDlgBox.Priority);
             }
             testOutput.AppendText(Environment.NewLine);
                         
@@ -77,21 +68,23 @@ namespace SpikingLibTest
         {            
             StopAsyncBtn.Enabled = true;
             StartAsyncBtn.Enabled = false;
-            s.StartAsync("Scheduler Test");
+            _s.StartAsync("Scheduler Test");
         }
 
         private void StopAsyncBtn_Click(object sender, EventArgs e)
         {            
-            s.Stop();
-            while (s.IsRunning) ;            
+            _s.Stop();
+            // ReSharper disable once EmptyEmbeddedStatement
+            while (_s.IsRunning) ;            
             StopAsyncBtn.Enabled = false;
             StartAsyncBtn.Enabled = true;
         }
 
         private void ScheduleTestForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            s.Stop();
-            while (s.IsRunning) ;
+            _s.Stop();
+            // ReSharper disable once EmptyEmbeddedStatement
+            while (_s.IsRunning) ;
         }
 
 

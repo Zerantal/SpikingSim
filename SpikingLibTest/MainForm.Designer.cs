@@ -83,7 +83,7 @@ namespace SpikingLibTest
             this.schedTestBtn.TabIndex = 0;
             this.schedTestBtn.Text = "Scheduler Test";
             this.schedTestBtn.UseVisualStyleBackColor = true;
-            this.schedTestBtn.Click += new System.EventHandler(this.schedTestBtn_Click);
+            this.schedTestBtn.Click += new System.EventHandler(this.schedulerTestBtn_Click);
             // 
             // neuronSimBtn
             // 
@@ -182,7 +182,7 @@ namespace SpikingLibTest
             this.NeuralEvolBtn.TabIndex = 11;
             this.NeuralEvolBtn.Text = "Neural Evolution Test";
             this.NeuralEvolBtn.UseVisualStyleBackColor = true;
-            this.NeuralEvolBtn.Click += new System.EventHandler(this.NeuralEvolBtn_Click);
+            this.NeuralEvolBtn.Click += new System.EventHandler(this.NeuralEvolutionBtn_Click);
             // 
             // MainForm
             // 

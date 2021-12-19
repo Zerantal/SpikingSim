@@ -1,13 +1,12 @@
-﻿using System.Diagnostics.Contracts;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using System;
 using System.Collections.Generic;
+// ReSharper disable UnusedMember.Global
 
 namespace SpikingLibrary
 {
     public static class SpikingNetEngine
     {
-        private static readonly Scheduler Sched = new Scheduler(10000); // 1000 ms in 0.1ms increment
         internal const double Dt = 0.1; // Time granularity of simulator
         private static readonly Stopwatch Timer = new Stopwatch();
         private static readonly NeuronCollection NeuronRegister = new NeuronCollection();
@@ -30,19 +29,13 @@ namespace SpikingLibrary
 
         internal static bool IsStopping
         {
-            get { return _isStopping; }
-            private set { _isStopping = value; }
+            get => _isStopping;
+            private set => _isStopping = value;
         }
 
-        public static bool IsRunning
-        {
-            get { return Scheduler.IsRunning; }
-        }
+        public static bool IsRunning => Scheduler.IsRunning;
 
-        internal static Scheduler Scheduler
-        {
-            get { return Sched; }
-        }
+        internal static Scheduler Scheduler { get; } = new Scheduler(10000);
 
         public static void Stop(bool unloadNeurons = false)
         {
@@ -50,7 +43,7 @@ namespace SpikingLibrary
 
             // schedule a future stop
             // (prevent race conditions when the structure of the network is changed)
-            Scheduler.ScheduleEvent(Sched_StopEngine, 3);
+            Scheduler.ScheduleEvent(Scheduler_StopEngine, 3);
             IsStopping = true;
             _unloadNeurons = unloadNeurons;
         }
@@ -76,7 +69,7 @@ namespace SpikingLibrary
 
                 if (_slowdownMethodRunning) return; // don't schedule a new one
                 _slowdownMethodRunning = true;
-                Scheduler.ScheduleEvent(Sched_DelayExecution, 1);
+                Scheduler.ScheduleEvent(Scheduler_DelayExecution, 1);
             }
         }
 
@@ -95,7 +88,7 @@ namespace SpikingLibrary
                     PendingNeuronAdditions.Add(neuron);
                     if (_neuronAdditionScheduled) return neuron;
 
-                    Scheduler.ScheduleEvent(Sched_AddNeurons, 1);
+                    Scheduler.ScheduleEvent(Scheduler_AddNeurons, 1);
                     _neuronAdditionScheduled = true;
                 }
             }         
@@ -103,7 +96,7 @@ namespace SpikingLibrary
             return neuron;
         }        
 
-        private static void Sched_AddNeurons(long time)
+        private static void Scheduler_AddNeurons(long time)
         {
             lock (SyncObj)
             {
@@ -113,20 +106,20 @@ namespace SpikingLibrary
             }
         }
 
-        public static void RemoveNeuron(Neuron n)
+        public static void RemoveNeuron(Neuron neuron)
         {
-            // Contract.Requires(n != null);
+            // Contract.Requires(neuron != null);
 
             if (!Scheduler.IsRunning)
-                NeuronRegister.Remove(n);
+                NeuronRegister.Remove(neuron);
             else
             {
                 lock (SyncObj)
                 {
-                    PendingNeuronRemovals.Add(n);
+                    PendingNeuronRemovals.Add(neuron);
                     if (_neuronRemovalScheduled) return;
 
-                    Scheduler.ScheduleEvent(Sched_RemoveNeurons, 1);
+                    Scheduler.ScheduleEvent(Scheduler_RemoveNeurons, 1);
                     _neuronRemovalScheduled = true;
                 }
             }
@@ -145,13 +138,13 @@ namespace SpikingLibrary
                     PendingNeuronRemovals.Add(neuronGroup);
                     if (_neuronRemovalScheduled) return;
 
-                    Scheduler.ScheduleEvent(Sched_RemoveNeurons, 1);
+                    Scheduler.ScheduleEvent(Scheduler_RemoveNeurons, 1);
                     _neuronRemovalScheduled = true;
                 }
             }
         }
 
-        private static void Sched_RemoveNeurons(long time)
+        private static void Scheduler_RemoveNeurons(long time)
         {
             lock (SyncObj)
             {
@@ -171,14 +164,14 @@ namespace SpikingLibrary
 
             Scheduler.StartAsync(name);
                 
-            Scheduler.ScheduleEvent(Sched_UpdateNeuronStates, 2);  
+            Scheduler.ScheduleEvent(Scheduler_UpdateNeuronStates, 2);  
                 
             if (_slowdownMethodRunning)
-                Scheduler.ScheduleEvent(Sched_DelayExecution, 3);
+                Scheduler.ScheduleEvent(Scheduler_DelayExecution, 3);
         }
 
         // called on the SNN engine thread
-        private static void Sched_UpdateNeuronStates(long time)
+        private static void Scheduler_UpdateNeuronStates(long time)
         {
             foreach (Neuron n in NeuronRegister)
             {
@@ -186,10 +179,10 @@ namespace SpikingLibrary
                     n.TriggerNeuronSpike(time);
             }
 
-            Scheduler.ScheduleEvent(Sched_UpdateNeuronStates, 1);
+            Scheduler.ScheduleEvent(Scheduler_UpdateNeuronStates, 1);
         }
 
-        private static void Sched_DelayExecution(long time)
+        private static void Scheduler_DelayExecution(long time)
         {
             Timer.Reset();
             Timer.Start();
@@ -202,10 +195,10 @@ namespace SpikingLibrary
             while (Timer.ElapsedTicks < Stopwatch.Frequency/1000000*_slowdown)
             {
             }
-            Scheduler.ScheduleEvent(Sched_DelayExecution, 1);
+            Scheduler.ScheduleEvent(Scheduler_DelayExecution, 1);
         }
 
-        private static void Sched_StopEngine(long time)
+        private static void Scheduler_StopEngine(long time)
         {
             Scheduler.Stop();
             IsStopping = false;
@@ -233,39 +226,31 @@ namespace SpikingLibrary
                                                                               synapse));                    
                     if (_createConnectionsScheduled) return;
 
-                    Scheduler.ScheduleEvent(Sched_CreateConnections, 1);
+                    Scheduler.ScheduleEvent(Scheduler_CreateConnections, 1);
                     _createConnectionsScheduled = true;
                 }
             }            
         }
 
-        private static void Sched_CreateConnections(long time)
+        private static void Scheduler_CreateConnections(long time)
         {
             lock (SyncObj)
             {
-                foreach (Tuple<Neuron, Neuron, Synapse> connData in PendingConnections)
+                foreach (var (presynapticNeuron, postsynapticNeuron, synapse) in PendingConnections)
                 {/*
                     Contract.Assume(connData != null);
                     Contract.Assume(connData.Item1 != null);
                     Contract.Assume(connData.Item2 != null);
                     Contract.Assume(connData.Item3 != null);*/
-                    connData.Item3.PostsynapticNeuron = connData.Item2; // set synapse.post
-                    connData.Item1.AddAxonalSynapse(connData.Item3);    // pre.AddAxonalSynapse
+                    synapse.PostsynapticNeuron = postsynapticNeuron; // set synapse.post
+                    presynapticNeuron.AddAxonalSynapse(synapse);    // pre.AddAxonalSynapse
       //              Contract.Assume(connData.Item3 != null);
-                    connData.Item2.AddDendriticSynapse(connData.Item3); // post.AddDendriticSynapse
+                    postsynapticNeuron.AddDendriticSynapse(synapse); // post.AddDendriticSynapse
                 }
 
                 PendingConnections.Clear();
                 _createConnectionsScheduled = false;                
             }            
-        }
-
-        [ContractInvariantMethod]
-        private static void ObjectInvariant()
-        {
-            Contract.Invariant(Contract.ForAll(PendingConnections, t => t != null));
-            Contract.Invariant(Contract.ForAll(PendingConnections,
-                                               t => t.Item1 != null && t.Item2 != null && t.Item3 != null));
         }
     }
 }

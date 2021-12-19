@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using MathLib.Evolution;
-using System.Diagnostics.Contracts;
 using System.Collections.ObjectModel;
 
 using Util; 
@@ -9,8 +8,7 @@ using MathLib.Graph;
 
 namespace SpikingLibTest
 {
-   
-    class EvolvableNeuralNetwork : GaObject<EvolvableNeuralNetwork, GraphChromosome<SpikingNetGraph>>
+    internal class EvolvableNeuralNetwork : GaObject<EvolvableNeuralNetwork, GraphChromosome<SpikingNetGraph>>
     {
         private readonly ReadOnlyCollection<int> _inputVertices;
         private readonly ReadOnlyCollection<int> _outputVertices;
@@ -58,6 +56,6 @@ namespace SpikingLibTest
             return StaticRandom.NextDouble();
         }
 
-        public Graph NetworkStructure { get { return Chromosome.ChromosomalGraph; } }        
+        public Graph NetworkStructure => Chromosome.ChromosomalGraph;
     }     
 }

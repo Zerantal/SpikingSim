@@ -5,7 +5,6 @@ using ZedGraph;
 using SpikingLibrary;
 using MathLib.Statistics;
 using System.Diagnostics;
-using System.Diagnostics.Contracts;
 
 namespace SpikingLibTest
 {
@@ -15,27 +14,27 @@ namespace SpikingLibTest
         
         private const int Ne = 800;  // Number of excitatory neurons
         private const int Ni = 200;  // Number of inhibitory neurons
-        
-        NeuronCollection _inhibitoryNeurons;
-        NeuronCollection _excitatoryNeurons;
-        NeuronProbe _inhibProbe;
-        NeuronProbe _excitProbe;
-        PeriodicInputSource _inhibitoryInput;
-        PeriodicInputSource _excitatoryInput;
 
-        RollingPointPairList _inhibitoryFiringsTrace;        
-        RollingPointPairList _excitatoryFiringsTrace;
-        RollingPointPairList _inhibatoryFiringPlotTrace;     // data for scatter plot of firings
-        RollingPointPairList _excitatoryFiringPlotTrace;     // data fir scatter plot of firings
-        RollingPointListWithStaticX _inhibNeuronTrace;
-        RollingPointListWithStaticX _excitNeuronTrace;
-        GraphPane _firingPane, _inhibPane, _excitPane, _firingPlotPane;
+        private NeuronCollection _inhibitoryNeurons;
+        private NeuronCollection _excitatoryNeurons;
+        private NeuronProbe _inhibitoryProbe;
+        private NeuronProbe _excitatoryProbe;
+        private PeriodicInputSource _inhibitoryInput;
+        private PeriodicInputSource _excitatoryInput;
+
+        private RollingPointPairList _inhibitoryFiringsTrace;
+        private RollingPointPairList _excitatoryFiringsTrace;
+        private RollingPointPairList _inhibatoryFiringPlotTrace;     // data for scatter plot of firings
+        private RollingPointPairList _excitatoryFiringPlotTrace;     // data fir scatter plot of firings
+        private RollingPointListWithStaticX _inhibitoryNeuronTrace;
+        private RollingPointListWithStaticX _excitatoryNeuronTrace;
+        private GraphPane _firingPane, _inhibitoryPane, _excitatoryPane, _firingPlotPane;
 
         private int _updateCounter;
         private const int UpdateInterval = 100; // 8 ms
         private long _currentTime;
-        private int _currentInhibCount;
-        private int _currentExcitCount;
+        private int _currentInhibitoryCount;
+        private int _currentExcitatoryCount;
 
         private const int TimeBinSize = 20; // 1 ms
 
@@ -43,7 +42,7 @@ namespace SpikingLibTest
 
         public FirstNetwork()
         {
-            _currentExcitCount = 0;
+            _currentExcitatoryCount = 0;
             InitializeComponent();
 
             SetupGraph();
@@ -52,21 +51,21 @@ namespace SpikingLibTest
 
         private void SetupGraph()
         {
-            Color inhibColour = Color.Blue;
-            Color excitColour = Color.Red;
+            Color inhibitoryColour = Color.Blue;
+            Color excitatoryColour = Color.Red;
 
             _master = zgc.MasterPane;
             _master.PaneList.Clear();
             _master.Margin.All = 10;
-            _inhibNeuronTrace = new RollingPointListWithStaticX(10000, 0, 1000);
-            _excitNeuronTrace = new RollingPointListWithStaticX(10000, 0, 1000);
+            _inhibitoryNeuronTrace = new RollingPointListWithStaticX(10000, 0, 1000);
+            _excitatoryNeuronTrace = new RollingPointListWithStaticX(10000, 0, 1000);
             _inhibitoryFiringsTrace = new RollingPointPairList(1000);
             _excitatoryFiringsTrace = new RollingPointPairList(1000);
             _inhibatoryFiringPlotTrace = new RollingPointPairList(Ni * 20);  // enough points to hold 1000 ms of data (assuming max firing rate of 20Hz)
             _excitatoryFiringPlotTrace = new RollingPointPairList(Ne * 20);
             
-            _inhibPane = new GraphPane();
-            _excitPane = new GraphPane();
+            _inhibitoryPane = new GraphPane();
+            _excitatoryPane = new GraphPane();
             _firingPane = new GraphPane();
             _firingPlotPane = new GraphPane();
 
@@ -80,30 +79,30 @@ namespace SpikingLibTest
             _firingPlotPane.YAxis.Title.Text = "Neuron number";
             _firingPlotPane.YAxis.Scale.Max = Ni + Ne;
 
-            _inhibPane.Title.Text = "Random inhibitory neuron";
-            _inhibPane.XAxis.Title.Text = "time (ms)";
-            _inhibPane.YAxis.Title.Text = "Membrane potential (v)";
-            _inhibPane.XAxis.Scale.Min = 0;
-            _inhibPane.XAxis.Scale.Max = 1000;
-            _inhibPane.YAxis.Scale.Min = -100;
-            _inhibPane.YAxis.Scale.Max = 40;
-            _inhibPane.YAxis.MajorGrid.IsZeroLine = false;
+            _inhibitoryPane.Title.Text = "Random inhibitory neuron";
+            _inhibitoryPane.XAxis.Title.Text = "time (ms)";
+            _inhibitoryPane.YAxis.Title.Text = "Membrane potential (v)";
+            _inhibitoryPane.XAxis.Scale.Min = 0;
+            _inhibitoryPane.XAxis.Scale.Max = 1000;
+            _inhibitoryPane.YAxis.Scale.Min = -100;
+            _inhibitoryPane.YAxis.Scale.Max = 40;
+            _inhibitoryPane.YAxis.MajorGrid.IsZeroLine = false;
 
-            _excitPane.Title.Text = "Random excitatory neuron";
-            _excitPane.XAxis.Title.Text = "time (ms)";
-            _excitPane.YAxis.Title.Text = "Membrane potential (v)";
-            _excitPane.XAxis.Scale.Min = 0;
-            _excitPane.XAxis.Scale.Max = 1000;
-            _excitPane.YAxis.Scale.Min = -100;
-            _excitPane.YAxis.Scale.Max = 40;
-            _excitPane.YAxis.MajorGrid.IsZeroLine = false;
+            _excitatoryPane.Title.Text = "Random excitatory neuron";
+            _excitatoryPane.XAxis.Title.Text = "time (ms)";
+            _excitatoryPane.YAxis.Title.Text = "Membrane potential (v)";
+            _excitatoryPane.XAxis.Scale.Min = 0;
+            _excitatoryPane.XAxis.Scale.Max = 1000;
+            _excitatoryPane.YAxis.Scale.Min = -100;
+            _excitatoryPane.YAxis.Scale.Max = 40;
+            _excitatoryPane.YAxis.MajorGrid.IsZeroLine = false;
 
             _master.Add(_firingPane);
-            _master.Add(_inhibPane);
+            _master.Add(_inhibitoryPane);
             _master.Add(_firingPlotPane);
-            _master.Add(_excitPane);
+            _master.Add(_excitatoryPane);
 
-            // Refigure the axis ranges for the GraphPanes
+            // Reconfigure the axis ranges for the GraphPanes
             zgc.AxisChange();
 
             // Layout the GraphPanes using a default Pane Layout
@@ -112,26 +111,26 @@ namespace SpikingLibTest
                 _master.SetLayout(g, PaneLayout.ForceSquare);
             }
 
-            LineItem inhibCurve = _firingPane.AddCurve("Inhibitory neurons", _inhibitoryFiringsTrace, inhibColour, SymbolType.None);
-            inhibCurve.Symbol.IsVisible = false;
+            LineItem inhibitoryCurve = _firingPane.AddCurve("Inhibitory neurons", _inhibitoryFiringsTrace, inhibitoryColour, SymbolType.None);
+            inhibitoryCurve.Symbol.IsVisible = false;
 
-            LineItem excitCurve = _firingPane.AddCurve("Excitatory neurons", _excitatoryFiringsTrace, excitColour, SymbolType.None);
-            excitCurve.Symbol.IsVisible = false;
+            LineItem excitatoryCurve = _firingPane.AddCurve("Excitatory neurons", _excitatoryFiringsTrace, excitatoryColour, SymbolType.None);
+            excitatoryCurve.Symbol.IsVisible = false;
 
-            LineItem inhibNeuronCurve = _inhibPane.AddCurve("", _inhibNeuronTrace, inhibColour, SymbolType.None);
-            inhibNeuronCurve.Symbol.IsVisible = false;
+            LineItem inhibitoryNeuronCurve = _inhibitoryPane.AddCurve("", _inhibitoryNeuronTrace, inhibitoryColour, SymbolType.None);
+            inhibitoryNeuronCurve.Symbol.IsVisible = false;
 
-            LineItem excitNeuronCurve = _excitPane.AddCurve("", _excitNeuronTrace, excitColour, SymbolType.None);
-            excitNeuronCurve.Symbol.IsVisible = false;
+            LineItem excitatoryNeuronCurve = _excitatoryPane.AddCurve("", _excitatoryNeuronTrace, excitatoryColour, SymbolType.None);
+            excitatoryNeuronCurve.Symbol.IsVisible = false;
 
-            LineItem inhibNeuronPlot = _firingPlotPane.AddCurve("", _inhibatoryFiringPlotTrace, inhibColour, SymbolType.Circle);
-            inhibNeuronPlot.Line.IsVisible = false;
-            inhibNeuronPlot.Symbol.Size = 2.0F;
-            inhibNeuronPlot.Symbol.Fill = new Fill(inhibColour);
-            LineItem excitNeuronPlot = _firingPlotPane.AddCurve("", _excitatoryFiringPlotTrace, excitColour, SymbolType.Circle);
-            excitNeuronPlot.Line.IsVisible = false;
-            excitNeuronPlot.Symbol.Size = 2.0F;
-            excitNeuronPlot.Symbol.Fill = new Fill(excitColour);
+            LineItem inhibitoryNeuronPlot = _firingPlotPane.AddCurve("", _inhibatoryFiringPlotTrace, inhibitoryColour, SymbolType.Circle);
+            inhibitoryNeuronPlot.Line.IsVisible = false;
+            inhibitoryNeuronPlot.Symbol.Size = 2.0F;
+            inhibitoryNeuronPlot.Symbol.Fill = new Fill(inhibitoryColour);
+            LineItem excitatoryNeuronPlot = _firingPlotPane.AddCurve("", _excitatoryFiringPlotTrace, excitatoryColour, SymbolType.Circle);
+            excitatoryNeuronPlot.Line.IsVisible = false;
+            excitatoryNeuronPlot.Symbol.Size = 2.0F;
+            excitatoryNeuronPlot.Symbol.Fill = new Fill(excitatoryColour);
         }
 
         private void SetupNetwork()
@@ -157,7 +156,7 @@ namespace SpikingLibTest
                     8 - 6 * Math.Pow(rNum, 2), 0));
                 _excitatoryNeurons.Add(n);
                 if (i == 0)   // probe first excitatory neuron
-                    _excitProbe = new NeuronProbe(n, 1);  // probe random excitatory neuron
+                    _excitatoryProbe = new NeuronProbe(n, 1);  // probe random excitatory neuron
             }            
 
             // Create inhibitory neurons           
@@ -167,7 +166,7 @@ namespace SpikingLibTest
                 n = SpikingNetEngine.CreateNeuron(new NeuronParameters(0.02 + 0.08 * rNum, 0.25 - 0.05 * rNum, -65, 2, 0));
                 _inhibitoryNeurons.Add(n);
                 if (i == 0)         // probe first inhibitory neuron
-                    _inhibProbe = new NeuronProbe(n, 1); // probe random inhibitory neuron
+                    _inhibitoryProbe = new NeuronProbe(n, 1); // probe random inhibitory neuron
             }
 
             allNeurons.Add(_inhibitoryNeurons);
@@ -187,10 +186,10 @@ namespace SpikingLibTest
            _excitatoryNeurons.NeuronFired += UpdatePlot;
 
             // setup neuron probes                      
-            _inhibProbe.NeuronProbed += ProbeUpdated; 
-            _inhibProbe.Start();
-            _excitProbe.NeuronProbed += ProbeUpdated;
-            _excitProbe.Start();
+            _inhibitoryProbe.NeuronProbed += ProbeUpdated; 
+            _inhibitoryProbe.Start();
+            _excitatoryProbe.NeuronProbed += ProbeUpdated;
+            _excitatoryProbe.Start();
 
             // start network and random inputs
             SpikingNetEngine.SlowNeuralEngine(0);
@@ -201,13 +200,13 @@ namespace SpikingLibTest
 
         private void ProbeUpdated(object sender, NeuronProbeUpdateEventArgs ev)
         {
-            if (sender == _inhibProbe)
+            if (sender == _inhibitoryProbe)
             {
-                _inhibNeuronTrace.Add( ev.V);
+                _inhibitoryNeuronTrace.Add( ev.V);
             }
             else
             {
-                _excitNeuronTrace.Add(ev.V);
+                _excitatoryNeuronTrace.Add(ev.V);
             }
             if (_updateCounter == UpdateInterval)
             {
@@ -220,24 +219,24 @@ namespace SpikingLibTest
         
         private void UpdatePlot(object sender, NeuronCollectionFiringEventArgs e)
         {           
-            if ((e.Time - _currentTime) > TimeBinSize)
+            if (e.Time - _currentTime > TimeBinSize)
             {
-                _inhibitoryFiringsTrace.Add((double)e.Time / 10, _currentInhibCount);
-                _excitatoryFiringsTrace.Add((double)e.Time / 10, _currentExcitCount);
+                _inhibitoryFiringsTrace.Add((double)e.Time / 10, _currentInhibitoryCount);
+                _excitatoryFiringsTrace.Add((double)e.Time / 10, _currentExcitatoryCount);
                 _currentTime = e.Time;
-                Debug.WriteLine(_currentExcitCount+_currentInhibCount);
-                _currentInhibCount = 0;
-                _currentExcitCount = 0;                
+                Debug.WriteLine(_currentExcitatoryCount+_currentInhibitoryCount);
+                _currentInhibitoryCount = 0;
+                _currentExcitatoryCount = 0;                
             }
 
             if (sender == _inhibitoryNeurons)
             {
-                _currentInhibCount++;
+                _currentInhibitoryCount++;
                 _inhibatoryFiringPlotTrace.Add((double)e.Time/10, e.FiringNeuron.Id);
             }
             else
             {
-                _currentExcitCount++;
+                _currentExcitatoryCount++;
                 _excitatoryFiringPlotTrace.Add((double)e.Time/10, e.FiringNeuron.Id);
             }
             
@@ -246,21 +245,20 @@ namespace SpikingLibTest
             //if (e.Time > 100000)
                 //NeuralNetwork.Pause();
 
-            if (_updateCounter == UpdateInterval)
-            {
+                if (_updateCounter != UpdateInterval) return;
+
                 RefreshGraphs();
-                _updateCounter = 0;
-            }
+            _updateCounter = 0;
         }
         
         private void RefreshGraphs()
         {
             if (WindowState == FormWindowState.Minimized) return;
 
-            _firingPane.XAxis.Scale.Max = ((double) _currentTime/10);
-            _firingPane.XAxis.Scale.Min = ((double) _currentTime/10) - 1000;
-            _firingPlotPane.XAxis.Scale.Max = ((double) _currentTime/10);
-            _firingPlotPane.XAxis.Scale.Min = ((double) _currentTime/10) - 1000;
+            _firingPane.XAxis.Scale.Max = (double) _currentTime/10;
+            _firingPane.XAxis.Scale.Min = (double) _currentTime/10 - 1000;
+            _firingPlotPane.XAxis.Scale.Max = (double) _currentTime/10;
+            _firingPlotPane.XAxis.Scale.Min = (double) _currentTime/10 - 1000;
             zgc.AxisChange();
             zgc.Invalidate();
         }
@@ -279,7 +277,8 @@ namespace SpikingLibTest
 
         private static void PauseBtn_Click(object sender, EventArgs e)
         {
-            Button b = sender as Button;
+            if (!(sender is Button b)) return;
+
             if (b.Text == @"Pause")
             {
                 SpikingNetEngine.Pause();
@@ -307,11 +306,5 @@ namespace SpikingLibTest
 
         }
 
-        [ContractInvariantMethod]
-        private void ObjectInvariant()
-        {
-            Contract.Invariant(this.zgc != null);
-        }
-         
     }
 }

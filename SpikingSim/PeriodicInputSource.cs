@@ -57,17 +57,15 @@ namespace SpikingLibrary
                 lock (_syncObj)
                 {
                     _newSpikeTimings = (int[])timings.Clone();
-                    
-                    if (!_pendingSpikeTimingChange)
-                    {
-                        _pendingSpikeTimingChange = true;                        
-                        SpikingNetEngine.Scheduler.ScheduleEvent(Sched_ChangeSpikeTiming, 1);
-                    }
+
+                    if (_pendingSpikeTimingChange) return;
+                    _pendingSpikeTimingChange = true;                        
+                    SpikingNetEngine.Scheduler.ScheduleEvent(Scheduler_ChangeSpikeTiming, 1);
                 }
             }
         }        
 
-        private void Sched_ChangeSpikeTiming(long time)
+        private void Scheduler_ChangeSpikeTiming(long time)
         {
             lock (_syncObj)
             {
@@ -105,25 +103,24 @@ namespace SpikingLibrary
                 {
                     _pendingBulkConnections.Add(new Tuple<NeuronCollection, ISynapseFactory>(
                                                neuronGroup.ShallowClone(), synapseFactory.DeepClone()));
-                    if (!_bulkConnectionEventScheduled)
-                    {
-                        _bulkConnectionEventScheduled = true;
-                        SpikingNetEngine.Scheduler.ScheduleEvent(Sched_ConnectionEvent, 1);
-                    }
+                    if (_bulkConnectionEventScheduled) return;
+
+                    _bulkConnectionEventScheduled = true;
+                    SpikingNetEngine.Scheduler.ScheduleEvent(Scheduler_ConnectionEvent, 1);
                 }
             }
         }
         
-        private void Sched_ConnectionEvent(long time)
+        private void Scheduler_ConnectionEvent(long time)
         {
             lock (_syncObj)
             {
-                foreach (Tuple<NeuronCollection, ISynapseFactory> connInfo in _pendingBulkConnections)
+                foreach (var (neuralNetwork, synapseFactory) in _pendingBulkConnections)
                 {
-                    foreach (Neuron postSynapticNeuron in connInfo.Item1)
+                    foreach (Neuron postSynapticNeuron in neuralNetwork)
                     {
                         Contract.Assume(postSynapticNeuron != null);
-                        Synapse syn = connInfo.Item2.CreateSynapse();
+                        Synapse syn = synapseFactory.CreateSynapse();
                         syn.PostsynapticNeuron = postSynapticNeuron;
                         _axon.Add(syn);
                         postSynapticNeuron.AddDendriticSynapse(syn);
@@ -155,28 +152,24 @@ namespace SpikingLibrary
             {
                 lock (_syncObj)
                 {
-                    _pendingNeuronConnections.Add(new Tuple<Neuron, Synapse>(postsynapticNeuron, synapse));  
-                    if (!_neuronConnectionEventScheduled)
-                    {
-                        _neuronConnectionEventScheduled = true;
-                        SpikingNetEngine.Scheduler.ScheduleEvent(Sched_SynapseConnectionEvent, 1);
-                    }
+                    _pendingNeuronConnections.Add(new Tuple<Neuron, Synapse>(postsynapticNeuron, synapse));
+                    if (_neuronConnectionEventScheduled) return;
+
+                    _neuronConnectionEventScheduled = true;
+                    SpikingNetEngine.Scheduler.ScheduleEvent(Scheduler_SynapseConnectionEvent, 1);
                 }
             }
         }
         
-        private void Sched_SynapseConnectionEvent(long time)
+        private void Scheduler_SynapseConnectionEvent(long time)
         {
             lock (_syncObj)
             {
-                foreach (Tuple<Neuron, Synapse> t in _pendingNeuronConnections)
+                foreach (var (postSynapticNeuron, synapse) in _pendingNeuronConnections)
                 {
-                    Neuron postSynapticNeuron = t.Item1;
-                    Synapse syn = t.Item2;
-                    Contract.Assume(postSynapticNeuron != null);
-                    syn.PostsynapticNeuron = postSynapticNeuron;
-                    _axon.Add(syn);
-                    postSynapticNeuron.AddDendriticSynapse(syn);                    
+                    synapse.PostsynapticNeuron = postSynapticNeuron;
+                    _axon.Add(synapse);
+                    postSynapticNeuron.AddDendriticSynapse(synapse);                    
                 }
                 _pendingNeuronConnections.Clear();
                 _neuronConnectionEventScheduled = false;
@@ -185,8 +178,8 @@ namespace SpikingLibrary
 
         public int MaxInputCycles
         {
-            get { return _maxInputCycles; }
-            set { _maxInputCycles = value; }
+            get => _maxInputCycles;
+            set => _maxInputCycles = value;
         }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1026:DefaultParametersShouldNotBeUsed")]
@@ -196,7 +189,7 @@ namespace SpikingLibrary
             {
                 _running = true;
                 _currentInjectionCycleCount = 0;
-                SpikingNetEngine.Scheduler.ScheduleEvent(Sched_InjectSpike, startTime);
+                SpikingNetEngine.Scheduler.ScheduleEvent(Scheduler_InjectSpike, startTime);
             }
 
             _stopping = false;
@@ -208,7 +201,7 @@ namespace SpikingLibrary
             _running = false;
         }
 
-        private void Sched_InjectSpike(long time)
+        private void Scheduler_InjectSpike(long time)
         {
             if (_stopping) return;
 
@@ -224,12 +217,12 @@ namespace SpikingLibrary
             }
             if (_currentInjectionCycleCount < _maxInputCycles)
             {
-                SpikingNetEngine.Scheduler.ScheduleEvent(Sched_InjectSpike, _spikeTimings[_spikeIdx]);
+                SpikingNetEngine.Scheduler.ScheduleEvent(Scheduler_InjectSpike, _spikeTimings[_spikeIdx]);
                 _spikeIdx++;
             }
             else
             {
-                _asyncOp.Post(_onInputFinishedDelegate, new EventArgs());
+                _asyncOp.Post(_onInputFinishedDelegate, EventArgs.Empty);
                 _running = false;
             }
         }
@@ -245,25 +238,7 @@ namespace SpikingLibrary
 
         protected void OnInputFinished(EventArgs e)
         {
-            if (PeriodicInputFinished != null)
-            {
-                PeriodicInputFinished(this, e);
-            }
-        }
-
-        [ContractInvariantMethod]
-        private void ObjectInvariant()
-        {          
-            Contract.Invariant(_axon != null);
-            Contract.Invariant(_spikeTimings != null);
-            Contract.Invariant(_spikeTimings.Length > 0);
-            Contract.Invariant(_newSpikeTimings != null);
-            Contract.Invariant(_newSpikeTimings.Length > 0);
-            Contract.Invariant(_asyncOp != null);
-            Contract.Invariant(_pendingBulkConnections != null);
-            Contract.Invariant(_pendingNeuronConnections != null);
-            //Contract.Invariant(Contract.ForAll(_pendingNeuronConnections, t => t.Item1 != null && t.Item2 != null) || 
-            //    _pendingNeuronConnections.Count == 0);
+            PeriodicInputFinished?.Invoke(this, e);
         }
     }
 }

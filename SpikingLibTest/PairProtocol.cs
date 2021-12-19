@@ -6,7 +6,7 @@ using System.Diagnostics.Contracts;
 namespace SpikingLibTest
 {
     [ContractVerification(false)]
-    class PairProtocol
+    internal class PairProtocol
     {
         public static double InitWeight = 0.25;
         public static int NumPairs = 60;
@@ -51,7 +51,7 @@ namespace SpikingLibTest
             ExecutePairProtocol();
         }
 
-        void preInput_PeriodicInputFinished(object sender, EventArgs e)
+        private void preInput_PeriodicInputFinished(object sender, EventArgs e)
         {
             // delay for 10s to prevent possible race condition
             _delayNotification.CreateNotification(100000); 
@@ -98,11 +98,8 @@ namespace SpikingLibTest
         protected virtual void OnUpdateEvent(EventArgs e)
         {            
             EventHandler handler = UpdateEvent;
-            
-            if (handler != null)
-            {             
-                handler(this, e);
-            }
+
+            handler?.Invoke(this, e);
         }
     }
 }

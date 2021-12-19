@@ -16,22 +16,23 @@ namespace SpikingLibrary
 
         private readonly GraphPane _weightPane;
         private readonly RollingPointPairList _synapseTrace;
+        // ReSharper disable once PrivateFieldCanBeConvertedToLocalVariable
         private readonly MasterPane _master;        
 
         private int _maxTime = 1800; // time period of trace in seconds. 
-        private const int _numTracePoints = 10000;
+        private const int NumTracePoints = 10000;
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters", MessageId = "ZedGraph.Label.set_Text(System.String)")]
         public SynapseDisplayControl()
         {
             InitializeComponent();
 
-            _sampleInterval = (int) Math.Ceiling(10000.0 / _numTracePoints * _maxTime);                         
+            _sampleInterval = (int) Math.Ceiling(10000.0 / NumTracePoints * _maxTime);                         
             _target = null;
 
             // Setup zedgraph control
             _weightPane = new GraphPane();
-            _synapseTrace = new RollingPointPairList(_numTracePoints);
+            _synapseTrace = new RollingPointPairList(NumTracePoints);
 
             _master = zgc.MasterPane;
             _master.PaneList.Clear();
@@ -52,16 +53,17 @@ namespace SpikingLibrary
         [Category("Appearance")]
         [Description("Time period of synaptic trace (in seconds)")]
         [DefaultValue(1800)]
+        // ReSharper disable once UnusedMember.Global
         public int TracePeriod
         {
-            get { return _maxTime; }
+            get => _maxTime;
             set
             {
                 // Contract.Requires(value >= 60);
                 // Contract.Requires(value <= 86400);  // 24 hrs
 
                 _maxTime = value;
-                _sampleInterval = (int)Math.Ceiling(10000.0 / _numTracePoints * _maxTime);
+                _sampleInterval = (int)Math.Ceiling(10000.0 / NumTracePoints * _maxTime);
 
                 if (_sampleInterval <= 0)
                     _sampleInterval = 1;
@@ -80,7 +82,7 @@ namespace SpikingLibrary
         [Browsable(false)]
         public Synapse Target
         {
-            get { return _target; }
+            get => _target;
             set
             {
                 if (_probe != null)
@@ -93,7 +95,7 @@ namespace SpikingLibrary
                 if (Target == null) return;
 
                 _probe = new SynapseProbe(_target, _sampleInterval);
-                _probe.SynapseProbed += new EventHandler<SynapseProbeUpdateEventArgs>(_probe_SynapseProbed);
+                _probe.SynapseProbed += _probe_SynapseProbed;
                 _probe.Start();
             }
         }
@@ -118,13 +120,5 @@ namespace SpikingLibrary
             _weightPane.CurveList[0].Clear();                            
         }
 
-        [ContractInvariantMethod]
-        private void ObjectInvariant()
-        {
-            Contract.Invariant(zgc != null);
-            Contract.Invariant(_synapseTrace != null);
-            Contract.Invariant(_sampleInterval > 0);
-            Contract.Invariant(_weightPane != null);
-        }
     }
 }

@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
-using System.Threading;
 using System.Diagnostics;
 
 using SpikingLibrary;
@@ -11,6 +10,7 @@ namespace SpikingLibTest
 {
     public partial class StdpLearningWindow : Form
     {        
+        // ReSharper disable once UnusedMember.Local
         private const double Freq = 1; // in Hz
         private const int NumPairs = 6;
         private const double InitWeight = 0.25;
@@ -46,12 +46,11 @@ namespace SpikingLibTest
 
         private void SetupNetwork()
         {
-            _timeDelayDelayNotification.Notification += new EventHandler(startPairProtocolAgain);
+            _timeDelayDelayNotification.Notification += StartPairProtocolAgain;
             // create network
             Neuron n = SpikingNetEngine.CreateNeuron(new NeuronParameters(0.02, -0.1, -55, 0, 0));
-            int t1, t2;
             _dt = DtMin;
-            CalcAxonalDelays(_dt, out t1, out t2);              
+            CalcAxonalDelays(_dt, out var t1, out var t2);              
             _s1 = new Synapse(t1, InitWeight, StdpParameters.HippocampalCulture);
             _s2 = new NonLearningSynapse(t2, 80);
             _p1 = new SynapseProbe(_s1);
@@ -59,7 +58,7 @@ namespace SpikingLibTest
             SpikingNetEngine.SlowNeuralEngine(0);            
             SpikingNetEngine.Start();
 
-            _input = new PeriodicInputSource((int)(10000.0/Freq));
+            _input = new PeriodicInputSource();
             _input.ConnectTo(n, _s1);
             _input.ConnectTo(n, _s2);
             _input.MaxInputCycles = NumPairs;
@@ -71,7 +70,7 @@ namespace SpikingLibTest
                         
         }
 
-        void startPairProtocolAgain(object sender, EventArgs e)
+        private void StartPairProtocolAgain(object sender, EventArgs e)
         {
             _learningWindowTrace.Add(_dt, _p1.GetWeight() - InitWeight);
 
@@ -82,8 +81,7 @@ namespace SpikingLibTest
 
             if (_dt > DtMax) return; //finish gathering data
 
-            int t1, t2;
-            CalcAxonalDelays(_dt, out t1, out t2);
+            CalcAxonalDelays(_dt, out var t1, out var t2);
             _p1.SetAxonalDelay(t1);
             _p2.SetAxonalDelay(t2);
             _p1.SetWeight(InitWeight);
@@ -105,9 +103,9 @@ namespace SpikingLibTest
             }           
         }
 
-        void _input_PeriodicInputFinished(object sender, EventArgs e)
+        private void _input_PeriodicInputFinished(object sender, EventArgs e)
         {
-            // delay for .5 seconds to allow for input signal to finish propogating along axon
+            // delay for .5 seconds to allow for input signal to finish propagating along axon
             _timeDelayDelayNotification.CreateNotification(5000); 
         }
 

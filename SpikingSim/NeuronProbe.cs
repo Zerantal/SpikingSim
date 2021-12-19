@@ -1,6 +1,5 @@
 ﻿using System;
 using System.ComponentModel;
-using System.Diagnostics.Contracts;
 using System.Threading;
 using System.Diagnostics;
 
@@ -11,7 +10,6 @@ namespace SpikingLibrary
         private volatile bool _started;
         private volatile int _updateTime;
         private volatile bool _stopping;
-        private Neuron _target;
 
         public event EventHandler<NeuronProbeUpdateEventArgs> NeuronProbed;
         private readonly SendOrPostCallback _onNeuronProbedDelegate;
@@ -44,38 +42,24 @@ namespace SpikingLibrary
 
             Target = target;
             UpdateInterval = updateInterval;
-            _onNeuronProbedDelegate = new SendOrPostCallback(ReportNeuronState);
+            _onNeuronProbedDelegate = ReportNeuronState;
             _asyncOp = AsyncOperationManager.CreateOperation(null);
             _pendingClassUpdate = null;            
         }
 
         public int UpdateInterval
         {
-            get { return _updateTime; }
-            set
-            {
-                // Contract.Requires(value > 0);
-
-                _updateTime = value;
-            }
+            get => _updateTime;
+            set => _updateTime = value;
         }
 
-        public Neuron Target
-        {
-            get { return _target; }
-            set
-            {
-                // Contract.Requires(value != null);
-                
-                _target = value;
-            }
-        }
+        public Neuron Target { get; set; }
 
         public void Start()
         {
             if (_started) return;
 
-            SpikingNetEngine.Scheduler.ScheduleEvent(Sched_ProbeNeuron, _updateTime);
+            SpikingNetEngine.Scheduler.ScheduleEvent(Scheduler_ProbeNeuron, _updateTime);
             _started = true;
             _stopping = false;
         }
@@ -88,19 +72,19 @@ namespace SpikingLibrary
 
         // callback used by scheduler. i.e., this method is executed 
         // on the neural network thread
-        private void Sched_ProbeNeuron(long time)
+        private void Scheduler_ProbeNeuron(long time)
         {
             // Contract.Requires(time >= 1);
 
-            double u = _target.U;
-            double v = _target.V;
+            double u = Target.U;
+            double v = Target.V;
 
             NeuronProbeUpdateEventArgs e = new NeuronProbeUpdateEventArgs(time, u, v);
 
             _asyncOp.Post(_onNeuronProbedDelegate, e);
 
             if (!_stopping)
-                SpikingNetEngine.Scheduler.ScheduleEvent(Sched_ProbeNeuron, _updateTime);
+                SpikingNetEngine.Scheduler.ScheduleEvent(Scheduler_ProbeNeuron, _updateTime);
         }
 
         // This method is invoked via the AsyncOperation object,
@@ -114,10 +98,7 @@ namespace SpikingLibrary
 
         protected void OnNeuronProbed(NeuronProbeUpdateEventArgs e)
         {
-            if (NeuronProbed != null)
-            {
-                NeuronProbed(this, e);
-            }
+            NeuronProbed?.Invoke(this, e);
         }
 
         public void ChangeNeuronType(NeuronParameters neuronType)
@@ -125,27 +106,25 @@ namespace SpikingLibrary
             // Contract.Requires(neuronType != null);
 
             if (!SpikingNetEngine.IsRunning)
-                _target.NeuronType = neuronType;
+                Target.NeuronType = neuronType;
             else
             {
                 lock (_syncObj)
                 {
                     _pendingClassUpdate = neuronType;
-                    if (!_updatesFlag.HasFlag(PendingUpdates.ClassUpdateScheduled))
-                    {
-                        _updatesFlag |= PendingUpdates.ClassUpdateScheduled;
-                        SpikingNetEngine.Scheduler.ScheduleEvent(Sched_ChangeClass, 1);
-                    }
+                    if (_updatesFlag.HasFlag(PendingUpdates.ClassUpdateScheduled)) return;
+                    _updatesFlag |= PendingUpdates.ClassUpdateScheduled;
+                    SpikingNetEngine.Scheduler.ScheduleEvent(Scheduler_ChangeClass, 1);
                 }
             }
         }
         
-        private void Sched_ChangeClass(long time)
+        private void Scheduler_ChangeClass(long time)
         {
             lock (_syncObj)
             {
                 if (_pendingClassUpdate != null)
-                    _target.NeuronType = _pendingClassUpdate;
+                    Target.NeuronType = _pendingClassUpdate;
                 else
                 {
                     Debug.WriteLine("_pendingClassUpdate shouldn't be null");
@@ -160,26 +139,25 @@ namespace SpikingLibrary
         public void ChangeV(double v)
         {
             if (!SpikingNetEngine.Scheduler.IsRunning)
-                _target.V = v;
+                Target.V = v;
             else
             {
                 lock (_syncObj)
                 {
                     _pendingVChange = v;
-                    if (!_updatesFlag.HasFlag(PendingUpdates.VChangeScheduled))
-                    {
-                        _updatesFlag |= PendingUpdates.VChangeScheduled;
-                        SpikingNetEngine.Scheduler.ScheduleEvent(Sched_ChangeV, 1);
-                    }
+                    if (_updatesFlag.HasFlag(PendingUpdates.VChangeScheduled)) return;
+
+                    _updatesFlag |= PendingUpdates.VChangeScheduled;
+                    SpikingNetEngine.Scheduler.ScheduleEvent(Scheduler_ChangeV, 1);
                 }
             }
         }        
 
-        private void Sched_ChangeV(long time)
+        private void Scheduler_ChangeV(long time)
         {
             lock (_syncObj)
             {                
-                _target.V = _pendingVChange;
+                Target.V = _pendingVChange;
                 _updatesFlag &= ~PendingUpdates.VChangeScheduled;
             }
         }
@@ -187,68 +165,59 @@ namespace SpikingLibrary
         public void ChangeU(double u)
         {
             if (!SpikingNetEngine.Scheduler.IsRunning)
-                _target.U = u;
+                Target.U = u;
             else
             {
                 lock (_syncObj)
                 {
                     _pendingUChange = u;
-                    if (!_updatesFlag.HasFlag(PendingUpdates.UChangeScheduled))
-                    {
-                        _updatesFlag |= PendingUpdates.UChangeScheduled;
-                        SpikingNetEngine.Scheduler.ScheduleEvent(Sched_ChangeU, 1);
-                    }
+                    if (_updatesFlag.HasFlag(PendingUpdates.UChangeScheduled)) return;
+
+                    _updatesFlag |= PendingUpdates.UChangeScheduled;
+                    SpikingNetEngine.Scheduler.ScheduleEvent(Scheduler_ChangeU, 1);
                 }
             }    
         }        
 
-        private void Sched_ChangeU(long time)
+        private void Scheduler_ChangeU(long time)
         {
             lock (_syncObj)
             {
-                _target.U = _pendingUChange;
+                Target.U = _pendingUChange;
                 _updatesFlag &= ~PendingUpdates.UChangeScheduled;
             }            
         }
 
-        public void IncrementState(double uInc, double vInc)
+        public void IncrementState(double uIncrement, double vIncrement)
         {
             if (!SpikingNetEngine.Scheduler.IsRunning)
             {
-                _target.U += uInc;
-                _target.V += vInc;
+                Target.U += uIncrement;
+                Target.V += vIncrement;
             }
             else
             {
                 lock (_syncObj)
                 {
-                    _pendingUIncrement = uInc;
-                    _pendingVIncrement = vInc;
-                    if (!_updatesFlag.HasFlag(PendingUpdates.IncrementScheduled))
-                    {
-                        _updatesFlag |= PendingUpdates.IncrementScheduled;
-                        SpikingNetEngine.Scheduler.ScheduleEvent(Sched_IncrementState, 1);
-                    }
+                    _pendingUIncrement = uIncrement;
+                    _pendingVIncrement = vIncrement;
+                    if (_updatesFlag.HasFlag(PendingUpdates.IncrementScheduled)) return;
+
+                    _updatesFlag |= PendingUpdates.IncrementScheduled;
+                    SpikingNetEngine.Scheduler.ScheduleEvent(Scheduler_IncrementState, 1);
                 }
             }            
         }
 
-        private void Sched_IncrementState(long time)
+        private void Scheduler_IncrementState(long time)
         {
             lock (_syncObj)
             {
-                _target.U += _pendingUIncrement;
-                _target.V += _pendingVIncrement;                
+                Target.U += _pendingUIncrement;
+                Target.V += _pendingVIncrement;                
                 _updatesFlag &= ~PendingUpdates.IncrementScheduled;
             }
         }
 
-        [ContractInvariantMethod]
-        private void ObjectInvariant()
-        {
-            Contract.Invariant(_updateTime > 0);
-            Contract.Invariant(_target != null);
-            Contract.Invariant(_asyncOp != null);         
-        }
     }
 }

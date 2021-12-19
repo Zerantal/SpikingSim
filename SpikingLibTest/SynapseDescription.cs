@@ -1,6 +1,4 @@
-﻿using System.Diagnostics.Contracts;
-
-using SpikingLibrary;
+﻿using SpikingLibrary;
 
 namespace SpikingLibTest
 {
@@ -27,11 +25,5 @@ namespace SpikingLibTest
             LearningParameters = learningParams;
         }
 
-        [ContractInvariantMethod]
-        private void ObjectInvariant()
-        {
-            Contract.Invariant(LearningParameters != null);
-            Contract.Invariant(AxonalDelay > 0);
-        }
     }
 }

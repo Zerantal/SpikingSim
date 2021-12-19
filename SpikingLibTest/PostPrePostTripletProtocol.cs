@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Diagnostics.Contracts;
 
 using SpikingLibrary;
 using ZedGraph;
+// ReSharper disable IdentifierTypo
 
 namespace SpikingLibTest
 {
     [ContractVerification(false)]
-    class PostPrePostTripletProtocol
+    internal class PostPrePostTripletProtocol
     {
         public static double InitWeight = 0.25;
         public static int NumPairs = 60;
@@ -27,10 +25,6 @@ namespace SpikingLibTest
 
         public PostPrePostTripletProtocol(PointPairList postprepostTripletList, double[,] postprepostTriplets)
         {
-            // Contract.Requires(postprepostTriplets != null);            
-            // Contract.Requires(postprepostTriplets.Length >= 1);
-            // Contract.Requires(postprepostTriplets.GetLength(1) == 2);
-
             _ptList = postprepostTripletList;
             _prepostpreTriplets = postprepostTriplets;
             _tripletIdx = 0;
@@ -55,7 +49,7 @@ namespace SpikingLibTest
             ExecuteTripletProtocol();
         }
 
-        void preInput_PeriodicInputFinished(object sender, EventArgs e)
+        private void preInput_PeriodicInputFinished(object sender, EventArgs e)
         {
             // delay for 10s to prevent possible race condition
             _delayNotification.CreateNotification(100000);
@@ -100,10 +94,7 @@ namespace SpikingLibTest
         {
             EventHandler handler = UpdateEvent;
 
-            if (handler != null)
-            {
-                handler(this, e);
-            }
+            handler?.Invoke(this, e);
         }
     }
 }

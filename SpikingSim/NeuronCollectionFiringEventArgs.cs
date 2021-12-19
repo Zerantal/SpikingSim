@@ -10,8 +10,8 @@ namespace SpikingLibrary
             Time = time;
         }
 
-        public long Time { get; private set; }
+        public long Time { get; }
 
-        public Neuron FiringNeuron { get; private set; }
+        public Neuron FiringNeuron { get; }
     }
 }

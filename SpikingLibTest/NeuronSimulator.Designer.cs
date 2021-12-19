@@ -267,7 +267,7 @@ namespace SpikingLibTest
             this.InhibPulseBtn.TabIndex = 4;
             this.InhibPulseBtn.Text = "Inhibitory Pulse";
             this.InhibPulseBtn.UseVisualStyleBackColor = true;
-            this.InhibPulseBtn.Click += new System.EventHandler(this.InhibPulseBtnClick);
+            this.InhibPulseBtn.Click += new System.EventHandler(this.InhibitoryPulseBtnClick);
             // 
             // SetPointBtn
             // 

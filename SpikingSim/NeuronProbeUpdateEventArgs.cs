@@ -4,9 +4,9 @@ namespace SpikingLibrary
 {
     public class NeuronProbeUpdateEventArgs : EventArgs
     {
-        public double U { get; private set; }
-        public double V { get; private set; }
-        public long Time { get; private set; }
+        public double U { get; }
+        public double V { get; }
+        public long Time { get; }
 
         public NeuronProbeUpdateEventArgs(long time, double u, double v)
         {

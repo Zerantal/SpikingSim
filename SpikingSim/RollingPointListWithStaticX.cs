@@ -18,12 +18,12 @@
 //Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 //=============================================================================
 using System;
-using System.Text;
 using System.Runtime.Serialization;
 using System.Security.Permissions;
 using System.Diagnostics.Contracts;
 
 using ZedGraph;
+// ReSharper disable UnusedMember.Global
 
 // based upon RollingPointPairList source
 namespace SpikingLibrary
@@ -38,7 +38,7 @@ namespace SpikingLibrary
     /// The queue is constructed with a fixed capacity and new points can be enqueued. When the 
     /// capacity is reached the oldest (first in) PointPair is overwritten. However, when 
     /// accessing via <see cref="IPointList" />, the <see cref="PointPair" /> objects are
-    /// seen in the order in which they were enqeued.
+    /// seen in the order in which they were enqueued.
     ///
     /// RollingPointPairList supports data editing through the <see cref="IPointListEdit" />
     /// interface.
@@ -48,7 +48,7 @@ namespace SpikingLibrary
     /// </summary>
     [Serializable]
     [ContractVerification(false)]
-    public class RollingPointListWithStaticX : IPointList, ISerializable, IPointListEdit
+    public class RollingPointListWithStaticX : ISerializable, IPointListEdit
     {
 
         #region Fields
@@ -79,6 +79,8 @@ namespace SpikingLibrary
         /// </summary>
         /// <param name="capacity">Number of elements in the rolling list.  This number
         /// cannot be changed once the RollingPointPairList is constructed.</param>
+        /// <param name="min"></param>
+        /// <param name="max"></param>
         public RollingPointListWithStaticX(int capacity, double min, double max)        
         {
             // Contract.Requires(capacity >= 0);
@@ -107,8 +109,8 @@ namespace SpikingLibrary
         /// </summary>
         public int Capacity
         {
-            get { return _capacity; }
-            set { _capacity = value; }
+            get => _capacity;
+            set => _capacity = value;
         }
 
         /// <summary>
@@ -123,36 +125,31 @@ namespace SpikingLibrary
                     return 0;
 
                 if (_headIdx > _tailIdx)
-                    return (_headIdx - _tailIdx) + 1;
+                    return _headIdx - _tailIdx + 1;
 
                 if (_tailIdx > _headIdx)
-                    return (Capacity - _tailIdx) + _headIdx + 1;
+                    return Capacity - _tailIdx + _headIdx + 1;
 
                 return 1;
             }
         }
 
         /// <summary>
-        /// Gets a bolean that indicates if the buffer is empty.
+        /// Gets a boolean that indicates if the buffer is empty.
         /// Alternatively you can test Count==0.
         /// </summary>
-        public bool IsEmpty
-        {
-            get { return _headIdx == -1; }
-        }
+        public bool IsEmpty => _headIdx == -1;
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1819:PropertiesShouldNotReturnArrays")]
         protected internal double[] XValues
         {
-            get { return _xValues; }
-            set { _xValues = value; }
+            get => _xValues;
+            set => _xValues = value;
         }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1819:PropertiesShouldNotReturnArrays")]
         protected internal double[] YValues
         {
-            get { return _yValues; }
-            set { _yValues = value; }
+            get => _yValues;
+            set => _yValues = value;
         }
 
         /// <summary>
@@ -161,8 +158,8 @@ namespace SpikingLibrary
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1704:IdentifiersShouldBeSpelledCorrectly", MessageId = "Idx")]
         protected internal int HeadIdx
         {
-            get { return _headIdx; }
-            set { _headIdx = value; }
+            get => _headIdx;
+            set => _headIdx = value;
         }
 
         /// <summary>
@@ -171,20 +168,20 @@ namespace SpikingLibrary
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1704:IdentifiersShouldBeSpelledCorrectly", MessageId = "Idx")]
         protected internal int TailIdx
         {
-            get { return _tailIdx; }
-            set { _tailIdx = value; }
+            get => _tailIdx;
+            set => _tailIdx = value;
         }
 
         protected internal double Min
         {
-            get { return _min; }
-            set { _min = value; }
+            get => _min;
+            set => _min = value;
         }
 
         protected internal double Max
         {
-            get { return _max; }
-            set { _max = value; }
+            get => _max;
+            set => _max = value;
         }
 
         /// <summary>
@@ -198,19 +195,13 @@ namespace SpikingLibrary
         {
             get
             {
-                int yIdx, xIdx;                                
-
-                xIdx = index;
-                yIdx = index + _tailIdx;
+                var yIdx = index + _tailIdx;
                 if (yIdx >= _capacity)
                     yIdx -= Capacity;
 
-                return new PointPair(_xValues[xIdx], _yValues[yIdx]);
+                return new PointPair(_xValues[index], _yValues[yIdx]);
             }
-            set
-            {
-                throw new NotSupportedException();                
-            }
+            set => throw new NotSupportedException();
         }
 
         #endregion
@@ -218,23 +209,25 @@ namespace SpikingLibrary
         #region Public Methods
 
         /// <summary>
-        /// Implement the <see cref="ICloneable" /> interface in a typesafe manner by just
+        /// Implement the <see cref="ICloneable" /> interface in a type-safe manner by just
         /// calling the typed version of <see cref="Clone" />
         /// </summary>
         /// <returns>A deep copy of this object</returns>
         object ICloneable.Clone()
         {
-            return this.Clone();
+            return Clone();
         }
 
         /// <summary>
-        /// Typesafe, deep-copy clone method.
+        /// Type-safe, deep-copy clone method.
         /// </summary>
         /// <returns>A new, independent copy of this class</returns>
         public RollingPointListWithStaticX Clone()
         {
-            RollingPointListWithStaticX copy = new RollingPointListWithStaticX(Capacity, _min, _max);
-            copy._xValues = (double [])this._xValues.Clone();
+            RollingPointListWithStaticX copy = new RollingPointListWithStaticX(Capacity, _min, _max)
+            {
+                _xValues = (double [])_xValues.Clone()
+            };
 
             return copy;
         }
@@ -250,7 +243,7 @@ namespace SpikingLibrary
 
         /// <summary>
         /// Calculate that the next index in the buffer that should receive a new data point.
-        /// Note that this method actually advances the buffer, so a datapoint should be
+        /// Note that this method actually advances the buffer, so a data point should be
         /// added at _mBuffer[_headIdx].
         /// </summary>
         /// <returns>The index position of the new head element</returns>
@@ -268,12 +261,11 @@ namespace SpikingLibrary
                     _headIdx = 0;
                 }
 
-                if (_headIdx == _tailIdx)
-                {	// Buffer overflow. Increment tailIdx.
-                    if (++_tailIdx == _capacity)
-                    {	// Wrap around.
-                        _tailIdx = 0;
-                    }
+                if (_headIdx != _tailIdx) return _headIdx;
+                // Buffer overflow. Increment tailIdx.
+                if (++_tailIdx == _capacity)
+                {	// Wrap around.
+                    _tailIdx = 0;
                 }
             }
 
@@ -353,9 +345,9 @@ namespace SpikingLibrary
             // shift all the items that lie after index back by 1
             for (int i = index + _tailIdx; i < _tailIdx + Count - 1; i++)
             {
-                i = (i >= _capacity) ? 0 : i;
+                i = i >= _capacity ? 0 : i;
                 int j = i + 1;
-                j = (j >= _capacity) ? 0 : j;
+                j = j >= _capacity ? 0 : j;
                 _yValues[i] = _yValues[j];
             }
 

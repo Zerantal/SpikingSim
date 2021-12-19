@@ -1,23 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
 using SpikingLibrary;
-using MathLib.Statistics;
 
 namespace SpikingLibTest
 {
-    public partial class STDPTestForm : Form
+    public partial class StdpTestForm : Form
     {
         private PeriodicInputSource _input;        
-        private Neuron n;        
+        private Neuron _neuron;        
 
-        public STDPTestForm()
+        public StdpTestForm()
         {
             InitializeComponent();
 
@@ -26,7 +19,7 @@ namespace SpikingLibTest
 
         private void SetupNetwork()
         {
-            n = SpikingNetEngine.CreateNeuron(new NeuronParameters(0.02, -0.1, -55, 0, 0));
+            _neuron = SpikingNetEngine.CreateNeuron(new NeuronParameters(0.02, -0.1, -55, 0, 0));
 
             SpikingNetEngine.Start();
             SpikingNetEngine.SlowNeuralEngine(0);                   
@@ -53,8 +46,8 @@ namespace SpikingLibTest
 
             Synapse s1 = new Synapse(t1, 0.5, StdpParameters.RatVisualCortexL23);
             NonLearningSynapse s2 = new NonLearningSynapse(t2, 80);
-            _input.ConnectTo(n, s1);
-            _input.ConnectTo(n, s2);
+            _input.ConnectTo(_neuron, s1);
+            _input.ConnectTo(_neuron, s2);
 
             synapseDisplayControl1.Target = s1;
             synapseDisplayControl1.ClearTrace();

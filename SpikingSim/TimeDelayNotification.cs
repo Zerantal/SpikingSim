@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Threading;
 using System.ComponentModel;
-using System.Diagnostics.Contracts;
 
 namespace SpikingLibrary
 {
@@ -14,38 +13,29 @@ namespace SpikingLibrary
 
         public TimeDelayNotification()
         {
-            _onNotificationDelegate = new SendOrPostCallback(ReportNotification);
+            _onNotificationDelegate = ReportNotification;
             _asyncOp = AsyncOperationManager.CreateOperation(null);
         }
 
         public void CreateNotification(int time)
         {
             // Contract.Requires(time > 0);
-            SpikingNetEngine.Scheduler.ScheduleEvent(Sched_NotifyClient, time);
+            SpikingNetEngine.Scheduler.ScheduleEvent(Scheduler_NotifyClient, time);
         } 
 
-        private void Sched_NotifyClient(long time)
+        private void Scheduler_NotifyClient(long time)
         {
-            _asyncOp.Post(_onNotificationDelegate, new EventArgs());
+            _asyncOp.Post(_onNotificationDelegate, EventArgs.Empty);
         }
 
         private void ReportNotification(object state)
         {           
-            OnNotification(new EventArgs());
+            OnNotification(EventArgs.Empty);
         }
 
         protected void OnNotification(EventArgs e)
         {
-            if (Notification != null)
-            {
-                Notification(this, e);                
-            }
-        }
-
-        [ContractInvariantMethod]
-        private void ObjectInvariant()
-        {
-            Contract.Invariant(_asyncOp != null);
+            Notification?.Invoke(this, e);
         }
     }
 }

@@ -18,7 +18,7 @@ namespace SpikingLibTest
 
         private const int AxonalDelayMutationVariance = 20;
         private const int MaxInitDelayVariance = 200;
-        private static StdpParameters _stdpMutationVariances = new StdpParameters
+        private static readonly StdpParameters StdpMutationVariances = new StdpParameters
         {
             A2Negative = 1e-3,
             A2Positive = 1e-3,
@@ -38,7 +38,7 @@ namespace SpikingLibTest
                 NeuronParameters.DAP,
                 NeuronParameters.InhibitionInducedBursting, NeuronParameters.InhibitionInducedSpiking, NeuronParameters.Integrator,
                 NeuronParameters.MixedMode, NeuronParameters.PhasicBursting, NeuronParameters.PhasicSpiking, NeuronParameters.ReboundBurst,
-                NeuronParameters.ReboundSpike, NeuronParameters.Resonator, NeuronParameters.SpikeFreqAdaptation,
+                NeuronParameters.ReboundSpike, NeuronParameters.Resonator, NeuronParameters.SpikeFrequencyAdaptation,
                 NeuronParameters.SpikeLatency,
                 NeuronParameters.SubthresholdOscillation, NeuronParameters.ThresholdVariability, NeuronParameters.TonicBursting,
                 NeuronParameters.TonicSpiking
@@ -49,7 +49,7 @@ namespace SpikingLibTest
                 StdpParameters.HippocampalCulture, StdpParameters.RatVisualCortexL23
             };
 
-        public SpikingNetGraph() : base()
+        public SpikingNetGraph()
         {
             VertexAddedEvent += SpikingNetGraph_VertexAddedEvent;
             VertexRemovedEvent += SpikingNetGraph_VertexRemovedEvent;
@@ -97,28 +97,28 @@ namespace SpikingLibTest
                 {
                     A2Negative =
                         oldParams.A2Negative +
-                        (StaticRandom.NextDouble() - 0.5) * _stdpMutationVariances.A2Negative,
+                        (StaticRandom.NextDouble() - 0.5) * StdpMutationVariances.A2Negative,
                     A2Positive =
                         oldParams.A2Positive +
-                        (StaticRandom.NextDouble() - 0.5) * _stdpMutationVariances.A2Positive,
+                        (StaticRandom.NextDouble() - 0.5) * StdpMutationVariances.A2Positive,
                     A3Negative =
                         oldParams.A3Negative +
-                        (StaticRandom.NextDouble() - 0.5) * _stdpMutationVariances.A3Negative,
+                        (StaticRandom.NextDouble() - 0.5) * StdpMutationVariances.A3Negative,
                     A3Positive =
                         oldParams.A3Positive +
-                        (StaticRandom.NextDouble() - 0.5) * _stdpMutationVariances.A3Positive,
+                        (StaticRandom.NextDouble() - 0.5) * StdpMutationVariances.A3Positive,
                     TauNegative =
                         oldParams.TauNegative +
-                        (StaticRandom.NextDouble() - 0.5) * _stdpMutationVariances.TauNegative,
+                        (StaticRandom.NextDouble() - 0.5) * StdpMutationVariances.TauNegative,
                     TauPositive =
                         oldParams.TauPositive +
-                        (StaticRandom.NextDouble() - 0.5) * _stdpMutationVariances.TauPositive,
+                        (StaticRandom.NextDouble() - 0.5) * StdpMutationVariances.TauPositive,
                     TauX =
                         oldParams.A2Negative +
-                        (StaticRandom.NextDouble() - 0.5) * _stdpMutationVariances.TauX,
+                        (StaticRandom.NextDouble() - 0.5) * StdpMutationVariances.TauX,
                     TauY =
                         oldParams.TauY +
-                        (StaticRandom.NextDouble() - 0.5) * _stdpMutationVariances.TauY,
+                        (StaticRandom.NextDouble() - 0.5) * StdpMutationVariances.TauY
                 };
                 int axonalDelay = synapse.AxonalDelay + StaticRandom.Next(-AxonalDelayMutationVariance, AxonalDelayMutationVariance);
                 if (axonalDelay < 1)
@@ -150,11 +150,5 @@ namespace SpikingLibTest
             _neuronParameters.Add(e.VertexId, GenerateNeuronParameters());            
         }
 
-        [ContractInvariantMethod]
-        private void ObjectInvariant()
-        {
-            Contract.Invariant(_neuronParameters != null);
-            Contract.Invariant(_synapseParameters != null);
-        }
     }
 }

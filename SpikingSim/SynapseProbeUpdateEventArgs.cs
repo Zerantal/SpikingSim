@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace SpikingLibrary
 {
@@ -13,8 +10,8 @@ namespace SpikingLibrary
             Time = time;
         }
 
-        public double Weight { get; private set; }
+        public double Weight { get; }
 
-        public long Time { get; private set; }
+        public long Time { get; }
     }
 }

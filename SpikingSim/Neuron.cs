@@ -2,7 +2,6 @@
 
 using System;
 using System.Collections.Generic;
-using System.Diagnostics.Contracts;
 using System.ComponentModel;
 using System.Threading;
 
@@ -20,9 +19,6 @@ namespace SpikingLibrary
         private readonly List<Synapse> _axon;
         private readonly List<Synapse> _dendrite;
 
-        private readonly int _id;
-         
-        private NeuronParameters _neuronType;
         private double _u;
         private double _v;
 
@@ -35,14 +31,14 @@ namespace SpikingLibrary
         {
             // // Contract.Requires(type != null);
             
-            _neuronType = type;
-            _v = _neuronType.DefaultV;
-            _u = _neuronType.DefaultU;
+            NeuronType = type;
+            _v = NeuronType.DefaultV;
+            _u = NeuronType.DefaultU;
             _axon = new List<Synapse>();
             _dendrite = new List<Synapse>();
 
             // set neuron identifier
-            _id = _identifierCounter;
+            Id = _identifierCounter;
             _identifierCounter++;
             
             _onNeuronFiredDelegate = ReportNeuronFiring;
@@ -50,36 +46,22 @@ namespace SpikingLibrary
 
         }
 
-        internal NeuronParameters NeuronType
-        {
-            get
-            {
-                return _neuronType;
-            }            
-            set
-            {
-                // // Contract.Requires(value != null);
-                _neuronType = value;
-            }
-        }
+        internal NeuronParameters NeuronType { get; set; }
 
         internal double U
         {
-            get { return _u; }
+            get => _u;
 
-            set { _u = value; }
+            set => _u = value;
         }
 
         internal double V
         {
-            get { return _v; }
-            set { _v = value; }
+            get => _v;
+            set => _v = value;
         }
 
-        public int Id
-        {
-            get { return _id; }
-        }        
+        public int Id { get; }
 
         internal void AddAxonalSynapse(Synapse synapse)
         {
@@ -114,15 +96,12 @@ namespace SpikingLibrary
 
         protected void OnNeuronFired(NeuronFiredEventArgs e)
         {
-            if (NeuronFired != null)
-            {
-                NeuronFired(this, e);
-            }
+            NeuronFired?.Invoke(this, e);
         }
 
         internal void TriggerNeuronSpike(long time)
         {        
-            // Backpropogated action potential
+            // Back propagated action potential
             foreach (Synapse s in _dendrite)            
                 s.Bap(time); // performs weight updating on dendritic synapses            
             
@@ -139,15 +118,7 @@ namespace SpikingLibrary
         /// </summary>
         internal bool IncrementNeuronState()
         {
-            return _neuronType.CalcNextState(ref _u, ref _v);
-        }
-
-        [ContractInvariantMethod]
-        private void ObjectInvariant()
-        {
-            Contract.Invariant(_axon != null);
-            Contract.Invariant(_dendrite != null);
-            Contract.Invariant(_neuronType != null);         
+            return NeuronType.CalcNextState(ref _u, ref _v);
         }
     }
 }

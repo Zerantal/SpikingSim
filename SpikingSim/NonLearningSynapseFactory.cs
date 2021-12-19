@@ -1,5 +1,4 @@
-﻿using System.Diagnostics.Contracts;
-using System;
+﻿using System;
 
 using MathLib.Statistics;
 
@@ -31,13 +30,6 @@ namespace SpikingLibrary
         }
 
         #endregion
-
-        [ContractInvariantMethod]
-        private void ObjectInvariant()
-        {
-            Contract.Invariant(_delayGenerator != null);
-            Contract.Invariant(_weightGenerator != null);
-        }
 
         #region IDeepCloneable<ISynapseFactory> Members
 
